@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+
+    {% for cab in cabs %}
+        {{cab.type_name}}
+        {{cab.cab_name}}
+        {{cab.cab_location}}
+        {{cab.email}}
+        {{cab.tel_nr}}
+        {{cab.availability}}
+        {{cab.cab_picture}}
+        {{cab.cab_date}}
+    {% endfor%}
+
+ {% endblock%}
+    
