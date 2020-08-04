@@ -3,16 +3,57 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    {% for cab in cabs %}
-        {{cab.type_name}}
-        {{cab.cab_name}}
-        {{cab.cab_location}}
-        {{cab.email}}
-        {{cab.tel_nr}}
-        {{cab.availability}}
-        {{cab.cab_picture}}
-        {{cab.cab_date}}
+    
+
+     {% for cab in cabs %}
+<table class=" striped responsive-table">
+       
+          <tr>              
+              <th>Cab Type</th>
+              <th>Cab Name</th>
+              <th>Model</th>
+              <th>Location</th>
+              <th>Email</th>              
+              <th>Tel nr</th>
+              <th>Availability</th>              
+              <th>Picture</th>
+              <th>Due Date</th>
+          </tr>     
+        
+          <tr>
+            <td>{{cab.type_name}}</td>                 
+            <td>{{cab.cab_name}}</td> 
+             <td>{{cab.cab_model}}</td>
+             <td>{{cab.cab_location}}</td>
+             <td>{{cab.email}}</td>                 
+            <td>{{cab.tel_nr}}</td> 
+             <td>{{cab.availability}}</td>
+             <td>{{cab.cab_picture}}</td>
+              <td>{{cab.cab_date}}</td>                   
+          </tr>       
+      </table>
+     
+      <br><br>
+         {% endfor%}
+<ul class="collapsible" data-collapsible="accordion">
+ <!--Generate a list for every record returned-->
+ {% for cab in cabs %}
+
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{cab.type_name}} - {{cab.cab_name}}     
+      </div>
+      <div class="collapsible-body"><span>{{cab.cab_location}}</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
     {% endfor%}
 
- {% endblock%}
+{% endblock%}
     
