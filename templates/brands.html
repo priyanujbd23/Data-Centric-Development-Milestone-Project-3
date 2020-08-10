@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <h5>Cabs</h5>
+
+     {% for brand in brands %}
+     <div class="row">
+<table class=" striped responsive-table">       
+          <tr class="table-text grey">              
+              <th>Brand Name</th>              
+          </tr>             
+          <tr>
+            <td>{{brand.brand_name}}</td>     
+                        
+          </tr>       
+      </table>
+</div>
+    
+      <div class="row">      
+      <a href="" class="waves-effect waves-light btn btn-style orange">find this Cab</a>        
+      <a href="{{ url_for('edit_brand', brand_id=brand._id)}}" class="waves-effect waves-light btn btn-style orange">Edit category</a>     
+      </div>
+         {% endfor%}
+</div>
+{% endblock%}
+    
