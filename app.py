@@ -22,7 +22,8 @@ def get_cabs():
 def add_cab():
     return render_template('addcab.html', types=mongo.db.types.find(),
                            brands=mongo.db.brands.find(),
-                           models=mongo.db.models.find())
+                           models=mongo.db.models.find(),
+                           bookings=mongo.db.bookings.find())
 
 
 # Insert a Cab
@@ -85,6 +86,33 @@ def get_one(cab_id):
     return render_template('findcab.html', cab=cab)
 
 
+# get booked cabs
+@app.route('/get_bookings')
+def get_bookings():
+    return render_template('bookings.html',
+                           bookings=mongo.db.bookings.find())
+
+
+# add booking
+@app.route('/add_booking')
+def add_booking():
+    return render_template('addbooking.html', types=mongo.db.types.find(),
+                           brands=mongo.db.brands.find(),
+                           models=mongo.db.models.find(),
+                           bookings=mongo.db.bookings.find())
+
+
+# Book a Cab
+@app.route('/insert_booking', methods=['POST'])
+def insert_booking():
+    bookings = mongo.db.bookings
+    # get the form and convert to a dictionary
+    bookings.insert_one(request.form.to_dict())
+    return redirect(url_for('get_bookings'))
+
+
+# <---- Manage vehicle Types, Brands & Models ---->
+
 # Gets the vehicle Types
 @app.route('/get_types')
 def get_types():
@@ -107,6 +135,64 @@ def update_type(type_id):
         {'_id': ObjectId(type_id)},
         {'vehicle_type': request.form.get('vehicle_type')})
     return redirect(url_for('get_types'))
+
+
+# ------ End of Vehicle Type----------
+
+# ------ Vehicle Brnad----------
+
+# Gets the Brand Name
+@app.route('/get_brand')
+def get_brand():
+    return render_template('brands.html',
+                           brands=mongo.db.brands.find())
+
+
+# edits a Brand Name
+@app.route('/edit_brand/<brand_id>')
+def edit_brand(brand_id):
+    return render_template('brands.html',
+                           brand=mongo.db.brands.find_one(
+                            {'_id': ObjectId(brand_id)}))
+
+
+# updates Brand
+@app.route('/update_brand/<brand_id>', methods=['POST'])
+def update_brand(brand_id):
+    mongo.db.brands.update(
+        {'_id': ObjectId(brand_id)},
+        {'brand_name': request.form.get('brand_name')})
+    return redirect(url_for('get_brand'))
+
+# ------ End of Vehicle Brand----------
+
+
+# ------ Vehicle Model----------
+
+# Get the Model
+@app.route('/get_models')
+def get_model():
+    return render_template('models.html',
+                           models=mongo.db.models.find())
+
+
+# edit the Model
+@app.route('/edit_model/<model_id>')
+def edit_model(model_id):
+    return render_template('brands.html',
+                           model=mongo.db.models.find_one(
+                            {'_id': ObjectId(model_id)}))
+
+
+# updates Model
+@app.route('/update_model/<model_id>', methods=['POST'])
+def update_model(model_id):
+    mongo.db.models.update(
+        {'_id': ObjectId(model_id)},
+        {'model_name': request.form.get('model_name')})
+    return redirect(url_for('get_models'))
+
+# ------ End of Vehicle Brand----------
 
 
 if __name__ == '__main__':
