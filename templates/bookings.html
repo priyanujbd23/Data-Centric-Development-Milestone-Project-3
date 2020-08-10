@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <h5>Booked Cabs</h5>
+    
+    {% for booking in bookings %}
+     <div class="row">
+<table class=" striped responsive-table">       
+          <tr class="table-text grey">              
+              <th>Vehicle Type</th>
+              <th>Cab Name</th>
+              <th>Model</th>
+              <th>Location</th>
+              <th>Name</th>
+              <th>Email</th>              
+              <th>Tel nr</th>                           
+              <th>Picture</th>
+              <!--<th><i class="fa fa-calendar"></i> Date</th> -->
+          </tr>             
+          <tr>
+            <td>{{booking.vehicle_type}}</td>                 
+            <td>{{booking.brand_name}}</td> 
+             <td>{{booking.model_name}}</td>
+             <td>{{booking.booking_location}}</td>
+             <td>{{booking.booking_name}}</td>
+             <td>{{booking.booking_email}}</td>                 
+            <td>{{booking.booking_tel}}</td>              
+             <td>{{booking.booking_img}}</td>                   
+          </tr>       
+      </table>
+</div>
+      <br><br>
+      <div class="row">      
+      <a href="" class="waves-effect waves-light btn btn-style orange">find this Cab</a>     
+      </div>
+    {% endfor %}
+</div>
+{% endblock%}
+    
