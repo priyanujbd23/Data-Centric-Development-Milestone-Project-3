@@ -20,10 +20,14 @@
 </div>
     
       <div class="row">      
-      <a href="" class="waves-effect waves-light btn btn-style orange">find this Cab</a>        
+      <a href="{{ url_for('delete_model', model_id=model._id)}}" class="waves-effect waves-light btn btn-style orange">Delete</a>        
       <a href="{{ url_for('edit_model', model_id=model._id)}}" class="waves-effect waves-light btn btn-style orange">Edit category</a>     
       </div>
          {% endfor%}
+         <br>
+        <div class="row">
+<a href="{{ url_for('new_model') }}" class="waves-effect waves-light btn"><i class="material-icons right">playlist_add</i>Add Model</a>
+</div>
 </div>
 {% endblock%}
     
