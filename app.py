@@ -135,11 +135,22 @@ def update_type(type_id):
         {'_id': ObjectId(type_id)},
         {'vehicle_type': request.form.get('vehicle_type')})
     return redirect(url_for('get_types'))
-
-
 # ------ End of Vehicle Type----------
 
-# ------ Vehicle Brnad----------
+# ------ Vehicle Brand----------
+
+
+"""
+# Insert a Cab
+@app.route('/insert_brand', methods=['POST'])
+def insert_brand():
+    brands = mongo.db.brands
+    # get the form and convert to a dictionary
+    brands.insert_one(request.form.to_dict())
+    # get the form fields with data in them
+    return redirect(url_for('get_brand'))
+"""
+
 
 # Gets the Brand Name
 @app.route('/get_brand')
@@ -170,7 +181,7 @@ def update_brand(brand_id):
 # ------ Vehicle Model----------
 
 # Get the Model
-@app.route('/get_models')
+@app.route('/get_model')
 def get_model():
     return render_template('models.html',
                            models=mongo.db.models.find())
@@ -179,7 +190,7 @@ def get_model():
 # edit the Model
 @app.route('/edit_model/<model_id>')
 def edit_model(model_id):
-    return render_template('brands.html',
+    return render_template('models.html',
                            model=mongo.db.models.find_one(
                             {'_id': ObjectId(model_id)}))
 
@@ -190,12 +201,52 @@ def update_model(model_id):
     mongo.db.models.update(
         {'_id': ObjectId(model_id)},
         {'model_name': request.form.get('model_name')})
-    return redirect(url_for('get_models'))
+    return redirect(url_for('get_model'))
 
 # ------ End of Vehicle Brand----------
+
+
+# ------ Delete functions--------
+
+#  delete Types
+@app.route('/delete_type/<type_id>')
+def delete_type(type_id):
+    mongo.db.types.remove({'_id': ObjectId(type_id)})
+    return redirect(url_for('get_types'))
+
+
+#  delete Brands
+@app.route('/delete_brand/<brand_id>')
+def delete_brand(brand_id):
+    mongo.db.brands.remove({'_id': ObjectId(brand_id)})
+    return redirect(url_for('get_brand'))
+
+
+#  delete Models
+@app.route('/delete_model/<model_id>')
+def delete_model(model_id):
+    mongo.db.models.remove({'_id': ObjectId(model_id)})
+    return redirect(url_for('get_model'))
+
+# ------ End Delete---------
+
+
+# add Types
+@app.route('/insert_type', methods=['POST'])
+def insert_type():
+    types = mongo.db.types
+    types_doc = {'vehicle_type': request.form.get('vehicle_type')}
+    types.insert_one(types_doc)
+    return redirect(url_for('get_types'))
+
+
+# render a view and add a new type
+@app.route('/new_type')
+def new_type():
+    return render_template('addtype.html')
 
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+                debug=True)
