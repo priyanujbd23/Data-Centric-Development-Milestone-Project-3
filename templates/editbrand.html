@@ -3,19 +3,18 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-<h5> Edit Brand</h5>
+<h5> Edit Car Brand</h5>
 <div class="row">
 <!---------- Form -------------->
-
     
     <!---------------End Vehicle Type-------->
     
-    <form action="{{ url_for('insert_cab') }}" method="POST" class="col s12">
+    <form action="{{ url_for('insert_brand') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">poll</i>
-                <input id="brand_name" name="brand_name" type="text" class="validate" value="{{brand.brand_name}}}">
-                <label for="category_name">Category Name</label>
+                <input id="brand_name" name="brand_name" type="text" class="validate" value="{{brand.brand_name}}">
+                <label for="category_name">Brand Name</label>
             </div>
         </div>
         <div class="row">
@@ -27,17 +26,8 @@
             </a>
         </div>
     </form>
-
-
-
-
     
-      <!---------- Button -------------->
-      <div class="row">
-      <button class="btn waves-effect waves-light  btn-large" type="submit" name="action">Edit Cab
-        <i class="material-icons right">playlist_add</i>
-      </button>
-      </div>
+      
   <!----------End Button -------------->
   
      <!----------  -------------->
@@ -45,7 +35,6 @@
   </div>
   </div>
   
-   <!-- jQuerry -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>  
+   
 
 {% endblock %}

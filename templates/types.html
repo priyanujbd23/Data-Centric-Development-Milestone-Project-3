@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <h5>Vehicle Types</h5>
+
+     {% for type in types %}
+     <div class="row">
+<table class=" striped responsive-table">       
+          <tr class="table-text grey">              
+              <th>Vehicle Type</th>              
+          </tr>             
+          <tr>
+            <td>{{type.vehicle_type}}</td>               
+                        
+          </tr>       
+      </table>
+</div>
+    
+      <div class="row">      
+      <a href="{{ url_for('delete_type', type_id=type._id) }}" class="waves-effect waves-light btn btn-style orange">Delete </a>        
+      <a href="{{ url_for('edit_type', type_id=type._id) }}" class="waves-effect waves-light btn btn-style orange">Edit category</a>     
+      </div>
+         {% endfor%}
+         <br>
+ <div class="row">
+<a href="{{ url_for('new_type') }}" class="waves-effect waves-light btn"><i class="material-icons right">playlist_add</i>Add Type</a>
+</div>
+</div>
+{% endblock%}
+    

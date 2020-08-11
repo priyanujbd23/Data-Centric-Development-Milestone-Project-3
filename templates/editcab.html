@@ -3,12 +3,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-<h5> Add Cab</h5>
+<h5> Edit Cab</h5>
 <div class="row">
 <!---------- Form -------------->
 
     <!--Get URL, or use the URL, for the insert_cab function -->
-    <form action="{{ url_for('insert_cab') }}" method="POST" class="col s12">
+    <form action="{{ url_for('update_cab', cab_id=cab._id) }}" method="POST" class="col s12">
     <div class="row">
     <div class="input-field col s12">
     <i class="material-icons prefix">poll</i>
@@ -17,7 +17,11 @@
       <option value="" disabled selected>Choose Vehicle</option>
       <!-- Display each instant of the type-->
       {% for type in types %}
-        <option value="{{type.vehicle_type}}">{{type.vehicle_type}}</option>
+        {% if type.vehicle_type == cab.vehicle_type %}
+        <option value="{{type.vehicle_type}}" selected >{{type.vehicle_type}}</option>
+        {% else %}
+         <option value="{{type.vehicle_type}}">{{type.vehicle_type}}</option>
+        {% endif %}
       {% endfor %}     
     </select>
     <label>Vehicle Type</label>
@@ -34,7 +38,11 @@
       <option value="" disabled selected>Choose Brand</option>
       <!-- Display each instant of the type-->
       {% for brand in brands %}
+       {% if brand.brand_name == cab.brand_name %}
+        <option value="{{brand.brand_name}}" selected>{{brand.brand_name}}</option>
+         {% else %}
         <option value="{{brand.brand_name}}">{{brand.brand_name}}</option>
+        {% endif %}
       {% endfor %}     
     </select>
     <label>Brand</label>
@@ -51,18 +59,22 @@
       <option value="" disabled selected>Choose Model</option>
       <!-- Display each instant of the type-->
       {% for model in models %}
+       {% if model.model_name == cab.model_name %}
+        <option value="{{model.model_name}}" selected>{{model.model_name}}</option>
+        {% else %}
         <option value="{{model.model_name}}">{{model.model_name}}</option>
+        {% endif %}
       {% endfor %}     
     </select>
     <label>Model</label>
   </div>    
-    </div>       
+    </div>   
     <!------------End Vehicle Model ------->
     <!----------Location------->      
         <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">phone</i>
-          <input id="cab_location" name="cab_location" type="tel" class="validate">
+          <input id="cab_location" name="cab_location" type="text" class="validate"  value="{{cab.cab_location}}">
           <label for="icon_telephone">Location</label>
         </div>  
         </div> 
@@ -71,7 +83,7 @@
         <div class="row">      
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
-          <input id="email" name="email" type="text" class="validate">
+          <input id="email" name="email" type="text" class="validate" value="{{cab.email}}">
           <label for="icon_prefix">Email</label>
         </div>
         </div>
@@ -80,7 +92,7 @@
         <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">phone</i>
-          <input id="tel_nr" name="tel_nr" type="tel" class="validate">
+          <input id="tel_nr" name="tel_nr" type="tel" class="validate" value="{{cab.tel_nr}}">
           <label for="icon_telephone">Telephone</label>
         </div>
         </div> 
@@ -89,7 +101,7 @@
         <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
-          <input id="cab_picture" name="cab_picture" type="text" class="validate">
+          <input id="cab_picture" name="cab_picture" type="text" class="validate" value="{{cab.cab_picture}}">
           <label for="icon_prefix">Image URL</label>
         </div>
         </div>
@@ -117,7 +129,7 @@
       -->   
       <!---------- Button -------------->
       <div class="row">
-      <button class="btn waves-effect waves-light  btn-large" type="submit" name="action">Add Cab
+      <button class="btn waves-effect waves-light  btn-large" type="submit" name="action">Edit Cab
         <i class="material-icons right">playlist_add</i>
       </button>
       </div>
@@ -127,5 +139,8 @@
       <!---------- End Form -------------->
   </div>
   </div>
+  
+   <!-- jQuerry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>  
 
 {% endblock %}
