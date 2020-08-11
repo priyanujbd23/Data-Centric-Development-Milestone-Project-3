@@ -140,18 +140,6 @@ def update_type(type_id):
 # ------ Vehicle Brand----------
 
 
-"""
-# Insert a Cab
-@app.route('/insert_brand', methods=['POST'])
-def insert_brand():
-    brands = mongo.db.brands
-    # get the form and convert to a dictionary
-    brands.insert_one(request.form.to_dict())
-    # get the form fields with data in them
-    return redirect(url_for('get_brand'))
-"""
-
-
 # Gets the Brand Name
 @app.route('/get_brand')
 def get_brand():
@@ -231,6 +219,7 @@ def delete_model(model_id):
 # ------ End Delete---------
 
 
+# <----- Add functions --------->
 # add Types
 @app.route('/insert_type', methods=['POST'])
 def insert_type():
@@ -244,6 +233,36 @@ def insert_type():
 @app.route('/new_type')
 def new_type():
     return render_template('addtype.html')
+
+
+# add Brands
+@app.route('/insert_brand', methods=['POST'])
+def insert_brand():
+    brands = mongo.db.brands
+    brands_doc = {'brand_name': request.form.get('brand_name')}
+    brands.insert_one(brands_doc)
+    return redirect(url_for('get_brand'))
+
+
+# render a view and add a new brand
+@app.route('/new_brand')
+def new_brand():
+    return render_template('addbrand.html')
+
+
+# add Model
+@app.route('/insert_model', methods=['POST'])
+def insert_model():
+    models = mongo.db.models
+    models_doc = {'model_name': request.form.get('model_name')}
+    models.insert_one(models_doc)
+    return redirect(url_for('get_model'))
+
+
+# render a view and add a new brand
+@app.route('/new_model')
+def new_model():
+    return render_template('addmodel.html')
 
 
 if __name__ == '__main__':
