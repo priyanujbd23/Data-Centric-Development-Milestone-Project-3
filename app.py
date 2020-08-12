@@ -265,6 +265,12 @@ def new_model():
     return render_template('addmodel.html')
 
 
+# Admin page
+@app.route('/admin_page')
+def admin_page():
+    return render_template('admin.html')
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
