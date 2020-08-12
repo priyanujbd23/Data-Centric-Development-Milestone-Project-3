@@ -13,8 +13,48 @@
     
 </head>
 <body>
+<header>
+<div class="navbar-fixed">
+<nav>
+    <div class="nav-wrapper light-blue accent-2">
+      <a href="#!" class="brand-logo">City Cab</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home_page') }}">Home</a></li>
+        <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
+        <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
+        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
+        <li><a href="{{ url_for('admin_page') }}">Admin</a></li>          
+      </ul>
+    </div> 
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
+</div>
+</header>
        
     {% block content %} {% endblock %}
+
+    <!-- Footer-->
+ 
+    <footer class="page-footer blue">
+    
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+            </div>
+          </div>   
+        </footer>
+        
+        <!--- End Footer-->
 
     <!-- jQuerry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>  
@@ -25,7 +65,11 @@
         $(document).ready(function(){
             $('.collapsible').collapsible();  
             $('.datepicker').datepicker(); 
-            $('select').formSelect();        
+            $('select').formSelect();
+            $('.sidenav').sidenav(); 
+            $(document).ready(function(){
+            $('.materialboxed').materialbox();
+         });       
         });
 
         //  Date Picker

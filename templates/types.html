@@ -17,8 +17,7 @@
                         
           </tr>       
       </table>
-</div>
-    
+</div>    
       <div class="row">      
       <a href="{{ url_for('delete_type', type_id=type._id) }}" class="waves-effect waves-light btn btn-style orange">Delete </a>        
       <a href="{{ url_for('edit_type', type_id=type._id) }}" class="waves-effect waves-light btn btn-style orange">Edit category</a>     
@@ -27,6 +26,10 @@
          <br>
  <div class="row">
 <a href="{{ url_for('new_type') }}" class="waves-effect waves-light btn"><i class="material-icons right">playlist_add</i>Add Type</a>
+</div>
+
+ <div class="row">
+<a href="{{ url_for('admin_page') }}" class="waves-effect waves-light btn"><i class="material-icons right">playlist_add</i>Bact to admin page</a>
 </div>
 </div>
 {% endblock%}

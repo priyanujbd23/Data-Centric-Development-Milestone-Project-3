@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700");
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 .btn-style {
     margin: 0px 10px;
@@ -6,4 +17,13 @@
 
 .table-text {
     color: white;
+}
+
+#cover-image {
+  height: 600px;
+  width: 100%;
+  background: url("../img/cab1.jpg") no-repeat center center;
+  animation-name: cover-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
 }
