@@ -11,7 +11,13 @@ app.config["MONGO_URI"] = "mongodb+srv://root:rOOtUser@myfirstcluster.ilffs.mong
 mongo = PyMongo(app)
 
 
+# Admin page
 @app.route('/')
+@app.route('/home_page')
+def home_page():
+    return render_template('home.html')
+
+
 @app.route('/get_cabs')
 def get_cabs():
     return render_template('cabs.html', cabs=mongo.db.cabs.find())
