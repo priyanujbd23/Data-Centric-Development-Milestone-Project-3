@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<h5>Home</h5>
+
+<!---------- Hero image -------------->
+<div class="row">
+<img class="materialboxed" height="650" width="100%" src="{{ url_for('static', filename='assets/img/cab1.jpg') }}">
+
+</div>
+<!----------End Hero image -------------->
+
+<div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/sample-1.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row">
+<!---------- Form -------------->
+    <div class="col s12 m5">
+    <h4 class="header">Manage Vehicle Type</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Add vehicle type. Van, Station wagon, Sedan, etc.</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('get_types') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+   
+  <div class="col s12 m5">
+    <h4 class="header">Manage Vehicle Brand</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Add vehicle brand. Peugoet, Toyota, Renault, etc. etc.</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('get_brand') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
+  <div class="col s12 m5">
+    <h4 class="header">Manage Vehicle Model</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Add a vehicle model. Avensus, Clio, Note, Tipo, etc.</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('get_model') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col s12 m5">
+    <h4 class="header">Add a new cab</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p> New drivers or admin can dd a new cab to the collection .</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('add_cab') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <!---------------End Vehicle Type-------->
+    
+    
+      <!---------- Button -------------->
+      
+  <!----------End Button -------------->
+  
+     <!----------  -------------->
+      <!---------- End Form -------------->
+  </div>
+  </div>
+  
+
+{% endblock %}
