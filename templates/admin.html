@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<h5>Admin Panel</h5>
+<div class="row">
+
+<!---------- Form -------------->
+
+    <div class="col s12 m5">
+    <h4 class="header">Manage Vehicle Type</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Add vehicle type. Van, Station wagon, Sedan, etc.</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('get_types') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+   
+  <div class="col s12 m5">
+    <h4 class="header">Manage Vehicle Brand</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Add vehicle brand. Peugoet, Toyota, Renault, etc. etc.</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('get_brand') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
+  <div class="col s12 m5">
+    <h4 class="header">Manage Vehicle Model</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>Add a vehicle model. Avensus, Clio, Note, Tipo, etc.</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('get_model') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col s12 m5">
+    <h4 class="header">Add a new cab</h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p> New drivers or admin can dd a new cab to the collection .</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('add_cab') }}">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <!---------------End Vehicle Type-------->
+    
+    
+      <!---------- Button -------------->
+      
+  <!----------End Button -------------->
+  
+     <!----------  -------------->
+      <!---------- End Form -------------->
+  </div>
+  </div>
+  
+
+{% endblock %}
