@@ -110,7 +110,7 @@
         <div class="row">
         <div id="matfix" class="input-field col s12">
           <i class="material-icons prefix">date_range</i>
-          <input id="cab_date" name="cab_date" type="text" class="datepicker">
+          <input id="booking_date" name="booking_date" type="text" class="datepicker">
           <label for="icon_telephone">Date</label>
         </div>        
       </div> 
@@ -142,5 +142,15 @@
   
    <!-- jQuerry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>  
+    
+<script type="text/javascript">
+    $(document).ready(function() {
+  // local variable
+        new_date = Date.parse('{{cab.booking_date}}');
+        // inject the due date into the form field associated with that date picker.
+        $('#booking_date').pickadate('picker').set('select', new_date, {format: 'dd/mm/yyyy'}).trigger('change')
+    });
+
+</script>
 
 {% endblock %}

@@ -16,7 +16,7 @@
 <header>
 <div class="navbar-fixed">
 <nav>
-    <div class="nav-wrapper light-blue accent-2">
+    <div class="nav-wrapper blue accent-2">
       <a href="#!" class="brand-logo">City Cab</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -24,34 +24,40 @@
         <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
         <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
         <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
-        <li><a href="{{ url_for('admin_page') }}">Admin</a></li>          
+        <li><a href="{{ url_for('login') }}">Log in/Register</a></li>   
+        <li><a href="{{ url_for('admin_page') }}"> Admin tasks</a></li>  
       </ul>
-    </div> 
+    </div>     
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+        <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
+        <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
+        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
+        <li><a href="{{ url_for('admin_page') }}">Admin</a></li> 
+       
+               
   </ul>
 </div>
+
+
 </header>
+<!----------Login stff -Temp stuff---->
+
+<!------------  End login --- -->
        
     {% block content %} {% endblock %}
 
     <!-- Footer-->
  
-    <footer class="page-footer blue">
-    
-          <div class="container">
+    <footer class="page-footer container-fluid blue">        
             <div class="row">
-              <div class="col l6 s12">
+              <div class="col s12">
                 <h5 class="white-text">Footer Content</h5>
                 <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
               </div>
             </div>
-          </div>   
         </footer>
         
         <!--- End Footer-->
@@ -66,12 +72,12 @@
             $('.collapsible').collapsible();  
             $('.datepicker').datepicker(); 
             $('select').formSelect();
-            $('.sidenav').sidenav(); 
-            $(document).ready(function(){
+            $('.sidenav').sidenav();            
             $('.materialboxed').materialbox();
+            $('.modal').modal();
          });       
-        });
-
+     
+            
         //  Date Picker
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month

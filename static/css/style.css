@@ -19,11 +19,56 @@ body {
     color: white;
 }
 
-#cover-image {
+.container-cover {  
+height: 600px;
+width: 100%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+
+#hero-img {  
   height: 600px;
-  width: 100%;
-  background: url("../img/cab1.jpg") no-repeat center center;
-  animation-name: cover-zoom;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
+ width: 100%;
+}
+
+.welcome-text {
+  margin-bottom: 150px;
+  margin-top: 20x;
+  height: 50px;
+}
+
+/*------ Login Section ------*/
+
+h1 {
+	padding-top: 6rem;
+	text-align: center;
+}
+
+.active {
+	border-bottom: 3px solid #000000;
+}
+
+#alerts {
+    position: absolute;
+    display: none;
+    min-height: 50px;
+    top: 95%;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+#alerts p {
+    margin: 10px 0px;
+}
+
+.page-footer {
+   margin-top: 300px;
+}
+
+.card.small {
+    height: 300px;
+    margin-top: 60px;
 }

@@ -296,6 +296,7 @@ def search_cab(vehicle_type):
         'vehicleType': vehicle_type
     })
     return render_template('searchresults.html', cab=cab)
+# -------------------------------------------------------------->
 
 
 # ------ Login section for new drivers to add a Cab -----------
@@ -358,7 +359,7 @@ def register():
         # Check if the password and password1 actualy match
         if form['user_password'] == form['user_password1']:
             # If so try to find the user in db
-            user = mongo.db.users.find_one({"username" : form['username']})
+            user = mongo.db.users.find_one({"username": form['username']})
             if user:
                 flash(f"{form['username']} already exists!")
                 return redirect(url_for('register'))
@@ -410,7 +411,7 @@ def profile(user):
         return render_template('profile.html', user=user_in_db)
     else:
         flash("You must be logged in!")
-        return redirect(url_for('index'))
+        return redirect(url_for('admin_tasks'))
 
 
 # Admin area

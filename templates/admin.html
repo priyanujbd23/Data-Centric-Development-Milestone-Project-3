@@ -2,8 +2,39 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
+<div class="admin-page container">
 <h5>Admin Panel</h5>
+<nav>
+<!--
+<div class="collapse navbar-collapse" id="main-nav">
+					<ul class="navbar-nav ml-auto text-center">				
+						{% if session.user %}
+						<li class="nav-item {% if 'profile' in request.path %} active {% endif %}">
+							<a class="nav-link" href="{{url_for('profile', user=session.user)}}">Profile</a>
+						</li>
+						<li class="nav-item hidden-md-down">
+							<a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+						</li>
+						{% if session.user == "admin" %}
+						<li class="nav-item hidden-md-down {% if 'admin' in request.path  and 'profile' not in request.path %} active {% endif %}">
+							<a class="nav-link" href="{{url_for('admin')}}">Admin</a>
+						</li>
+						{% endif %}
+						{% else %}
+						<li class="nav-item hidden-md-down {% if 'register' in request.path %} active {% endif %}">
+							<a class="nav-link" href="{{url_for('register')}}">Register</a>
+						</li>
+						<li class="nav-item hidden-md-down {% if 'login' in request.path %} active {% endif %}">
+							<a class="nav-link" href="{{url_for('login')}}">Login</a>
+						</li>
+						{% endif %}		
+					</ul>
+				</div>
+            -->
+    <!--- temp stuff-->
+    
+        <!-- end temp -->
+</nav>
 
 <!---------- Manage Vehicle Type -------------->
 <div class="row">
@@ -11,14 +42,14 @@
     <h4 class="header">Manage Vehicle Type</h4>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
+        <img src="https://cdn.pixabay.com/photo/2015/06/08/15/18/steering-wheel-801994_960_720.jpg">
       </div>
       <div class="card-stacked">
         <div class="card-content">
           <p>Add vehicle type. Van, Station wagon, Sedan, etc.</p>
         </div>
         <div class="card-action">
-          <a href="{{ url_for('get_types') }}">This is a link</a>
+          <a href="{{ url_for('get_types') }}">Add Vehicle Type</a>
         </div>
       </div>
     </div>
@@ -30,14 +61,14 @@
     <h4 class="header">Manage Vehicle Brand</h4>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
+        <img src="https://cdn.pixabay.com/photo/2015/08/11/22/33/nissan-885309_960_720.jpg">
       </div>
       <div class="card-stacked">
         <div class="card-content">
           <p>Add vehicle brand. Peugoet, Toyota, Renault, etc. etc.</p>
         </div>
         <div class="card-action">
-          <a href="{{ url_for('get_brand') }}">This is a link</a>
+          <a href="{{ url_for('get_brand') }}">Add Vehicla Brand</a>
         </div>
       </div>
     </div>
@@ -49,14 +80,14 @@
     <h4 class="header">Manage Vehicle Model</h4>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
+        <img src="https://cdn.pixabay.com/photo/2015/05/15/14/46/bmw-768688__340.jpg">
       </div>
       <div class="card-stacked">
         <div class="card-content">
           <p>Add a vehicle model. Avensus, Clio, Note, Tipo, etc.</p>
         </div>
         <div class="card-action">
-          <a href="{{ url_for('get_model') }}">This is a link</a>
+          <a href="{{ url_for('get_model') }}">Add Vehicle Model</a>
         </div>
       </div>
     </div>
@@ -69,14 +100,14 @@
     <h4 class="header">Add a new cab</h4>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
+        <img src="https://cdn.pixabay.com/photo/2016/02/19/11/01/taxi-1209542__340.jpg">
       </div>
       <div class="card-stacked">
         <div class="card-content">
           <p> New drivers or admin can dd a new cab to the collection .</p>
         </div>
         <div class="card-action">
-          <a href="{{ url_for('add_cab') }}">This is a link</a>
+          <a href="{{ url_for('add_cab') }}">Add new Cab</a>
         </div>
       </div>
     </div>
