@@ -5,6 +5,27 @@
 
 <div class="container">
     <h5>Cabs Page</h5>
+<!--- Search form-->
+
+  <div class="row card-panel grey lighten-5">
+        <form class="col s12" action="{{ url_for('search') }}" method="POST">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                    <input type="text" id="query" name="query" minlength="3" class="validate" required>
+                    <label for="query">Search Cab</label>
+                </div>
+                <div class="col s12 m4">
+                    <button class="light-blue darken-1 btn text-shadow" type="submit">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                    <a href="{{ url_for('get_cabs') }}" class="red btn text-shadow">Reset</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--
     <div class="row">
 
     <form action="{{ url_for('search_cab') }}" method="GET">
@@ -12,7 +33,9 @@
   <button type="submit"><i class="fa fa-search">Search</i></button>
     </form>
     </div>
+    -->
     <br><br>
+
     
      {% for cab in cabs %}
      <div class="row">
