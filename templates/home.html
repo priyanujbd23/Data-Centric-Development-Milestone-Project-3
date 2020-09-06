@@ -4,75 +4,168 @@
 {% block content %}
 
 <!---------- Hero image -------------->
-<section class="container-cover container">
-		<div class="row">
-    
-    <!----Modal-->
-    <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn modal-trigger">Modal</button>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-   
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-  <!--- End -Modal-->
-
-<img class="materialboxed responsive-img" id="hero-img" src="{{ url_for('static', filename='assets/img/cab1.jpg') }}">
+<section class="container-cover container-fluid">
+		<div class="row"> 
+        <div id="cover-text">
+			<h3>Hire a Cab </h3>
+			<!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
+            <p>Call or click below to book one of our cabs online. Our team of experienced drivers have got your booking destinations covered </p>
+            <a href="{{ url_for('add_booking') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left"> book_online</i>Book Online</a>            
+		</div>
+        <!--- Driver program-->
+        <div id="driver-text">
+			<h3>Become a Driver </h3>
+			<!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
+            <p>Join our driver programe and become your own boss. Drive one of our vehicles or submit your owncar once you sign up</p>
+            <a href="{{ url_for('admin_page') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left"> local_taxi</i>Drive for Us</a>            
+		</div>
+           
+<img class="responsive-img" id="hero-img" src="{{ url_for('static', filename='assets/img/tx4.jpg') }}">
 </div>
-
-
 </section>
 
 <!----------End Hero image -------------->
-<div class="container welcome-text">
+<div class="container welcome-text center-align">
 <div class="row">
-<article>
-<h3>Grenfied Cab Agency</h3>
-<p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
-</article>
+
+<h3 id="main-heading">Grenfied Cab Agency</h3>
+<p>Grenfied City Cabs is cab agengy located in the North London. It began as a small family busines 10 years ago and has gained considerable trust and from its cutomers. This is due to the it's reliability and consistent method of operation. Our drivers are well screened to make sure that they reflect the company label. This is particurlary essential since they represent the face of the company to every customer they come in contact with.</p>
 </div>
 </div>
 
-<div class="container">
+
+<div class="container center-align">
+<h3 id="services-heading">Services</h3>
 <!----------city tours -------------->
 <div class="row">
-    <div class="col s12 m5">
+</div>    
+<div class="row">
+    <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/city1.jpg') }}">
-          <span class="card-title">Card Title</span>
+          <img src="{{ url_for('static', filename='assets/img/lon.jpg') }}">          
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <p>Book a cab for a quick drop off or a city tours. You can book a single tour or multiple tours lasting several hours</p>
         </div>
-        <div class="card-action">
-          <a href="#">City Tours</a>
+        <div class="card-action center-align">
+          <h5 class="main-subheading">City Tours</h5>
         </div>
       </div>
     </div>
 
 <!----------Airport service-------------->   
-    <div class="col s12 m5">
+    <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/airport.jpg') }}">
-          <span class="card-title">Card Title</span>
+          <img src="{{ url_for('static', filename='assets/img/air1.jpg')}}">          
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <p>Need a reliable airport service? Our experinced cab drivers can get you to the airport in time for your flight.</p>
         </div>
-        <div class="card-action">
-          <a href="#">Airport Service</a>
+        <div class="card-action center-align">
+          <h5 class="main-subheading">Airport Service</h5>
         </div>
       </div>
     </div>
-  </div>  
+
+    <!--------- End Airport service----------> 
+    <!--------- Escursions ----------> 
+
+  <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='assets/img/way.jpg') }}">          
+        </div>
+        <div class="card-content">
+          <p>Our cab services to out of city escursions as well. Our drivers have vitrually been hired for trips all around the UK.</p>
+        </div>
+        <div class="card-action center-align">
+         <h5 class="main-subheading">Intercity Escursion</h5>
+        </div>
+      </div>
+    </div>
+    <!--------- End Escusions---------->
+  </div> 
+  <br><br>
+  
+    <div class="row">  
+    <!--------- Camper---------> 
+
+  <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='assets/img/camper.jpg') }}">          
+        </div>
+        <div class="card-content">
+          <p>Going on Holidays? Hire one of our mobile campers and drive it yourself to a camping site nationwide or abroad. Our campers come well equiped.</p>
+        </div>
+        <div class="card-action center-align">
+         <h5 class="main-subheading">Mobile Camper</h5>
+        </div>
+      </div>
+    </div>
+    <!--------- End Camper--------->
+
+    <!--------- Man and Van---------> 
+  <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='assets/img/man.jpg') }}">          
+        </div>
+        <div class="card-content">
+          <p>Our services include Man-and-van options for those who need to move items from one location to another. The van comes with a driver.</p>
+        </div>
+        <div class="card-action center-align">
+         <h5 class="main-subheading">Man & Van</h5>
+        </div>
+      </div>
+    </div>
+    <!--------- End Man and Van --------->
+
+  <!----------Become a driver------------->   
+    <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='assets/img/driver.jpg') }}">          
+        </div>
+        
+        <div class="card-content">
+          <p>Want to join our driver program? Enjoy the benefits of working at your own pace, being your own boss and earning all the while.</p>
+        </div>
+        <div class="card-action center-align">
+          <h5 class="main-subheading">Drive for Us</h5>
+        </div>
+      </div>
+    </div>
+    <!--------- End become a driver---------->  
+    </div>
+    <br><br>
+
+ <div class="row">
+ <div class="left">
+ <a href="{{ url_for('add_booking') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left">book_online</i>Book A Cab</a>
+ </div>
+ <div class="right">
+ <a href="{{ url_for('admin_page') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left">local_taxi</i>Become  A Driver</a>
+ </div>
+ </div>
+
+<div class="row">
+<!----Modal-->
+    <!-- Modal Trigger -->
+  <button data-target="modal1" class="btn modal-trigger">Add a Cab</button>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+   
+    <div class="modal-footer">
+    <a href="{{ url_for('admin_page') }}">Admin</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  <!--- End -Modal-->
+  </div>
 </div>
-<!--------- End Airport service---------->  
 
 {% endblock %}
