@@ -5,13 +5,13 @@
 
 <div class="container">
     <h5>Cabs Page</h5>
-<!--- Search form-->
+<!--- Search Cabs form-->
 
   <div class="row card-panel grey lighten-5">
         <form class="col s12" action="{{ url_for('search') }}" method="POST">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                    <i class="fa fa-search prefix light-blue-text text-darken-4"></i>
                     <input type="text" id="query" name="query" minlength="3" class="validate" required>
                     <label for="query">Search Cab</label>
                 </div>
@@ -24,48 +24,51 @@
             </div>
         </form>
     </div>
-
-    <!--
-    <div class="row">
-
-    <form action="{{ url_for('search_cab') }}" method="GET">
-  <input type="text" placeholder="Vehicle Type" id="vehicleType" name="vehicleType" >
-  <button type="submit"><i class="fa fa-search">Search</i></button>
-    </form>
-    </div>
-    -->
+     </div>
     <br><br>
-
-    
+  
      {% for cab in cabs %}
-     <div class="row">
-<table class=" striped responsive-table">       
-          <tr class="table-text grey">              
-              <th>Vehicle Type</th>
-              <th>Cab Name</th>
-              <th>Model</th>
-              <th>Location</th>
-              <th>Email</th>              
-              <th>Tel nr</th>                           
-              <th>Picture</th>
-              <!--<th><i class="fa fa-calendar"></i> Date</th> -->
-          </tr>             
-          <tr>
-            <td>{{cab.vehicle_type}}</td>                 
-            <td>{{cab.brand_name}}</td> 
-             <td>{{cab.model_name}}</td>
-             <td>{{cab.cab_location}}</td>
-             <td>{{cab.email}}</td>                 
-            <td>{{cab.tel_nr}}</td>              
-             <td><img class="materialboxed responsive-img" width="200" src="{{cab.cab_picture}}"></td>
-             <!-- <td>{{cab.cab_date}}</td>   -->                
-          </tr>       
-      </table>
-</div>      
-      <div class="row">      
-      <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style orange">find this Cab</a>     
+     
+    <div class="container cabs-container  grey lighten-5">
+     <!-- trial----->
+    <div class="row">
+      <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img class="materialboxed responsive-img" width="200" src="{{cab.cab_picture}}">        
+        </div>                
       </div>
+      </div>
+
+      <div class="col s12 m4 l4"> 
+       <div class="card-content  center-align">
+      <h4 class="model-display">{{cab.model_name}}</h4>
+       
+          <p class="specs">Vehicle Type</p>
+          <p class="specs-db">{{cab.vehicle_type}}</p>
+          <p class="specs">Vehicle Brand</p>
+          <p class="specs-db">{{cab.brand_name}}</p>
+            </div>               
+       
+        </div>
+
+      <div class="col s12 m4 l4">      
+    <div id="one">
+    <p>THIS CAR IS AVAILABLE FOR HIRE.</p>
+    </div>
+    <div id="two">
+        <p class="specs-db"><span class="material-icons green-text">location_on</span> - {{cab.cab_location}}</p>
+        <p class="specs-db"><span class="material-icons blue-text">email</span> - {{cab.email}}</p> 
+        <p class="specs-db"><span class="material-icons DarkSlateGray-text">phone_in_talk</span> - {{cab.tel_nr}}</p>    
+        </div>       
+     <div id="book-thisCab">      
+      <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style book_btn orange">book this Cab</a>     
+      </div>
+      </div>
+    </div>        
+     </div>
+     
          {% endfor%}
-</div>
+    
 {% endblock%}
     
