@@ -16,32 +16,29 @@
 <header>
 <div class="navbar-fixed">
 <nav>
-    <div class="nav-wrapper blue accent-2">
-      <a href="#!" class="brand-logo">City Cab</a>
+    <div class="nav-wrapper navbar-nav orange accent-2">
+      <a href="/" class="brand-logo">CityCabs</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('home_page') }}">Home</a></li>
         <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
         <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
-        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
-        <li><a href="{{ url_for('login') }}">Log in/Register</a></li>   
-        <li><a href="{{ url_for('admin_page') }}"> Admin tasks</a></li>  
+        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>       
+        <li><a href="{{ url_for('admin_page') }}"> Admins</a></li>  
       </ul>
     </div>     
   </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+  </div>
+  <div>
+  <ul class="sidenav navbar-na" id="mobile-demo">
+        <li><a href="{{ url_for('home_page') }}">Home</a></li>
         <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
         <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
         <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
         <li><a href="{{ url_for('admin_page') }}">Admin</a></li> 
-       
-               
+                         
   </ul>
 </div>
-
-
 </header>
 <!----------Login stff -Temp stuff---->
 
@@ -51,15 +48,35 @@
 
     <!-- Footer-->
  
-    <footer class="page-footer container-fluid blue">        
-            <div class="row">
-              <div class="col s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-            </div>
-        </footer>
-        
+    <footer class="page-footer container-fluid"> 
+    <div class="row">  
+     <div class="col s12 m6">
+     <h5 class="about-sub">About</h5>
+				<p class="inline-block">
+					We are a group of salad lovers who meet regurlarly to share their experience and recipes. <br>
+		            Being vegans make it even more interesting to try out quick and easy non-diary salads.
+		        </p>
+     </div>
+    <div class="col s12 m6">
+    <h5 class="social-sub">Social</h5> 
+    <ul class="social-icon">
+      <li>
+          <a class="waves-effect waves-light  social google"><i class="fa fa-google"></i></a>
+      </li>
+      <li>
+          <a class="waves-effect waves-light  facebook"><i class="fa fa-facebook"></i></a>
+      </li>
+      <li>
+          <a class="waves-effect waves-light linkedin"><i class="fa fa-linkedin"></i></a>
+      </li>
+      <li>
+          <a class="waves-effect waves-light twitter"><i class="fa fa-twitter"></i></a>
+      </li>      
+     </ul> 
+    </div> 
+   
+    </div>         
+    </footer>
         <!--- End Footer-->
 
     <!-- jQuerry -->
@@ -75,9 +92,15 @@
             $('.sidenav').sidenav();            
             $('.materialboxed').materialbox();
             $('.modal').modal();
+            $('.carousel').carousel();
+            $(".button-collapse").sideNav();            
          });       
-     
-            
+             
+        /*$("#two").click(function(){
+             $("#three").slideToggle("slow");
+             });
+             */
+
         //  Date Picker
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
@@ -91,7 +114,11 @@
         document.getElementById("matfix").addEventListener("click", function(e) {
 	        e.stopPropagation();
         });
+        
     </script>
+
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
             
 </body>
 </html>
