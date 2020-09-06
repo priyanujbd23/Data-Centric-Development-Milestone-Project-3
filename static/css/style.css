@@ -1,14 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700");
 
-body {
+/*body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+  }
+  */
+  body {
+      margin: 0;
+      padding: 0;
   }
 
   main {
     flex: 1 0 auto;
   }
+
+
+
+/* Navbar  */
+.navbar-nav {
+  font-size: 30%;
+  list-style-type: none;
+  letter-spacing: 2px;  
+  padding-bottom: 10px;  
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #fafafa;
+   font-size: 22px;
+  list-style-type: none  
+}
+
+.navbar-nav a:hover {
+  border-bottom: 2px solid rgba(24, 24, 23, 0.8);
+}
+
+.navbar-nav .active {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/*  */
 
 .btn-style {
     margin: 0px 10px;
@@ -20,22 +52,22 @@ body {
 }
 
 .container-cover {  
-height: 600px;
+height: auto;
 width: 100%;
   margin-bottom: 50px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 
 #hero-img {  
-  height: 600px;
+  height: auto;
  width: 100%;
 }
 
 .welcome-text {
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   margin-top: 20x;
-  height: 50px;
+  
 }
 
 /*------ Login Section ------*/
@@ -64,11 +96,264 @@ h1 {
     margin: 10px 0px;
 }
 
-.page-footer {
-   margin-top: 300px;
-}
-
 .card.small {
     height: 300px;
     margin-top: 60px;
+}
+
+/*- Headings */
+
+#main-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    color: orangered;
+}
+
+#services-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    color: orangered;
+}
+
+.main-subheading {    
+    color: orangered;
+}
+
+#admin-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: orangered;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 30px;    
+}
+
+
+/*-  cover text */
+#cover-text h3{
+  color: #fafafa;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#cover-text {
+text-align: center;
+  font-size: 1.1rem;
+  color: #fafafa;
+  font-family: "Exo", sans-serif;
+  /*text-transform: uppercase;*/
+  letter-spacing: 4px;
+  width: 450px;
+  height: 265px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: rgba(63, 70, 36, 0.8);
+  top: 85%;
+  left: 23%;
+  position: absolute;
+}
+
+/*   Driver program-*/
+#driver-text h3{
+  color: #fafafa;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#driver-text{
+text-align: center;
+  font-size: 1.1rem;
+  color: #fafafa;
+  font-family: "Exo", sans-serif;
+  /*text-transform: uppercase;*/
+  letter-spacing: 4px;
+  width: 450px;
+  height: 265px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: rgba(85, 58, 40, 0.8);
+  top: 85%;
+  left: 52%;
+  position: absolute;
+}
+
+/*-----Footer ----*/
+
+
+.page-footer {
+   margin-top: 80px;
+   padding: 0;
+   height: 150px;
+   background-color: rgba(63, 70, 36, 0.8);
+}
+
+#footer-details {
+  padding-top: 10px;   
+}
+
+/*  Admin link text- --*/
+/*.admin-link a {
+    text-align: center;
+    font-size: 20px;
+    color: orangered;
+    margin-top: 0px;
+    position: absolute;
+    left: 30%;
+    top: 60%;
+}
+*/
+
+.admin-desc {
+    font-size: 18px;
+    margin-top: 1.1rem;    
+}
+
+
+.admin-button {
+  background-color: orange; 
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 34px;
+  border-radius: 6px;  
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  margin-top: 50px;
+}
+
+.model-display {
+   background-color: rgb(9, 119, 45); 
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;  
+  border-radius: 6px;  
+  cursor: none;
+  font-weight: bold;
+  border: none;
+ 
+}
+
+.specs {
+    font-size: 14px;
+   font-weight: bold;
+    color: orange;
+}
+
+.specs-db {
+    font-weight: bold;
+}
+
+/* cabs page div --*/
+#one {    
+    background-color: #2F4F4F;  
+    height: 30px;
+  width: 100%;  
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #fafafa;
+    
+}
+
+#two {
+    border: 2px solid blue;
+    height: 150px;
+   width: 90%;  
+   position: relative;
+  left: 7%;
+  margin-bottom: 20px;
+}
+
+#thre {
+    height: 40px;
+  width: 80%;  
+  padding: 30px;
+  margin-bottom: 10px;
+  display: none;  
+  background-color: grey;
+  position: relative;
+  left: 10%;
+  
+}
+
+.book-thisCab {
+    margin-top: 110px;    
+}
+
+.book_btn {   
+    width: 90%;  
+   position: relative;
+  left: 5%;  
+}
+
+/*----------------------------------Social Media icons-*/
+.social-icon {
+    display: flex;
+    padding-bottom: 15px;
+  float: right;
+  padding-top: 35px;  
+  margin-top: 30px;
+}
+
+.social-icon li a i {
+  width: 30px;
+  height: 30px;
+  padding: 12px 0;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 7px;
+  text-align: center;
+  color: #fafafa;
+  background: orange;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+.social-icon li a i:hover {
+  background: #e84610;
+}
+
+.social-sub {
+  position: absolute;
+  right: 20px;  
+}
+.social-icon li {
+    margin-left: 20px;
+}
+/*-------------------------- End of Social Media-*/
+
+
+/*---------------------------------------Media Queries--*/
+@media screen and (max-width: 743px) {
+  #cover-text {
+    display: none;
+  }
+
+  #driver-text {
+    display: none;
+  }
+
+  .social-sub {
+    position: absolute; 
+    left: 20px;
+  }
+
+  .page-footer {
+    margin-top: 50px;
+    padding: 0;
+    /* height: 140px; */
+    background-color: rgba(63, 70, 36, 0.8);
+}
+
 }

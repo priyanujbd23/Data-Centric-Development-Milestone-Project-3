@@ -5,6 +5,35 @@
 
 <div class="container">
     <h5>Booked Cabs</h5>
+
+    <!--- Search form-->
+
+  <div class="row card-panel grey lighten-5">
+        <form class="col s12" action="{{ url_for('search_booking') }}" method="POST">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fa fa-search prefix light-blue-text text-darken-4"></i>
+                    <input type="text" id="query" name="query" minlength="3" class="validate" required>
+                    <label for="query">Search Bookings</label>
+                </div>
+                <div class="col s12 m4">
+                    <button class="light-blue darken-1 btn text-shadow" type="submit">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                    <a href="{{ url_for('get_bookings') }}" class="red btn text-shadow">Reset</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    <li class="active"><a href="#!">1</a></li>
+    <li class="waves-effect"><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
     
     {% for booking in bookings %}
      <div class="row">
@@ -31,11 +60,10 @@
              <td><img class="materialboxed responsive-img" width="200" src="{{booking.booking_img}}"></td>
              <td>{{booking.booking_date}}</td> 
             
-
-
           </tr>       
       </table>
 </div>
+
       <br><br>
       <div class="row">      
       <a href="" class="waves-effect waves-light btn btn-style orange">find this Cab</a>     
