@@ -86,7 +86,7 @@ def delete_cab(cab_id):
     return redirect(url_for('get_cabs'))
 
 
-# find a book by using a search field
+# find a cab by using a search field
 @app.route('/get_one/<cab_id>', methods=['GET'])
 def get_one(cab_id):
     cab = mongo.db.cabs
