@@ -23,17 +23,24 @@
   list-style-type: none;
   letter-spacing: 2px;  
   padding-bottom: 10px;  
+  background-color:  #3e4623;
+ 
+}
+
+nav .nav-wrapper {
+    position: relative;   
+    height: 70px;
 }
 
 .navbar-nav a {
   text-decoration: none;
   color: #fafafa;
-   font-size: 22px;
+   font-size: 18px;
   list-style-type: none  
 }
 
 .navbar-nav a:hover {
-  border-bottom: 2px solid rgba(24, 24, 23, 0.8);
+  border-bottom: 2px solid rgba(223, 166, 10, 0.8);
 }
 
 .navbar-nav .active {
@@ -72,34 +79,8 @@ width: 100%;
 
 /*------ Login Section ------*/
 
-h1 {
-	padding-top: 6rem;
-	text-align: center;
-}
 
-.active {
-	border-bottom: 3px solid #000000;
-}
 
-#alerts {
-    position: absolute;
-    display: none;
-    min-height: 50px;
-    top: 95%;
-    left: 0;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-}
-
-#alerts p {
-    margin: 10px 0px;
-}
-
-.card.small {
-    height: 300px;
-    margin-top: 60px;
-}
 
 /*- Headings */
 
@@ -107,16 +88,19 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     color: orangered;
+     font-weight: bold;
 }
 
 #services-heading {
     text-align: center;
     margin-bottom: 30px;
     color: orangered;
+     font-weight: bold;
 }
 
 .main-subheading {    
     color: orangered;
+    font-weight: bold;
 }
 
 #admin-title {
@@ -124,11 +108,14 @@ h1 {
     margin-top: 50px;
     margin-bottom: 30px;
     color: orangered;
+     font-weight: bold;
 }
 
 .admin-header {
     text-align: center;
-    margin-bottom: 30px;    
+    margin-bottom: 30px; 
+     font-weight: bold;  
+     color:  rgba(63, 70, 36, 0.8); 
 }
 
 
@@ -229,65 +216,74 @@ text-align: center;
 }
 
 .model-display {
-   background-color: rgb(9, 119, 45); 
+  background-color:  #fb8c00;
   color: white;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;  
+  font-size: 1.2rem;  
   border-radius: 6px;  
-  cursor: none;
+  cursor: pointer; 
+  border: none; 
   font-weight: bold;
-  border: none;
- 
 }
 
 .specs {
-    font-size: 14px;
-   font-weight: bold;
-    color: orange;
+    font-size: 1.1rem;
+   font-weight: bold;   
+   margin-bottom: 5px; 
 }
 
 .specs-db {
     font-weight: bold;
+    color: green;
 }
 
-/* cabs page div --*/
-#one {    
-    background-color: #2F4F4F;  
+.specs1 {
+    font-size: 1.1rem;
+   font-weight: bold;   
+   margin-bottom: 100px; 
+}
+
+.specs-db1 {
+    font-weight: bold;
+    color: green;
+}
+
+/* ----- cabs page div --*/
+
+.search-container {
+    position: relative;
+    left: 10%;
+    margin-top: 50px;
+}
+
+.available {    
+   background-color:#26a69a;
     height: 30px;
-  width: 100%;  
-  margin-bottom: 10px;
+  width: 90%;  
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 15px;
+  font-weight: bold;
   color: #fafafa;
+   position: relative;
+  left: 7%;
     
 }
 
-#two {
-    border: 2px solid blue;
+.book-it {   
     height: 150px;
    width: 90%;  
    position: relative;
   left: 7%;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
-#thre {
-    height: 40px;
-  width: 80%;  
-  padding: 30px;
-  margin-bottom: 10px;
-  display: none;  
-  background-color: grey;
-  position: relative;
-  left: 10%;
-  
-}
 
 .book-thisCab {
-    margin-top: 110px;    
+    margin-top: 60px;    
 }
 
 .book_btn {   
@@ -295,6 +291,173 @@ text-align: center;
    position: relative;
   left: 5%;  
 }
+
+#modal1 {
+    width: 400px;    
+}
+
+#rates {
+    font-size: 48px;
+    color: orange;
+    text-align: center;
+    padding: 5px;
+}
+
+#currency {
+    font-size: 50px;
+    color: orangered;
+    }
+
+.for-hire {
+     color:  #fafafa;
+     font-size: 1.1rem;
+}
+
+/*--------Bookings --*/
+
+.bookings-search {
+    position: relative;
+    left: 10%;
+    margin-top: 50px;
+}
+
+#contact-heading {
+  padding: 5px; 
+  text-align: center;
+}
+
+#contact-details { 
+  text-align: center;
+  padding: 15px;
+  
+}
+
+.booker-info {
+    padding: 50px;
+}
+
+.cab-headings {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: orangered;
+    font-weight: bold;    
+    position: relative;
+    right: 18%;
+}
+
+/*------------------------------------Find a specific Cab page----*/
+
+.page-headings {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: orangered;
+     font-weight: bold;
+}
+
+.findcab-container {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.delete-btn {
+    margin-left: 40px;
+}
+
+/*-------------------------------Search for Cabs by Model or Brand --*/
+
+.results-container {
+    margin-top: 100px;
+    margin-bottom: 300px;
+}
+
+
+/*-------------------------Add Booking Page --*/
+
+.addBooking-container {
+    width: 50%;
+    padding: 50px;
+    
+}
+
+/*-------------------------Edit Cab Page --*/
+
+.editCab-container {
+    width: 50%;
+    padding: 50px;
+}
+
+
+/*----------------------------------Admin Section---*/
+
+/*--------Add Vehicle Type --*/
+
+.types-heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+}
+
+.types-text {
+    font-size: 18px;
+    font-weight: bold;    
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.available-types {    
+  background-color:  #4db6ac;
+    height: 40px;
+  width: 90%;  
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fafafa;
+   position: relative;
+  left: 7%;
+  padding: 1px 2px;
+    
+}
+
+.name-type {   
+    height: 150px;
+   width: 90%;  
+   position: relative;
+  left: 7%;
+  margin-bottom: 5px;
+}
+
+.addType-container {
+    width: 50%;
+    padding: 20px;
+}
+
+.new-types {
+    padding: 60px;
+}
+
+/* Edit Vehicle Type */
+
+.editType-container {
+    width: 50%;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 300px;
+}
+
+/*----------- New Vehicle Brand --*/
+
+.addBrand-container {
+    width: 50%;
+    padding: 20px;
+}
+
+
+
+
+
 
 /*----------------------------------Social Media icons-*/
 .social-icon {
@@ -355,5 +518,14 @@ text-align: center;
     /* height: 140px; */
     background-color: rgba(63, 70, 36, 0.8);
 }
+ /* search bar */
+ .orange.lighten-2 {
+    background-color: #ffb74d !important;
+    margin-bottom: 10px;
+}
+
+ .fa {    
+    display: none;
+ }
 
 }
