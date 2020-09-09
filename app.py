@@ -158,7 +158,7 @@ def get_brand():
 # edits a Brand Name
 @app.route('/edit_brand/<brand_id>')
 def edit_brand(brand_id):
-    return render_template('brands.html',
+    return render_template('editbrand.html',
                            brand=mongo.db.brands.find_one(
                             {'_id': ObjectId(brand_id)}))
 
@@ -186,7 +186,7 @@ def get_model():
 # edit the Model
 @app.route('/edit_model/<model_id>')
 def edit_model(model_id):
-    return render_template('models.html',
+    return render_template('editmodel.html',
                            model=mongo.db.models.find_one(
                             {'_id': ObjectId(model_id)}))
 
