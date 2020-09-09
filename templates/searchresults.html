@@ -3,38 +3,61 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <h5>Results</h5>
-
-    {% for cab in cabs %}
-     <div class="row">
-<table class=" striped responsive-table">       
-          <tr class="table-text grey">              
-              <th>Vehicle Type</th>
-              <th>Cab Name</th>
-              <th>Model</th>
-              <th>Location</th>
-              <th>Email</th>              
-              <th>Tel nr</th>                           
-              <th>Picture</th>
-              <!--<th><i class="fa fa-calendar"></i> Date</th> -->
-          </tr>             
-          <tr>
-            <td>{{cab.vehicle_type}}</td>                 
-            <td>{{cab.brand_name}}</td> 
-             <td>{{cab.model_name}}</td>
-             <td>{{cab.cab_location}}</td>
-             <td>{{cab.email}}</td>                 
-            <td>{{cab.tel_nr}}</td>              
-             <td><img class="materialboxed responsive-img" width="200" src="{{cab.cab_picture}}"></td>
-             <!-- <td>{{cab.cab_date}}</td>   -->                
-          </tr>       
-      </table>
-</div>      
-      <div class="row">      
-      <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style orange">find this Cab</a>     
+      
+    <div class="container results-container">
+    <h4 class="page-headings">Results</h4>
+     <!-- trial----->
+     {% for cab in cabs %}
+    <div class="row grey lighten-5">
+      <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img class="materialboxed responsive-img" width="200" src="{{cab.cab_picture}}">        
+        </div>                
       </div>
-         {% endfor%}
-</div>
+      </div>
+
+        <!-- Cab Model ccolumn-->
+      <div class="col s12 m4 l4"> 
+       <div class="card-content center-align">
+      <h4 class="model-display">{{cab.brand_name}}  {{cab.model_name}}</h4>       
+          <p class="specs1">Vehicle Type | <span class="specs-db1">{{cab.vehicle_type}}</span></p> 
+          <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">See Rates</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+        <div class="modal-content">
+      <h6>Base Rates From</h6>       
+        <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
+        <small>Additional charges may apply as per distance ot toll charges</small>
+    </div>
+        <div class="modal-footer">        
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+    </div> 
+              <!--End- Modal Structure -->   
+     </div>     
+     </div>
+        <!-- End Cab Model ccolumn-->
+
+      <div class="col s12 m4 l4">      
+    <div class="available">
+    <p class="for-hire">THIS VEHICLE IS AVAILABLE FOR HIRE.</p>
+    </div>
+    <div class="book-it">
+        <p class="specs"><span class="material-icons green-text">location_on</span> - {{cab.cab_location}}</p>
+        <p class="specs"><span class="material-icons blue-text">email</span> - {{cab.email}}</p> 
+        <p class="specs"><span class="material-icons blue-text">phone_in_talk</span> - {{cab.tel_nr}}</p>    
+        </div>       
+     <div id="book-thisCab">      
+      <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style book_btn">book this Cab</a>     
+      </div>
+      </div>
+      <!-- End book this Cab -->
+    </div>  
+     {% endfor%}      
+     </div>
+
 {% endblock%}
     
