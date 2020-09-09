@@ -2,8 +2,8 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-<h5> Edit Car Brand</h5>
+<div class="container editBrand-container">
+<h4 class="page-headings"> Edit Car Brand</h4>
 <div class="row">
 <!---------- Form -------------->
     
@@ -14,7 +14,7 @@
             <div class="input-field col s12">
                 <i class="material-icons prefix">poll</i>
                 <input id="brand_name" name="brand_name" type="text" class="validate" value="{{brand.brand_name}}">
-                <label for="category_name">Brand Name</label>
+                <label for="brand_name">Brand Name</label>
             </div>
         </div>
         <div class="row">
