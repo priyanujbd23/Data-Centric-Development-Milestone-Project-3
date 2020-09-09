@@ -3,13 +3,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <h5>Booked Cabs</h5>
+<div class="container bookings-search">
+    <h4 class="cab-headings">Booked Cabs</h4>
 
     <!--- Search form-->
 
-  <div class="row card-panel grey lighten-5">
-        <form class="col s12" action="{{ url_for('search_booking') }}" method="POST">
+  <div class="row ">
+        <form class="col s12 m8" action="{{ url_for('search_booking') }}" method="POST">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
                     <i class="fa fa-search prefix light-blue-text text-darken-4"></i>
@@ -17,57 +17,53 @@
                     <label for="query">Search Bookings</label>
                 </div>
                 <div class="col s12 m4">
-                    <button class="light-blue darken-1 btn text-shadow" type="submit">
-                        <i class="fas fa-search left"></i> Search
+                    <button class="orange lighten-2 btn" type="submit">
+                        <i class="fa fa-search left"></i> Search
                     </button>
-                    <a href="{{ url_for('get_bookings') }}" class="red btn text-shadow">Reset</a>
+                    <a href="{{ url_for('get_bookings') }}" class="red btn text-shadow">Cancel</a>
                 </div>
             </div>
         </form>
     </div>
-    <ul class="pagination">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  </ul>
+   
+    </div>
+     <!--End of Seaarch Box -->
     
-    {% for booking in bookings %}
-     <div class="row">
-<table class=" striped responsive-table">       
-          <tr class="table-text grey">              
-              <th>Vehicle Type</th>
-              <th>Cab Name</th>
-              <th>Model</th>
-              <th>Location</th>
-              <th>Name</th>
-              <th>Email</th>              
-              <th>Tel nr</th>                           
-              <th>Picture</th>
-              <th>Date</th> 
-          </tr>             
-          <tr>
-            <td>{{booking.vehicle_type}}</td>                 
-            <td>{{booking.brand_name}}</td> 
-             <td>{{booking.model_name}}</td>
-             <td>{{booking.booking_location}}</td>
-             <td>{{booking.booking_name}}</td>
-             <td>{{booking.booking_email}}</td>                 
-            <td>{{booking.booking_tel}}</td>              
-             <td><img class="materialboxed responsive-img" width="200" src="{{booking.booking_img}}"></td>
-             <td>{{booking.booking_date}}</td> 
-            
-          </tr>       
-      </table>
-</div>
+    <div class="container bookings-container">
 
-      <br><br>
-      <div class="row">      
-      <a href="" class="waves-effect waves-light btn btn-style orange">find this Cab</a>     
+    {% for booking in bookings %}
+
+     <div class="row grey lighten-4">
+      <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img class="materialboxed responsive-img" width="200" src="{{booking.booking_img}}">        
+        </div>                
       </div>
+      </div>
+
+      <div class="col s12 m4 l4 center-align">
+      <div class="new">
+      <h4 class="model-display">{{booking.brand_name}}  {{booking.model_name}}</h4>    
+      <p class="specs">Vehicle Type | <span class="specs-db">{{booking.vehicle_type}}</span></p> 
+      <p class="specs">Booked Location | <span class="specs-db">{{booking.booking_location}}</span></p> 
+      <p class="specs">Booked By | <span class="specs-db">{{booking.booking_name}}</span></p>       
+      </div>      
+      </div>
+
+    <!-- Contact Details  --> 
+      <div class="col s12 m4 l4 center-align"> 
+      <div class="booker-info">
+    <p class="specs">{{booking.booking_name}}'s | <span class="specs-db">Contact info</span></p>      
+       
+      <p class="specs">Email Address | <span class="specs-db">{{booking.booking_email}}</span></p> 
+      <p class="specs">Phone Number | <span class="specs-db">{{booking.booking_tel}}</span></p>
+      <p class="specs">Booking Date | <span class="specs-db">{{booking.booking_date}}</span></p>      
+        </div>
+      </div>  
+    </div>
+     
+      
     {% endfor %}
 </div>
 {% endblock%}
