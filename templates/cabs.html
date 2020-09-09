@@ -64,13 +64,13 @@
         <!-- End Cab Model ccolumn-->
 
       <div class="col s12 m4 l4">      
-    <div class="available">
+    <!--<div class="available"></div> -->
     <p class="for-hire">THIS VEHICLE IS AVAILABLE FOR HIRE.</p>
-    </div>
+    
     <div class="book-it">
-        <p class="specs"><span class="material-icons green-text">location_on</span> - {{cab.cab_location}}</p>
-        <p class="specs"><span class="material-icons blue-text">email</span> - {{cab.email}}</p> 
-        <p class="specs"><span class="material-icons blue-text">phone_in_talk</span> - {{cab.tel_nr}}</p>    
+        <p class="specs">Location| <span class="specs-db"> {{cab.cab_location}}</span></p>
+        <p class="specs">Email Address | <span class="specs-db"> {{cab.email}}</span></p> 
+        <p class="specs">Phone Number | <span class="specs-db"> {{cab.tel_nr}}</span></p>    
         </div>       
      <div id="book-thisCab">      
       <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style book_btn">book this Cab</a>     
@@ -80,7 +80,7 @@
     </div>        
      </div>
      
-         {% endfor%}
+         {% endfor %}
     
-{% endblock%}
+{% endblock %}
     
