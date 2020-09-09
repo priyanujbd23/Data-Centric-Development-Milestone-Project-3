@@ -3,35 +3,35 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <h5>Cabs Page</h5>
+<div class="container search-container">
+    <h4 class="cab-headings">Cabs </h4>
 <!--- Search Cabs form-->
 
-  <div class="row card-panel grey lighten-5">
-        <form class="col s12" action="{{ url_for('search') }}" method="POST">
+  <div class="row search-box">
+        <form class="col s12 m8" action="{{ url_for('search') }}" method="POST">
             <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
+                <div class="input-field col s12 m6">
                     <i class="fa fa-search prefix light-blue-text text-darken-4"></i>
                     <input type="text" id="query" name="query" minlength="3" class="validate" required>
                     <label for="query">Search Cab</label>
                 </div>
                 <div class="col s12 m4">
-                    <button class="light-blue darken-1 btn text-shadow" type="submit">
-                        <i class="fas fa-search left"></i> Search
+                    <button class="orange lighten-2 btn" type="submit">
+                        <i class="fa fa-search left"></i> Search
                     </button>
-                    <a href="{{ url_for('get_cabs') }}" class="red btn text-shadow">Reset</a>
+                    <a href="{{ url_for('get_cabs') }}" class="red btn text-shadow">Cancel</a>
                 </div>
             </div>
         </form>
     </div>
      </div>
     <br><br>
-  
+   
      {% for cab in cabs %}
      
-    <div class="container cabs-container  grey lighten-5">
+    <div class="container cabs-container">
      <!-- trial----->
-    <div class="row">
+    <div class="row grey lighten-5">
       <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
@@ -40,31 +40,44 @@
       </div>
       </div>
 
+        <!-- Cab Model ccolumn-->
       <div class="col s12 m4 l4"> 
-       <div class="card-content  center-align">
-      <h4 class="model-display">{{cab.model_name}}</h4>
-       
-          <p class="specs">Vehicle Type</p>
-          <p class="specs-db">{{cab.vehicle_type}}</p>
-          <p class="specs">Vehicle Brand</p>
-          <p class="specs-db">{{cab.brand_name}}</p>
-            </div>               
-       
-        </div>
+       <div class="card-content center-align">
+      <h4 class="model-display">{{cab.brand_name}}  {{cab.model_name}}</h4>       
+          <p class="specs1">Vehicle Type | <span class="specs-db1">{{cab.vehicle_type}}</span></p> 
+          <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">See Rates</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+        <div class="modal-content">
+      <h6>Base Rates From</h6>       
+        <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
+        <small>Additional charges may apply as per distance ot toll charges</small>
+    </div>
+        <div class="modal-footer">        
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+    </div> 
+              <!--End- Modal Structure -->   
+     </div>     
+     </div>
+        <!-- End Cab Model ccolumn-->
 
       <div class="col s12 m4 l4">      
-    <div id="one">
-    <p>THIS CAR IS AVAILABLE FOR HIRE.</p>
+    <div class="available">
+    <p class="for-hire">THIS VEHICLE IS AVAILABLE FOR HIRE.</p>
     </div>
-    <div id="two">
-        <p class="specs-db"><span class="material-icons green-text">location_on</span> - {{cab.cab_location}}</p>
-        <p class="specs-db"><span class="material-icons blue-text">email</span> - {{cab.email}}</p> 
-        <p class="specs-db"><span class="material-icons DarkSlateGray-text">phone_in_talk</span> - {{cab.tel_nr}}</p>    
+    <div class="book-it">
+        <p class="specs"><span class="material-icons green-text">location_on</span> - {{cab.cab_location}}</p>
+        <p class="specs"><span class="material-icons blue-text">email</span> - {{cab.email}}</p> 
+        <p class="specs"><span class="material-icons blue-text">phone_in_talk</span> - {{cab.tel_nr}}</p>    
         </div>       
      <div id="book-thisCab">      
-      <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style book_btn orange">book this Cab</a>     
+      <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style book_btn">book this Cab</a>     
       </div>
       </div>
+      <!-- End book this Cab -->
     </div>        
      </div>
      
