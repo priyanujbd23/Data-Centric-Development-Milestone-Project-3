@@ -216,13 +216,13 @@ text-align: center;
 }
 
 .model-display {
-  background-color:  #fb8c00;
+  background-color: orange;
   color: white;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.2rem;  
+  font-size: 1.5rem;  
   border-radius: 6px;  
   cursor: pointer; 
   border: none; 
@@ -351,8 +351,9 @@ text-align: center;
 .for-hire {
     font-size: 18px;
    font-weight: bold;
-   color: orange;
+   color: rgb(31, 104, 238);
    text-align: center;
+   text-transform: uppercase;
 }
 
 /*------------------------------------Find a specific Cab page----*/
