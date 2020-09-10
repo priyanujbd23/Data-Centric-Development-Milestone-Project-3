@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container profile-container">
+    <div class="row">
+        <div class="col s12 m8 offset-m2 center-align">
+            <div class="card-panel">
+                <h5 class="center-align light-blue-text text-darken-4">You are logged in as
+                    {{ username }}   
+                </h5>
+                <p><strong> As a registered user you can access the admin section to add or modify a Cab</strong></p>
+                <br>
+                <a href="{{ url_for('admin_page') }}" class="waves-effect waves-light btn">
+                <span class="material-icons"></span>Visit the admin page</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
