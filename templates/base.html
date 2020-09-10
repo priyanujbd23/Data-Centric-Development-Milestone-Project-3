@@ -23,8 +23,15 @@
         <li><a href="{{ url_for('home_page') }}">Home</a></li>
         <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
         <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
-        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>       
-        <li><a href="{{ url_for('admin_page') }}"> Admins</a></li>  
+        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>         
+        {% if session.user %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>      
+                   
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">LogIn</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}  
       </ul>
     </div>     
   </nav>
@@ -34,13 +41,34 @@
         <li><a href="{{ url_for('home_page') }}">Home</a></li>
         <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
         <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
-        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
-        <li><a href="{{ url_for('admin_page') }}">Admin</a></li> 
+        <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>        
+        {% if session.user %}
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>                    
+                   
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %} 
                          
   </ul>
 </div>
 </header>
 <!----------Login stff -Temp stuff---->
+ <!-- top navbar -->
+       
+        <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
 
 <!------------  End login --- -->
        
