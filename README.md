@@ -140,67 +140,74 @@ This projet is built using HTML, CSS, Javascript, jQuery and Materialize
    1. from home page navigate to the other pages on the website. The link s work as intended.
    2. clicking on the logo brings you to the home page.
 
-2. Video:
-   1. click on the video. It plays on small and full screen sizes. 
+2. Home Page:
+   1. click on the Hire a Cab. It takes you to the Book a Cab page. 
+   2. Click on Become a Driver. It takes you to the Register Page where you can become a member   
+   3. The button at the bottom of the page also takes you to the Book a Cab page
 
-3. cover text(Fresh Salad for all):
+3. Cover text(Hire a Cab and Become a Driver):
    1. Open this website on mobile version. This content is set to hide on small screens less than 763px
 
-4. Contact Form:
-   1. Go to the "Contact" page
-   2. Submit empty form and verify that an error message about the required fields appears
-   3. Submit the form with an invalid email and see a message asking you to fill the inromation in the required fields 
-   4. Try to click on the map. It opens up in a new tab allowing you to search for a location directly from this website
-  
-5. Sign up Form:
-   1. Go to the "Sign Up" page
-   2. Submit empty form and verify that an error message about the required fields appears
-   3. Submit the form with an invalid email and see a message asking you to fill the inromation in the required fields 
-   4. Try to submit a form by clicking on the social medial icons. They open in separate tabs aalowing you to sign up.
+4. Cabs Page:
+   1. Go to Cabs page. Enter a vehicle type or model in the search box. Click search or cancel to stop the search. The results are displayed   in a separate page.
+   2. Click on the "See Ratea" modal. It pops up with the base rates per ride.
+   3. Click on "Book IT". It opens a page where you can book this cab or edit preferences. 
 
-6. Sign up Form:
-   1. Go to the "Sign Up" page
+5. Book Cab Page:
+   1. Fill in the booking form. You can only choose from the given vehicle types, brands and models in the drop-down options
+   2. Fill your information and add a url link for a picture of the cab. Click on Book it. It takes you to the "Bookings Page"
+
+5. View Bookings Page:
+   1. Go to "View Bookings" page. Enter a vehicle type or model in the search box. Click search or cancel to stop the search. The results       are displayed in a separate page.
+        
+6. Register Form:
+   1. Go to the "Register" page
+   2. Submit empty form and verify that an error message about the required fields appears
+   3. Submit the form with an invalid email and see a message asking you to fill the information in the required fields 
+   4. Try to submit a form with password shorter than 5 characters or longer than 15 characters. You get an error message
+   5. Try to submit a form by clicking on the Log In link. It take you to the Log In page where you can log in if you already have an account
+
+7. Log In Form:
+   1. Go to the "Log In" page. Log in or click on "Register Account" if you haven't yet got an account
+    
+8. Profile Page:
+   1. It is only visible when you log in. It displays a welcome message with the username in session. Click on the "Log out" link. 
+   2. It brings you back to the profile page and displays a flash message that user is logged out
  
-7. Social Media icons:
+9. Social Media icons:
    1. Go to the footer section at the bottom of each page
    2. Try clicking on any social icons. They each open in separate tabs 
  
-8. Tablets and mobiles:
+10. Tablets and mobiles:
     1. The website is optimized for mobile viewing. The media queries display the pages correctly.
     2. Try running the page in mobile mode and see how it correctly fits to the size of the screen 
   
 
 ## Deployment
 
-The code consist of static website developed using HTML, CSS and Bootstrap. This code does not contain any executable file. The website is hosted
-using Github pages. This can be located via:
-   - Settings tab on the repository page
-   - Github pages
-   - Under Github pages select source and choose master branch. This will then use the mastr branch for the Github pages
+The code consist of interactive website developed using HTML, CSS Javascript, jQuery and Materialize. This code does not contain any executable file. The website is hosted using Heroku. This can be located via:
+   - Settings tab on the app page in Heroku 
+   - click "Open app" on the top right corner of the page
+   - This will open the app in a new page and reveal the project url in Heroku.
 
 ## Credits
 
 ### Content
 
-- Tips for the main-content rows and colums of the home page was taken and edited from:
-  - https://websitesetup.org/bootstrap-tutorial-for-beginners/
+- Code for the cards on the home page was taken and edited from:
+  - https://materializecss.com/cards.html
   
-- The code for the contact form was taken and edited from:
-  - https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp
+- The code for the forms was taken and edited from:
+  - https://materializecss.com/
   
-- The code fpr the Map was taken from:
-  - https://www.maps.ie/create-google-map/
+- The code for the Flask Log In was taken from:
+  - https://github.com/TravelTimN/flask-task-manager-project/tree/master/templates 
   
-- The code for the sign up form was taken and edited from: 
-  - https://mdbootstrap.com/docs/jquery/forms/basic/?#!
-  
-### Media
-  
-- The video was taken from:
-  - https://www.pexels.com/video/a-person-tossing-a-vegetable-salad-in-a-bowl-3189049/
-  
+### Media  
+
 - The images were taken from the royalty free website at:
   - https://www.pexels.com/search/eating/ 
+  - https://unsplash.com/
 
 ### Acknowledgements
-- I received inspiration for this project from the Love Running project.
+- I received inspiration for this project from the private cab companies.
