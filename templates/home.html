@@ -27,14 +27,14 @@
 <!----------End Hero image -------------->
 <div class="container welcome-text center-align">
 <div class="row">
-
-<h3 id="main-heading">Grenfied Cab Agency</h3>
-<p>Grenfied City Cabs is cab agengy located in the North London. It began as a small family busines 10 years ago and has gained considerable trust and from its cutomers. This is due to the it's reliability and consistent method of operation. Our drivers are well screened to make sure that they reflect the company label. This is particurlary essential since they represent the face of the company to every customer they come in contact with.</p>
+<h4 id="main-heading">CityCabs Agency</h4>
+<p> CityCabs is a cab agengy located in North London. It began as a small family busines 10 years ago and has gained considerable trust and from its cutomers. This is due to the it's reliability and consistent method of operation. Our drivers are well screened to make sure that they reflect the company label. This is particurlary essential since they represent the face of the company to every customer they come in contact with.
+</p>
 </div>
 </div>
 
-<div class="container center-align">
-<h3 id="services-heading">Services</h3>
+<div class="container services-container center-align">
+<h5 id="services-heading">Services</h5>
 <!----------city tours -------------->
 <div class="row">
 </div>    
@@ -86,7 +86,7 @@
     </div>
     <!--------- End Escusions---------->
   </div> 
-  <br><br>
+ 
   
     <div class="row">  
     <!--------- Camper---------> 
@@ -139,32 +139,13 @@
     </div>
     <!--------- End become a driver---------->  
     </div>
-    <br><br>
 
  <div class="row">
  <div class="left">
  <a href="{{ url_for('add_booking') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left">book_online</i>Book A Cab</a>
  </div>
- <div class="right">
- <a href="{{ url_for('admin_page') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left">local_taxi</i>Become  A Driver</a>
+ 
  </div>
- </div>
-
-<div class="row">
-<!----Modal-->
-    <!-- Modal Trigger -->
-  <button data-target="modal1" class="btn modal-trigger">Add a Cab</button>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-   
-    <div class="modal-footer">
-    <a href="{{ url_for('admin_page') }}">Admin</a>
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-  <!--- End -Modal-->
-  </div>
 </div>
 
 {% endblock %}

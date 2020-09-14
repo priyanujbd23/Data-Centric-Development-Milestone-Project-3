@@ -22,13 +22,13 @@ def home_page():
 
 @app.route('/get_cabs')
 def get_cabs():
-    return render_template('cabs.html', cabs=mongo.db.cabs.find())
+    return render_template('cabs/cabs.html', cabs=mongo.db.cabs.find())
 
 
 # Add a cab
 @app.route('/add_cab')
 def add_cab():
-    return render_template('addcab.html', types=mongo.db.types.find(),
+    return render_template('cabs/addcab.html', types=mongo.db.types.find(),
                            brands=mongo.db.brands.find(),
                            models=mongo.db.models.find(),
                            bookings=mongo.db.bookings.find())
@@ -54,7 +54,7 @@ def edit_cab(cab_id):
     all_types = mongo.db.types.find()
     all_brands = mongo.db.brands.find()
     all_models = mongo.db.models.find()
-    return render_template('editcab.html', cab=a_cab,
+    return render_template('cabs/editcab.html', cab=a_cab,
                            types=all_types, brands=all_brands,
                            models=all_models)
 
@@ -91,20 +91,20 @@ def delete_cab(cab_id):
 def get_one(cab_id):
     cab = mongo.db.cabs
     cab = mongo.db.cabs.find_one({'_id': ObjectId(cab_id)})
-    return render_template('findcab.html', cab=cab)
+    return render_template('cabs/findcab.html', cab=cab)
 
 
 # get booked cabs
 @app.route('/get_bookings')
 def get_bookings():
-    return render_template('bookings.html',
+    return render_template('bookings/bookings.html',
                            bookings=mongo.db.bookings.find())
 
 
 # add booking
 @app.route('/add_booking')
 def add_booking():
-    return render_template('addbooking.html', types=mongo.db.types.find(),
+    return render_template('bookings/addbooking.html', types=mongo.db.types.find(),
                            brands=mongo.db.brands.find(),
                            models=mongo.db.models.find(),
                            bookings=mongo.db.bookings.find())
@@ -124,14 +124,14 @@ def insert_booking():
 # Gets the vehicle Types
 @app.route('/get_types')
 def get_types():
-    return render_template('types.html',
+    return render_template('types/types.html',
                            types=mongo.db.types.find())
 
 
 # edits a vehicle Type
 @app.route('/edit_type/<type_id>')
 def edit_type(type_id):
-    return render_template('edittype.html',
+    return render_template('types/edittype.html',
                            type=mongo.db.types.find_one(
                             {'_id': ObjectId(type_id)}))
 
@@ -151,14 +151,14 @@ def update_type(type_id):
 # Gets the Brand Name
 @app.route('/get_brand')
 def get_brand():
-    return render_template('brands.html',
+    return render_template('brands/brands.html',
                            brands=mongo.db.brands.find())
 
 
 # edits a Brand Name
 @app.route('/edit_brand/<brand_id>')
 def edit_brand(brand_id):
-    return render_template('editbrand.html',
+    return render_template('brands/editbrand.html',
                            brand=mongo.db.brands.find_one(
                             {'_id': ObjectId(brand_id)}))
 
@@ -179,14 +179,14 @@ def update_brand(brand_id):
 # Get the Model
 @app.route('/get_model')
 def get_model():
-    return render_template('models.html',
+    return render_template('models/models.html',
                            models=mongo.db.models.find())
 
 
 # edit the Model
 @app.route('/edit_model/<model_id>')
 def edit_model(model_id):
-    return render_template('editmodel.html',
+    return render_template('models/editmodel.html',
                            model=mongo.db.models.find_one(
                             {'_id': ObjectId(model_id)}))
 
@@ -240,7 +240,7 @@ def insert_type():
 # render a view and add a new type
 @app.route('/new_type')
 def new_type():
-    return render_template('addtype.html')
+    return render_template('types/addtype.html')
 
 
 # add Brands
@@ -255,7 +255,7 @@ def insert_brand():
 # render a view and add a new brand
 @app.route('/new_brand')
 def new_brand():
-    return render_template('addbrand.html')
+    return render_template('brands/addbrand.html')
 
 
 # add Model
@@ -270,7 +270,7 @@ def insert_model():
 # render a view and add a new brand
 @app.route('/new_model')
 def new_model():
-    return render_template('addmodel.html')
+    return render_template('models/addmodel.html')
 
 
 # Admin page

@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700");
 
-/*body {
+ /*
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
-  */
+*/
+
   body {
       margin: 0;
       padding: 0;
@@ -14,7 +16,6 @@
   main {
     flex: 1 0 auto;
   }
-
 
 
 /* Navbar  */
@@ -65,6 +66,10 @@ width: 100%;
   margin-top: 0px;
 }
 
+.services-container {
+    height: auto;
+    margin-bottom: 30px;
+}
 
 #hero-img {  
   height: auto;
@@ -93,7 +98,7 @@ width: 100%;
 
 #services-heading {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: orangered;
      font-weight: bold;
 }
@@ -171,15 +176,16 @@ text-align: center;
 
 
 .page-footer {
-   margin-top: 80px;
-   padding: 0;
-   height: 150px;
+   margin-top: 100px;
+   padding: 10;
+   height: 170px;
    background-color: rgba(63, 70, 36, 0.8);
 }
 
-#footer-details {
-  padding-top: 10px;   
+.footer-details {
+ height: 120px;  
 }
+
 
 /*  Admin link text- --*/
 /*.admin-link a {
@@ -225,8 +231,7 @@ text-align: center;
   font-size: 1.5rem;  
   border-radius: 6px;  
   cursor: pointer; 
-  border: none; 
-  font-weight: bold;
+  border: none;  
 }
 
 .specs {
@@ -287,9 +292,9 @@ text-align: center;
 }
 
 .book_btn {   
-    width: 90%;  
+    width: 40%;  
    position: relative;
-  left: 5%;  
+  left: 2%;  
 }
 
 #modal1 {
@@ -349,9 +354,8 @@ text-align: center;
 
 
 .for-hire {
-    font-size: 18px;
-   font-weight: bold;
-   color: rgb(31, 104, 238);
+    font-size: 18px;  
+   color: orangered;
    text-align: center;
    text-transform: uppercase;
 }
@@ -514,16 +518,40 @@ text-align: center;
     line-height: 1;    
 }
 
-/*----------------------------------Social Media icons-*/
-.social-icon {
-    display: flex;
-    padding-bottom: 15px;
-  float: right;
-  padding-top: 35px;  
-  margin-top: 30px;
+/*-----Contact Page ---*/
+.contact-container {
+    height: 500px;
+    width: 100%;    
+}
+#contact {
+    height: 300px;
+    width: 50%;
+    border: 1px solid green;
+    position: relative;
+    left: 25%;
+    top: 120px;
+    background-color: white;
+    border-radius: 10px;
 }
 
-.social-icon li a i {
+
+/*******************************************/
+
+/*----------------------------------Social Media icons-*/
+.social-links {
+  padding-bottom: 15px;
+  float: right;
+  padding-top: 39px;  
+  margin-top: 10;
+  display: flex;
+}
+
+ul:not(.browser-default)>li {
+    list-style-type: none;
+    margin: 5px;
+}
+
+.social-links li a i {
   width: 30px;
   height: 30px;
   padding: 12px 0;
@@ -532,28 +560,60 @@ text-align: center;
   line-height: 7px;
   text-align: center;
   color: #fafafa;
-  background: orange;
+  background: rgb(13, 201, 207);
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
 }
-.social-icon li a i:hover {
+
+.social-links li a i:hover {
   background: #e84610;
+}
+
+#footer-details {
+  padding-top: 10px;   
 }
 
 .social-sub {
   position: absolute;
   right: 20px;  
 }
-.social-icon li {
-    margin-left: 20px;
+
+footer p {
+  font-size: 16px;
 }
+
 /*-------------------------- End of Social Media-*/
 
 
 /*---------------------------------------Media Queries--*/
 @media screen and (max-width: 743px) {
+
+ .container-cover {
+    height: auto;
+    width: 100%;   
+    margin-top: 0px;
+}
+  
+  #main-heading {
+    text-align: center;    
+    color: orangered;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#services-heading {
+    text-align: center;    
+    color: orangered;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+  .welcome-text {    
+    margin-top: 20x;
+ }
+
   #cover-text {
     display: none;
   }
@@ -566,22 +626,46 @@ text-align: center;
     position: absolute; 
     left: 20px;
   }
-
-  .page-footer {
+ 
+ .page-footer {
     margin-top: 50px;
     padding: 0;
-    /* height: 140px; */
-    background-color: rgba(63, 70, 36, 0.8);
+    height: 295px;
+    background-color: rgba(63, 70, 36, 0.8);    
 }
+
+ .social-links {
+    padding-bottom: 15px;
+    float: left;
+    padding-top: 39px;
+    margin-top: 10;
+    display: flex;
+}
+
+.left {
+    float: left !important;
+    position: relative;
+    left: 25%;
+}
+
  /* search bar */
  .orange.lighten-2 {
     background-color: #ffb74d !important;
     margin-bottom: 10px;
 }
-
+/*
  .fa {    
     display: none;
  }
+*/
+
+/*--Booking--*/
+
+.addBooking-container {
+    width: 90%;
+    padding: 3px;
+    margin-top: 10px;
+}
 
 .addCab-container {
     /* width: 50%; */
