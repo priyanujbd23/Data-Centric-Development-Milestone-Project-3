@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+   
+     
+    <div class="container findcab-container">
+     <h4 class="page-headings">Cab</h4>
+     <!-- trial----->
+    <div class="row grey lighten-5">
+      <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image">
+          <img class="materialboxed responsive-img" width="200" src="{{cab.cab_picture}}">        
+        </div>                
+      </div>
+      </div>
+
+        <!-- Cab Model ccolumn-->
+      <div class="col s12 m4 l4"> 
+       <div class="card-content center-align">
+      <h4 class="model-display">{{cab.brand_name}} {{cab.model_name}}</h4>       
+          <p class="specs1">Vehicle Type | <span class="specs-db1">{{cab.vehicle_type}}</span></p> 
+          <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">See Rates</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+        <div class="modal-content">
+      <h6>Base Rates From</h6>       
+        <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
+        <small>Additional charges may apply as per distance ot toll charges</small>
+    </div>
+        <div class="modal-footer">        
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+    </div> 
+              <!--End- Modal Structure -->   
+     </div>     
+     </div>
+        <!-- End Cab Model ccolumn-->
+
+      <div class="col s12 m4 l4">      
+    <!--<div class="available"></div>-->
+    <p class="for-hire">THIS VEHICLE IS AVAILABLE FOR HIRE.</p>
+    
+    <div class="book-it">
+        <p class="specs">Location| <span class="specs-db"> {{cab.cab_location}}</span></p>
+        <p class="specs">Email Address | <span class="specs-db"> {{cab.email}}</span></p> 
+        <p class="specs">Phone Number | <span class="specs-db"> {{cab.tel_nr}}</span></p>  
+        </div>  
+        </div>       
+     
+      <div class="row">
+      <a href="{{ url_for('delete_cab', cab_id=cab._id)}}" class="waves-effect waves-light delete-btn btn btn-style green">delete this Cab</a>
+      <a href="{{ url_for('edit_cab', cab_id=cab._id)}}" class="waves-effect waves-light  edit-btn btn btn-style orange">Edit or book this Cab</a>      
+      </div>   
+         </div>  
+</div>
+ 
+{% endblock%}
+    

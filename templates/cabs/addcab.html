@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container addCab-container">
+ <h4 class="page-headings">Add a new cab</h4>
+<div class="row">
+<!---------- Form -------------->
+
+    <!--Get URL, or use the URL, for the insert_cab function -->
+    <form action="{{ url_for('insert_cab') }}" method="POST" class="col s12">
+    <div class="row">
+    <div class="input-field col s12">
+    <i class="material-icons prefix">local_taxi</i>
+    <!--- Select option for vehicle types-->
+    <select id="type" name="vehicle_type">
+      <option value="" disabled selected>Choose Vehicle</option>
+      <!-- Display each instant of the type-->
+      {% for type in types %}
+        <option value="{{type.vehicle_type}}">{{type.vehicle_type}}</option>
+      {% endfor %}     
+    </select>
+    <label>Vehicle Type</label>
+  </div>      
+    </div>
+    <!---------------End Vehicle Type-------->
+    
+      <!--------------- Vehicle Brand ------->
+      <div class="row">
+    <div class="input-field col s12">
+    <i class="material-icons prefix">branding_watermark</i>
+    <!--- Select option for brand-->
+    <select id="brand" name="brand_name">
+      <option value="" disabled selected>Choose Brand</option>
+      <!-- Display each instant of the type-->
+      {% for brand in brands %}
+        <option value="{{brand.brand_name}}">{{brand.brand_name}}</option>
+      {% endfor %}     
+    </select>
+    <label>Brand</label>
+  </div>    
+    </div>   
+    <!---------------End Vehicle Brand ------->
+
+    <!--------------Vehicle Model ------->
+     <div class="row">
+    <div class="input-field col s12">
+    <i class="material-icons prefix">model_training</i>
+    <!--- Select option for brand-->
+    <select id="model" name="model_name">
+      <option value="" disabled selected>Choose Model</option>
+      <!-- Display each instant of the type-->
+      {% for model in models %}
+        <option value="{{model.model_name}}">{{model.model_name}}</option>
+      {% endfor %}     
+    </select>
+    <label>Model</label>
+  </div>    
+    </div>       
+    <!------------End Vehicle Model ------->
+    <!----------Location------->      
+        <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">location_on</i>
+          <input id="cab_location" name="cab_location" type="tel" class="validate">
+          <label for="icon_telephone">Location</label>
+        </div>  
+        </div> 
+        <!----------End Location ------->
+        <!---------- Email -------------->
+        <div class="row">      
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="email" name="email" type="text" class="validate">
+          <label for="icon_prefix">Email</label>
+        </div>
+        </div>
+         <!----------End email  -------------->
+          <!----------Tel number  -------------->
+        <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="tel_nr" name="tel_nr" type="tel" class="validate">
+          <label for="icon_telephone">Telephone</label>
+        </div>
+        </div> 
+         <!---------- End Tel number --------------> 
+          <!---------- Image URL  -------------->   
+        <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">insert_photo</i>
+          <input id="cab_picture" name="cab_picture" type="text" class="validate">
+          <label for="icon_prefix">Image URL</label>
+        </div>
+        
+
+        </div>
+         <!---------- End Image URL  -------------->
+          <!---------- Date --------------
+        <div class="row">
+        <div id="matfix" class="input-field col s12">
+          <i class="material-icons prefix">date_range</i>
+          <input id="cab_date" name="cab_date" type="text" class="datepicker">
+          <label for="icon_telephone">Date</label>
+        </div>        
+      </div> 
+       -->
+
+       <!-- Switch 
+      <div class="row">       
+        <div class="switch">
+        <label>         
+        <input id="availability" name="availability" type="checkbox">
+        <span class="lever"></span> 
+         Availability     
+        </label>
+        </div>
+      </div>
+      -->   
+      <!---------- Button -------------->
+      <div class="row">
+      <button class="btn waves-effect waves-light  btn-large" type="submit" name="action">Add Cab
+        <i class="material-icons right">playlist_add</i>
+      </button>
+      </div>
+  <!----------End Button -------------->
+    </form>
+     <!----------  -------------->
+      <!---------- End Form -------------->
+  </div>
+  </div>
+
+{% endblock %}
