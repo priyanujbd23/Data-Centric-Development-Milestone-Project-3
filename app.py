@@ -9,7 +9,7 @@ if path.exists("env.py"):
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
+app.config["MONGO_DBNAME"] = "cab_agency"
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 mongo = PyMongo(app)
@@ -399,7 +399,6 @@ def logout():
     return redirect(url_for("login"))
 
 # ----- end login section ---------------/
-
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
