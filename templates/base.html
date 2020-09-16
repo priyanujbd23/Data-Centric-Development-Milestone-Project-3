@@ -16,8 +16,8 @@
 <header>
 <div class="navbar-fixed">
 <nav>
-    <div class="nav-wrapper navbar-nav">
-      <a href="/" class="brand-logo">CityCabs</a>
+    <div class="nav-wrapper navbar-nav blue-grey darken-1">
+      <a href="/" class="brand-logo large">CityCabs</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('home_page') }}">Home</a></li>
@@ -63,7 +63,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+                        <h4 class="amber lighten-2 center-align">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -76,10 +76,10 @@
 
     <!-- Footer-->
  
-    <footer class="page-footer container-fluid"> 
+    <footer class="page-footer container-fluid  blue-grey darken-1"> 
    <div class="row footer-details">
 			<div class="col s12 m6">
-				<h5 class="about-sub">About</h5>
+				<h5 class="about-sub">Sign Up</h5>
 				<p class="inline-block">
 					We welcome new drivers to sign and join our driver program.      
          		        </p>
