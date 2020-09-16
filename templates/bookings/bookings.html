@@ -20,20 +20,20 @@
                     <button class="blue lighten-2 btn search-btn" type="submit">
                         Search
                     </button>
-                    <a href="{{ url_for('get_bookings') }}" class="grey btn cancel-btn text-shadow">Cancel</a>
+                    <a href="{{ url_for('get_bookings') }}" class="grey btn cancel-btn text-shadow cancel-btn">Cancel</a>
                 </div>
             </div>
         </form>
     </div>
    
-    </div>
+    </div> <br><br>
      <!--End of Seaarch Box -->
     
     <div class="container bookings-container">
 
     {% for booking in bookings %}
 
-     <div class="row">
+     <div class="row  yellow lighten-5">
       <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
