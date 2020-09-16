@@ -418,17 +418,16 @@ text-align: center;
     font-weight: bold;    
     text-align: center;
     margin-bottom: 60px;
+    color: green;
 }
 
-.available-types {    
-  background-color:  gray;
+.available-types {      
    height: 28px;
   width: 50%;  
   margin-bottom: 30px;
   text-align: center;
   font-size: 15px;
-  font-weight: bold;
-  color: #fafafa;
+  font-weight: bold; 
    position: relative;
   left: 27%;    
 }
@@ -441,9 +440,12 @@ text-align: center;
   margin-bottom: 5px;
 }
 
+
 .addType-container {
     width: 50%;
     padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 350px;
 }
 
 .new-types {
@@ -464,6 +466,8 @@ text-align: center;
 .addBrand-container {
     width: 50%;
     padding: 20px;
+     margin-top: 60px;
+    margin-bottom: 350px;
 }
 
 .editBrand-container {
@@ -560,7 +564,7 @@ ul:not(.browser-default)>li {
   line-height: 7px;
   text-align: center;
   color: #fafafa;
-  background: rgb(13, 201, 207);
+  background: rgb(223, 151, 18);
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
@@ -568,7 +572,7 @@ ul:not(.browser-default)>li {
 }
 
 .social-links li a i:hover {
-  background: #e84610;
+  background: #a446c9;
 }
 
 #footer-details {
@@ -587,7 +591,7 @@ footer p {
 /*-------------------------- End of Social Media-*/
 
 
-/*---------------------------------------Media Queries--*/
+/*----------------------------------------------------------Media Queries--------------------------------*/
 @media screen and (max-width: 743px) {
 
  .container-cover {
@@ -670,6 +674,177 @@ footer p {
 .addCab-container {
     /* width: 50%; */
     padding: 20px;
+}
+
+
+.addType-container {
+    width: 100%;
+    padding: 0px;
+}
+
+.addModel-container {
+    width: 100%;
+    padding: 0px;
+}
+
+.addBrand-container {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.specs1 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px; 
+}
+
+.cab-headings {
+    text-align: center;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+    color: orangered;
+    /* font-weight: bold; */
+    position: relative;
+    right: 18%;
+}
+
+.search-container {
+    position: relative;    
+    margin-top: 30px;
+    border: 1px solid green;
+    left: 0%;
+}
+
+.cab-headings {
+    text-align: center;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+    color: orangered;
+    /* font-weight: bold; */
+    /* position: relative; */
+    right: 18%;
+}
+
+.cancel-btn {
+    margin-top: 10px;
+}
+
+.booker-info {
+     padding: 10px; 
+}
+
+.bookings-search {
+    position: relative;    
+    margin-top: 30px;
+    border: 1px solid green;
+    left: 0%;
+}
+
+.login-container {    
+    margin-top: 20px;  
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.registe-container {   
+    margin-top: 32px;   
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.profile-container {
+    padding: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px; 
+}
+
+.admin-desc {
+    display: none;    
+}
+
+.admin-button {
+    background-color: orange;
+    color: white;
+    padding: 10;
+    text-align: center;
+    /* text-decoration: none; */
+    display: inline-block;
+    font-size: 16px;
+    /* margin-left: 34px; */
+    border-radius: 6px;
+    cursor: pointer;
+    /* font-weight: bold; */
+    border: none;
+    /* margin-top: 80px; */
+}
+
+.page-headings {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: orangered;
+    /* font-weight: bold; */
+}
+
+.types-heading {
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+}
+
+.new-types {
+     padding: 5px; 
+}
+
+.addType-container {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.editType-container {
+     width: 100%; 
+    padding: 15px; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.editBrand-container {
+     width: 100%; 
+    padding: 15px; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.editModel-container {
+     width: 100%; 
+    padding: 15px; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.addModel-container {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.page-headings {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: orangered;
+    font-weight: normal;
+}
+
+.addCab-container {
+    width: 100%; 
+    padding: 15px;
 }
 
 }
