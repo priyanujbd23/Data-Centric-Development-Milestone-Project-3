@@ -11,7 +11,7 @@
     <form action="{{ url_for('insert_booking') }}" method="POST" class="col s12">
     <div class="row">
     <div class="input-field col s12">
-    <i class="material-icons prefix">poll</i>
+    <i class="material-icons prefix">local_taxi</i>
     <!--- Select option for vehicle types-->
     <select id="type" name="vehicle_type">
       <option value="" disabled selected>Choose Vehicle</option>
@@ -28,7 +28,7 @@
       <!--------------- Vehicle Brand ------->
       <div class="row">
     <div class="input-field col s12">
-    <i class="material-icons prefix">poll</i>
+    <i class="material-icons prefix">branding_watermark</i>
     <!--- Select option for brand-->
     <select id="brand" name="brand_name">
       <option value="" disabled selected>Choose Brand</option>
@@ -45,7 +45,7 @@
     <!--------------Vehicle Model ------->
      <div class="row">
     <div class="input-field col s12">
-    <i class="material-icons prefix">poll</i>
+    <i class="material-icons prefix">model_training</i>
     <!--- Select option for brand-->
     <select id="model" name="model_name">
       <option value="" disabled selected>Choose Model</option>
@@ -61,7 +61,7 @@
     <!----------Location------->      
         <div class="row">
         <div class="input-field col s12">
-          <i class="material-icons prefix">phone</i>
+          <i class="material-icons prefix">location_on</i>
           <input id="booking_location" name="booking_location" type="tel" class="validate">
           <label for="icon_telephone">Location</label>
         </div>  
@@ -78,7 +78,7 @@
         <!---------- Email -------------->
         <div class="row">      
         <div class="input-field col s12">
-          <i class="material-icons prefix">account_circle</i>
+          <i class="material-icons prefix">email</i>
           <input id="booking_email" name="booking_email" type="text" class="validate">
           <label for="icon_prefix">Email</label>
         </div>
@@ -96,7 +96,7 @@
           <!---------- Image URL  -------------->   
         <div class="row">
         <div class="input-field col s12">
-          <i class="material-icons prefix">account_circle</i>
+          <i class="material-icons prefix">insert_photo</i>
           <input id="booking_img" name="booking_img" type="text" class="validate">
           <label for="icon_prefix">Image URL</label>
         </div>
