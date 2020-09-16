@@ -2,8 +2,8 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-<h5>Add Model</h5>
+<div class="container addModel-container">
+<h5 class="page-headings">Add Model</h5>
 <div class="row">
 <!---------- Form -------------->
     
@@ -12,7 +12,7 @@
     <form action="{{ url_for('insert_model') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">poll</i>
+                <i class="material-icons prefix">model_training</i>
                 <input id="model_name" name="model_name" type="text" class="validate">
                 <label for="category_name">Vehicle Type</label>
             </div>
