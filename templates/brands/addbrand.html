@@ -2,8 +2,8 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-<h5>Add Brand</h5>
+<div class="container addBrand-container">
+<h5 class="page-headings">Add Brand</h5>
 <div class="row">
 <!---------- Form -------------->
     
@@ -12,9 +12,9 @@
     <form action="{{ url_for('insert_brand') }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">poll</i>
+                <i class="material-icons prefix">branding_watermark</i>
                 <input id="brand_name" name="brand_name" type="text" class="validate">
-                <label for="category_name">Vehicle Type</label>
+                <label for="category_name">Vehicle Brand</label>
             </div>
         </div>
         <div class="row">
