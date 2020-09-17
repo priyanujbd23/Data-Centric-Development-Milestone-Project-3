@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700");
 
- /*
+/*
 body {
     display: flex;
     min-height: 100vh;
@@ -8,36 +8,34 @@ body {
   }
 */
 
-  body {
-      margin: 0;
-      padding: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
-
+main {
+  flex: 1 0 auto;
+}
 
 /* Navbar  */
 .navbar-nav {
   font-size: 30%;
   list-style-type: none;
-  letter-spacing: 2px;  
-  padding-bottom: 10px;  
-  background-color:  #3e4623;
- 
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  background-color: #3e4623;
 }
 
 nav .nav-wrapper {
-    position: relative;   
-    height: 70px;
+  position: relative;
+  height: 70px;
 }
 
 .navbar-nav a {
   text-decoration: none;
   color: #fafafa;
-   font-size: 18px;
-  list-style-type: none  
+  font-size: 18px;
+  list-style-type: none;
 }
 
 .navbar-nav a:hover {
@@ -51,88 +49,82 @@ nav .nav-wrapper {
 /*  */
 
 .btn-style {
-    margin: 0px 10px;
-    
+  margin: 0px 10px;
 }
 
 .table-text {
-    color: white;
+  color: white;
 }
 
-.container-cover {  
-height: auto;
-width: 100%;
+.container-cover {
+  height: auto;
+  width: 100%;
   margin-bottom: 50px;
   margin-top: 0px;
 }
 
 .services-container {
-    height: auto;
-    margin-bottom: 30px;
+  height: auto;
+  margin-bottom: 30px;
 }
 
-#hero-img {  
+#hero-img {
   height: auto;
- width: 100%;
+  width: 100%;
 }
 
 .welcome-text {
   margin-bottom: 50px;
   margin-top: 20x;
-  
 }
 
 /*------ Login Section ------*/
 
-
-
-
 /*- Headings */
 
 #main-heading {
-    text-align: center;
-    margin-bottom: 30px;
-    color: orangered;
-     font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: orangered;
+  font-weight: bold;
 }
 
 #services-heading {
-    text-align: center;
-    margin-bottom: 25px;
-    color: orangered;
-     font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  color: orangered;
+  font-weight: bold;
 }
 
-.main-subheading {    
-    color: orangered;
-    font-weight: bold;
+.main-subheading {
+  color: orangered;
+  font-weight: bold;
 }
 
 #admin-title {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    color: orangered;
-     font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: orangered;
+  font-weight: bold;
 }
 
 .admin-header {
-    text-align: center;
-    margin-bottom: 30px; 
-     font-weight: bold;  
-     color:  rgba(63, 70, 36, 0.8); 
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: rgba(63, 70, 36, 0.8);
 }
 
-
 /*-  cover text */
-#cover-text h3{
+#cover-text h3 {
   color: #fafafa;
   margin: 10px auto;
   text-align: center;
 }
 
 #cover-text {
-text-align: center;
+  text-align: center;
   font-size: 1.1rem;
   color: #fafafa;
   font-family: "Exo", sans-serif;
@@ -149,14 +141,14 @@ text-align: center;
 }
 
 /*   Driver program-*/
-#driver-text h3{
+#driver-text h3 {
   color: #fafafa;
   margin: 10px auto;
   text-align: center;
 }
 
-#driver-text{
-text-align: center;
+#driver-text {
+  text-align: center;
   font-size: 1.1rem;
   color: #fafafa;
   font-family: "Exo", sans-serif;
@@ -174,18 +166,16 @@ text-align: center;
 
 /*-----Footer ----*/
 
-
 .page-footer {
-   margin-top: 100px;
-   padding: 10;
-   height: 170px;
-   background-color: rgba(63, 70, 36, 0.8);
+  margin-top: 50px;
+  padding: 10;
+  height: 170px;
+  background-color: rgba(63, 70, 36, 0.8);
 }
 
 .footer-details {
- height: 120px;  
+  height: 120px;
 }
-
 
 /*  Admin link text- --*/
 /*.admin-link a {
@@ -200,13 +190,12 @@ text-align: center;
 */
 
 .admin-desc {
-    font-size: 18px;
-    margin-top: 1.1rem;    
+  font-size: 18px;
+  margin-top: 1.1rem;
 }
 
-
 .admin-button {
-  background-color: orange; 
+  background-color: orange;
   color: white;
   padding: 10px 24px;
   text-align: center;
@@ -214,7 +203,7 @@ text-align: center;
   display: inline-block;
   font-size: 16px;
   margin-left: 34px;
-  border-radius: 6px;  
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   border: none;
@@ -228,90 +217,88 @@ text-align: center;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.5rem;  
-  border-radius: 6px;  
-  cursor: pointer; 
-  border: none;  
+  font-size: 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
 }
 
 .specs {
-    font-size: 1.1rem;
-   font-weight: bold;   
-   margin-bottom: 5px; 
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .specs-db {
-    font-weight: bold;
-    color: green;
+  font-weight: bold;
+  color: green;
 }
 
 .specs1 {
-    font-size: 1.1rem;
-   font-weight: bold;   
-   margin-bottom: 100px; 
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 100px;
 }
 
 .specs-db1 {
-    font-weight: bold;
-    color: green;
+  font-weight: bold;
+  color: green;
 }
 
 /* ----- cabs page div --*/
 
 .search-container {
-    position: relative;
-    left: 10%;
-    margin-top: 50px;
+  position: relative;
+  left: 10%;
+  margin-top: 50px;
 }
 
-.available {    
-   background-color:#26a69a;
-    height: 30px;
-  width: 90%;  
+.available {
+  background-color: #26a69a;
+  height: 30px;
+  width: 90%;
   margin-bottom: 20px;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
   color: #fafafa;
-   position: relative;
+  position: relative;
   left: 7%;
-    
 }
 
-.book-it {   
-    height: 150px;
-   width: 90%;  
-   position: relative;
+.book-it {
+  height: 150px;
+  width: 90%;
+  position: relative;
   left: 7%;
   margin-bottom: 5px;
 }
 
-
 .book-thisCab {
-    margin-top: 60px;    
+  margin-top: 60px;
 }
 
-.book_btn {   
-    width: 40%;  
-   position: relative;
-  left: 2%;  
+.book_btn {
+  width: 40%;
+  position: relative;
+  left: 2%;
 }
 
 #modal1 {
-    width: 400px;    
+  width: 400px;
 }
 
 #rates {
-    font-size: 48px;
-    color: orange;
-    text-align: center;
-    padding: 5px;
+  font-size: 48px;
+  color: orange;
+  text-align: center;
+  padding: 5px;
 }
 
 #currency {
-    font-size: 50px;
-    color: orangered;
-    }
+  font-size: 50px;
+  color: orangered;
+}
 
 /*
 .for-hire {
@@ -322,222 +309,219 @@ text-align: center;
 /*--------Bookings --*/
 
 .bookings-search {
-    position: relative;
-    left: 10%;
-    margin-top: 50px;
+  position: relative;
+  left: 10%;
+  margin-top: 50px;
 }
 
 #contact-heading {
-  padding: 5px; 
+  padding: 5px;
   text-align: center;
 }
 
-#contact-details { 
+#contact-details {
   text-align: center;
   padding: 15px;
-  
 }
 
 .booker-info {
-    padding: 50px;
+  padding: 50px;
 }
 
 .cab-headings {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    color: orangered;
-    font-weight: bold;    
-    position: relative;
-    right: 18%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: orangered;
+  font-weight: bold;
+  position: relative;
+  right: 18%;
 }
 
-
 .for-hire {
-    font-size: 18px;  
-   color: orangered;
-   text-align: center;
-   text-transform: uppercase;
+  font-size: 18px;
+  color: orangered;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /*------------------------------------Find a specific Cab page----*/
 
 .page-headings {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    color: orangered;
-     font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: orangered;
+  font-weight: bold;
 }
 
 .findcab-container {
-    margin-top: 100px;
-    margin-bottom: 300px;
+  margin-top: 100px;
+  margin-bottom: 300px;
 }
 
 .delete-btn {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 /*-------------------------------Search for Cabs by Model or Brand --*/
 
 .results-container {
-    margin-top: 100px;
-    margin-bottom: 300px;
+  margin-top: 100px;
+  margin-bottom: 300px;
 }
-
 
 /*-------------------------Add Booking Page --*/
 
 .addBooking-container {
-    width: 50%;
-    padding: 50px;
-    
+  width: 50%;
+  padding: 50px;
 }
 
 /*-------------------------Edit Cab Page --*/
 
 .editCab-container {
-    width: 50%;
-    padding: 50px;
+  width: 40%;
+  padding: 20px;
+  margin-top: 50px;
 }
-
+}
 
 /*----------------------------------Admin Section---*/
 
 /*--------Add Vehicle Type --*/
 
 .types-heading {
-    font-weight: bold;
-    margin-bottom: 20px;
-   
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .types-text {
-    font-size: 1.5rem;
-    font-weight: bold;    
-    text-align: center;
-    margin-bottom: 60px;
-    color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+  color: green;
 }
 
-.available-types {      
-   height: 28px;
-  width: 50%;  
+.available-types {
+  height: 28px;
+  width: 50%;
   margin-bottom: 30px;
   text-align: center;
   font-size: 15px;
-  font-weight: bold; 
-   position: relative;
-  left: 27%;    
+  font-weight: bold;
+  position: relative;
+  left: 27%;
 }
 
-.name-type {   
-    height: 150px;
-   width: 90%;  
-   position: relative;
+.name-type {
+  height: 150px;
+  width: 90%;
+  position: relative;
   left: 7%;
   margin-bottom: 5px;
 }
 
-
 .addType-container {
-    width: 50%;
-    padding: 20px;
-    margin-top: 60px;
-    margin-bottom: 350px;
+  width: 40%;
+  padding: 30px;
+  margin-top: 160px;
+  margin-bottom: 310px;
 }
 
 .new-types {
-    padding: 60px;
+  padding: 60px;
 }
 
 /* Edit Vehicle Type */
 
 .editType-container {
-    width: 50%;
-    padding: 20px;
-    margin-top: 100px;
-    margin-bottom: 300px;
+  width: 40%;
+  padding: 20px;
+  margin-top: 160px;
+  margin-bottom: 310px;
 }
 
 /*----------- New Vehicle Brand --*/
 
 .addBrand-container {
-    width: 50%;
-    padding: 20px;
-     margin-top: 60px;
-    margin-bottom: 350px;
+  width: 40%;
+  padding: 30px;
+  margin-top: 160px;
+  margin-bottom: 310px;
 }
 
 .editBrand-container {
-    width: 50%;
-    padding: 20px;
-    margin-top: 100px;
-    margin-bottom: 300px;
+  width: 40%;
+  padding: 20px;
+  margin-top: 160px;
+  margin-bottom: 310px;
 }
 
 /*----------- New Vehicle Model --*/
 
 .addModel-container {
-    width: 50%;
-    padding: 20px;
+  width: 50%;
+  padding: 30px;
+  margin-top: 160px;
+  margin-bottom: 310px;
 }
 
 .editModel-container {
-    width: 50%;
-    padding: 20px;
-    margin-top: 100px;
-    margin-bottom: 300px;
+  width: 40%;
+  padding: 20px;
+  margin-top: 160px;
+  margin-bottom: 310px;
 }
 
 /*------Add New cab --*/
 
 .addCab-container {
-    width: 50%;
-    padding: 50px;
+  width: 40%;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 /*-----------------Log In------*/
 
 .profile-container {
-    padding: 20px;
-    margin-top: 100px;
-    margin-bottom: 350px;
+  padding: 30px;
+  margin-top: 160px;
+  margin-bottom: 350px;
 }
 
 .login-container {
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 100px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 170px;
 }
 
 .registe-container {
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 100px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 150px;
 }
 
 .flashes h4 {
-    line-height: 1;    
+  line-height: 1;
 }
 
 /*-----Contact Page ---*/
 .contact-container {
-    height: 500px;
-    width: 100%;    
+  height: 500px;
+  width: 100%;
 }
 #contact {
-    height: 300px;
-    width: 50%;
-    border: 1px solid green;
-    position: relative;
-    left: 25%;
-    top: 120px;
-    background-color: white;
-    border-radius: 10px;
+  height: 300px;
+  width: 50%;
+  border: 1px solid yellow;
+  position: relative;
+  left: 25%;
+  top: 120px;
+  background-color: white;
+  border-radius: 10px;
 }
-
 
 /*******************************************/
 
@@ -545,14 +529,14 @@ text-align: center;
 .social-links {
   padding-bottom: 15px;
   float: right;
-  padding-top: 39px;  
+  padding-top: 39px;
   margin-top: 10;
   display: flex;
 }
 
-ul:not(.browser-default)>li {
-    list-style-type: none;
-    margin: 5px;
+ul:not(.browser-default) > li {
+  list-style-type: none;
+  margin: 5px;
 }
 
 .social-links li a i {
@@ -576,12 +560,12 @@ ul:not(.browser-default)>li {
 }
 
 #footer-details {
-  padding-top: 10px;   
+  padding-top: 10px;
 }
 
 .social-sub {
   position: absolute;
-  right: 20px;  
+  right: 20px;
 }
 
 footer p {
@@ -590,33 +574,31 @@ footer p {
 
 /*-------------------------- End of Social Media-*/
 
-
 /*----------------------------------------------------------Media Queries--------------------------------*/
 @media screen and (max-width: 743px) {
-
- .container-cover {
+  .container-cover {
     height: auto;
-    width: 100%;   
+    width: 100%;
     margin-top: 0px;
-}
-  
+  }
+
   #main-heading {
-    text-align: center;    
+    text-align: center;
     color: orangered;
     font-weight: bold;
     font-size: 28px;
-}
+  }
 
-#services-heading {
-    text-align: center;    
+  #services-heading {
+    text-align: center;
     color: orangered;
     font-weight: bold;
     font-size: 26px;
-}
+  }
 
-  .welcome-text {    
+  .welcome-text {
     margin-top: 20x;
- }
+  }
 
   #cover-text {
     display: none;
@@ -627,80 +609,79 @@ footer p {
   }
 
   .social-sub {
-    position: absolute; 
+    position: absolute;
     left: 20px;
   }
- 
- .page-footer {
+
+  .page-footer {
     margin-top: 50px;
     padding: 0;
     height: 295px;
-    background-color: rgba(63, 70, 36, 0.8);    
-}
+    background-color: rgba(63, 70, 36, 0.8);
+  }
 
- .social-links {
+  .social-links {
     padding-bottom: 15px;
     float: left;
     padding-top: 39px;
     margin-top: 10;
     display: flex;
-}
+  }
 
-.left {
+  .left {
     float: left !important;
     position: relative;
     left: 25%;
-}
+  }
 
- /* search bar */
- .orange.lighten-2 {
+  /* search bar */
+  .orange.lighten-2 {
     background-color: #ffb74d !important;
     margin-bottom: 10px;
-}
-/*
+  }
+  /*
  .fa {    
     display: none;
  }
 */
 
-/*--Booking--*/
+  /*--Booking--*/
 
-.addBooking-container {
+  .addBooking-container {
     width: 90%;
     padding: 3px;
     margin-top: 10px;
-}
+  }
 
-.addCab-container {
+  .addCab-container {
     /* width: 50%; */
     padding: 20px;
-}
+  }
 
-
-.addType-container {
+  .addType-container {
     width: 100%;
     padding: 0px;
-}
+  }
 
-.addModel-container {
+  .addModel-container {
     width: 100%;
     padding: 0px;
-}
+  }
 
-.addBrand-container {
+  .addBrand-container {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 30px;
-}
+  }
 
-.specs1 {
+  .specs1 {
     font-size: 1.1rem;
     font-weight: bold;
-    margin-bottom: 20px; 
-}
+    margin-bottom: 20px;
+  }
 
-.cab-headings {
+  .cab-headings {
     text-align: center;
     /* margin-top: 30px; */
     margin-bottom: 30px;
@@ -708,16 +689,15 @@ footer p {
     /* font-weight: bold; */
     position: relative;
     right: 18%;
-}
+  }
 
-.search-container {
-    position: relative;    
-    margin-top: 30px;
-    border: 1px solid green;
+  .search-container {
+    position: relative;
+    margin-top: 30px;    
     left: 0%;
-}
+  }
 
-.cab-headings {
+  .cab-headings {
     text-align: center;
     /* margin-top: 30px; */
     margin-bottom: 30px;
@@ -725,46 +705,45 @@ footer p {
     /* font-weight: bold; */
     /* position: relative; */
     right: 18%;
-}
+  }
 
-.cancel-btn {
+  .cancel-btn {
     margin-top: 10px;
-}
+  }
 
-.booker-info {
-     padding: 10px; 
-}
+  .booker-info {
+    padding: 10px;
+  }
 
-.bookings-search {
-    position: relative;    
-    margin-top: 30px;
-    border: 1px solid green;
+  .bookings-search {
+    position: relative;
+    margin-top: 30px;   
     left: 0%;
-}
+  }
 
-.login-container {    
-    margin-top: 20px;  
+  .login-container {
+    margin-top: 20px;
     padding: 0px;
     margin-bottom: 0px;
-}
+  }
 
-.registe-container {   
-    margin-top: 32px;   
+  .registe-container {
+    margin-top: 32px;
     padding: 0px;
     margin-bottom: 0px;
-}
+  }
 
-.profile-container {
+  .profile-container {
     padding: 0px;
     margin-top: 50px;
-    margin-bottom: 10px; 
-}
+    margin-bottom: 10px;
+  }
 
-.admin-desc {
-    display: none;    
-}
+  .admin-desc {
+    display: none;
+  }
 
-.admin-button {
+  .admin-button {
     background-color: orange;
     color: white;
     padding: 10;
@@ -778,73 +757,71 @@ footer p {
     /* font-weight: bold; */
     border: none;
     /* margin-top: 80px; */
-}
+  }
 
-.page-headings {
+  .page-headings {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
     color: orangered;
     /* font-weight: bold; */
-}
+  }
 
-.types-heading {
+  .types-heading {
     font-weight: bold;
     /* margin-bottom: 20px; */
     font-size: 20px;
-}
+  }
 
-.new-types {
-     padding: 5px; 
-}
+  .new-types {
+    padding: 5px;
+  }
 
-.addType-container {
+  .addType-container {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 30px;
-}
+  }
 
-
-.editType-container {
-     width: 100%; 
-    padding: 15px; 
+  .editType-container {
+    width: 100%;
+    padding: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
-}
+  }
 
-.editBrand-container {
-     width: 100%; 
-    padding: 15px; 
+  .editBrand-container {
+    width: 100%;
+    padding: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
-}
+  }
 
-.editModel-container {
-     width: 100%; 
-    padding: 15px; 
+  .editModel-container {
+    width: 100%;
+    padding: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
-}
+  }
 
-.addModel-container {
+  .addModel-container {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 30px;
-}
+  }
 
-.page-headings {
+  .page-headings {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
     color: orangered;
     font-weight: normal;
-}
+  }
 
-.addCab-container {
-    width: 100%; 
+  .addCab-container {
+    width: 100%;
     padding: 15px;
-}
-
+  }
 }

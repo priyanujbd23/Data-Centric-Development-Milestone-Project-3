@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="container editBrand-container">
-<h4 class="page-headings"> Edit Car Brand</h4>
-<div class="row">
-<!---------- Form -------------->
-    
+  <h4 class="page-headings">Edit Car Brand</h4>
+  <div class="row">
+    <!---------- Form -------------->
+
     <!---------------End Vehicle Type-------->
-    
+
     <form action="{{ url_for('insert_brand') }}" method="POST" class="col s12">
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">poll</i>
-                <input id="brand_name" name="brand_name" type="text" class="validate" value="{{brand.brand_name}}">
-                <label for="brand_name">Brand Name</label>
-            </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">branding_watermark</i>
+          <input
+            id="brand_name"
+            name="brand_name"
+            type="text"
+            class="validate"
+            value="{{brand.brand_name}}"
+          />
+          <label for="brand_name">Brand Name</label>
         </div>
-        <div class="row">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Save Changes
-                <i class="material-icons right">playlist_add</i>
-             </button>
-            <a href="{{ url_for('get_brand') }}" class="waves-effect waves-light btn grey">
-                <i class="material-icons right">cancel</i>Cancel
-            </a>
-        </div>
+      </div>
+      <div class="row">
+        <button
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Save Changes
+          <i class="material-icons right">playlist_add</i>
+        </button>
+        <a
+          href="{{ url_for('get_brand') }}"
+          class="waves-effect waves-light btn grey"
+        >
+          <i class="material-icons right">cancel</i>Cancel
+        </a>
+      </div>
     </form>
-    
-      
-  <!----------End Button -------------->
-  
-     <!----------  -------------->
-      <!---------- End Form -------------->
+
+    <!----------End Button -------------->
+
+    <!----------  -------------->
+    <!---------- End Form -------------->
   </div>
-  </div>
-  
-   
+</div>
 
 {% endblock %}

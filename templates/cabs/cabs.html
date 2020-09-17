@@ -1,85 +1,116 @@
 <!DOCTYPE html>
 
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="container search-container">
-    <h4 class="cab-headings">Cabs </h4>
-<!--- Search Cabs form-->
-    <div class="row search-box">
-        <form class="col s12 m8" action="{{ url_for('search') }}" method="POST">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m6">
-                    <i class="fa fa-search prefix light-blue-text text-darken-4"></i>
-                    <input type="text" id="query" name="query" minlength="3" class="validate" required>
-                    <label for="query">Search Cab</label>
-                </div>
-                <div class="col s12 m4">
-                    <button class="blue lighten-2 btn" type="submit">Search
-                    </button>
-                    <a href="{{ url_for('get_cabs') }}" class="grey btn text-shadow cancel-btn">Cancel</a>
-                </div>
-            </div>
-        </form>
-    </div>
-     </div>
-    <br><br>
-   
-     {% for cab in cabs %}
-     
-    <div class="container cabs-container">
-     <!-- trial----->
-    <div class="row  yellow lighten-5">
-      <div class="col s12 m4 l4">
+  <h4 class="cab-headings">Cabs</h4>
+  <!--- Search Cabs form-->
+  <div class="row search-box">
+    <form class="col s12 m8" action="{{ url_for('search') }}" method="POST">
+      <div class="row valign-wrapper center-align">
+        <div class="input-field col s12 m6">
+          <i class="fa fa-search prefix light-blue-text text-darken-4"></i>
+          <input
+            type="text"
+            id="query"
+            name="query"
+            minlength="3"
+            class="validate"
+            required
+          />
+          <label for="query">Search Cab</label>
+        </div>
+        <div class="col s12 m4">
+          <button class="blue lighten-2 btn" type="submit">Search</button>
+          <a
+            href="{{ url_for('get_cabs') }}"
+            class="grey btn text-shadow cancel-btn"
+            >Cancel</a
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br /><br />
+
+{% for cab in cabs %}
+
+<div class="container cabs-container">
+  <!-- trial----->
+  <div class="row yellow lighten-5">
+    <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img class="materialboxed responsive-img" width="300" src="{{cab.cab_picture}}">        
-        </div>                
+          <img
+            class="materialboxed responsive-img"
+            width="300"
+            src="{{cab.cab_picture}}"
+          />
+        </div>
       </div>
-      </div>
+    </div>
 
-        <!-- Cab Model ccolumn-->
-      <div class="col s12 m4 l4"> 
-       <div class="card-content center-align">
-      <h4 class="model-display">{{cab.brand_name}}  {{cab.model_name}}</h4>       
-          <p class="specs1">Vehicle Type | <span class="specs-db1">{{cab.vehicle_type}}</span></p> 
-          <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn blue lighten-1 modal-trigger" href="#modal1">See Rates</a>
+    <!-- Cab Model ccolumn-->
+    <div class="col s12 m4 l4">
+      <div class="card-content center-align">
+        <h4 class="model-display">{{cab.brand_name}} {{cab.model_name}}</h4>
+        <p class="specs1">
+          Vehicle Type | <span class="specs-db1">{{cab.vehicle_type}}</span>
+        </p>
+        <!-- Modal Trigger -->
+        <a
+          class="waves-effect waves-light btn blue lighten-1 modal-trigger"
+          href="#modal1"
+          >See Rates</a
+        >
 
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
-        <div class="modal-content">
-      <h6>Base Rates From</h6>       
-        <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
-        <small>Additional charges may apply as per distance ot toll charges</small>
+          <div class="modal-content">
+            <h6>Base Rates From</h6>
+            <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
+            <small
+              >Additional charges may apply as per distance ot toll
+              charges</small
+            >
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+              >Close</a
+            >
+          </div>
+        </div>
+        <!--End- Modal Structure -->
+      </div>
     </div>
-        <div class="modal-footer">        
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-    </div>
-    </div> 
-              <!--End- Modal Structure -->   
-     </div>     
-     </div>
-        <!-- End Cab Model ccolumn-->
+    <!-- End Cab Model ccolumn-->
 
-      <div class="col s12 m4 l4 center-align">      
-    <!--<div class="available"></div> -->
-    <p class="for-hire">This Cab is available for hire</p>
-    
-    <div class="book-it">
-        <p class="specs">Location: <span class="specs-db"> {{cab.cab_location}}</span></p>
-        <p class="specs">Email Address: <span class="specs-db"> {{cab.email}}</span></p> 
-        <p class="specs">Phone Number: <span class="specs-db"> {{cab.tel_nr}}</span></p>    
-        </div>       
-     <div id="book-thisCab">      
-      <a href="{{ url_for('get_one', cab_id=cab._id)}}" class="waves-effect waves-light btn btn-style book_btn blue">book it</a>     
+    <div class="col s12 m4 l4 center-align">
+      <!--<div class="available"></div> -->
+      <p class="for-hire">This Cab is available for hire</p>
+
+      <div class="book-it">
+        <p class="specs">
+          Location: <span class="specs-db"> {{cab.cab_location}}</span>
+        </p>
+        <p class="specs">
+          Email Address: <span class="specs-db"> {{cab.email}}</span>
+        </p>
+        <p class="specs">
+          Phone Number: <span class="specs-db"> {{cab.tel_nr}}</span>
+        </p>
       </div>
+      <div id="book-thisCab">
+        <a
+          href="{{ url_for('get_one', cab_id=cab._id)}}"
+          class="waves-effect waves-light btn btn-style book_btn blue"
+          >book it</a
+        >
       </div>
-      <!-- End book this Cab -->
-    </div>        
-     </div>
-     
-         {% endfor %}
-    
-{% endblock %}
-    
+    </div>
+    <!-- End book this Cab -->
+  </div>
+</div>
+
+{% endfor %} {% endblock %}

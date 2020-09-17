@@ -58,9 +58,12 @@
        
       <p class="specs">Email Address | <span class="specs-db">{{booking.booking_email}}</span></p> 
       <p class="specs">Phone Number | <span class="specs-db">{{booking.booking_tel}}</span></p>
-      <p class="specs">Booking Date | <span class="specs-db">{{booking.booking_date}}</span></p>      
+      <p class="specs">Booking Date | <span class="specs-db">{{booking.booking_date}}</span></p> <br>  
+      <a href="{{ url_for('delete_booking', booking_id=booking._id)}}" class="waves-effect waves-light delete-btn btn btn-style green">delete this Cab</a>   
         </div>
+        
       </div>  
+       
     </div>
            
     {% endfor %}

@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <!---------- Hero image -------------->
 <section class="container-cover container-fluid">
-		<div class="row"> 
-        <div id="cover-text">
-			<h3>Hire a Cab </h3>
-			<!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
-            <p>Call or click below to book one of our cabs online. Our team of experienced drivers have got your booking destinations covered </p>
-            <a href="{{ url_for('add_booking') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left"> book_online</i>Book Online</a>            
-		</div>
-        <!--- Driver program-->
-        <div id="driver-text">
-			<h3>Become a Driver </h3>
-			<!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
-            <p>Join our driver programe and become your own boss. Drive one of our vehicles or submit your owncar once you sign up</p>
-            <a href="{{ url_for('login') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left"> local_taxi</i>Drive for Us</a>            
-		</div>
-           
-<img class="responsive-img" id="hero-img" src="{{ url_for('static', filename='assets/img/home.jpg') }}">
-</div>
+  <div class="row">
+    <div id="cover-text">
+      <h3>Hire a Cab</h3>
+      <!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
+      <p>
+        Call or click below to book one of our cabs online. Our team of
+        experienced drivers have got your booking destinations covered
+      </p>
+      <a
+        href="{{ url_for('add_booking') }}"
+        class="waves-effect waves-light btn-large orange"
+        ><i class="material-icons left"> book_online</i>Book Online</a
+      >
+    </div>
+    <!--- Driver program-->
+    <div id="driver-text">
+      <h3>Become a Driver</h3>
+      <!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
+      <p>
+        Join our driver programe and become your own boss. Drive one of our
+        vehicles or submit your owncar once you sign up
+      </p>
+      <a
+        href="{{ url_for('login') }}"
+        class="waves-effect waves-light btn-large orange"
+        ><i class="material-icons left"> local_taxi</i>Drive for Us</a
+      >
+    </div>
+
+    <img
+      class="responsive-img"
+      id="hero-img"
+      src="{{ url_for('static', filename='assets/img/home.jpg') }}"
+    />
+  </div>
 </section>
 
 <!----------End Hero image -------------->
 <div class="container welcome-text center-align">
-<div class="row">
-<h4 id="main-heading">CityCabs Agency</h4>
-<p> CityCabs is a cab agengy located in North London. It began as a small family busines 10 years ago and has gained considerable trust and from its cutomers. This is due to the it's reliability and consistent method of operation. Our drivers are well screened to make sure that they reflect the company label. This is particurlary essential since they represent the face of the company to every customer they come in contact with.
-</p>
-</div>
+  <div class="row">
+    <h4 id="main-heading">CityCabs Agency</h4>
+    <p>
+      CityCabs is a cab agengy located in North London. It began as a small
+      family busines 10 years ago and has gained considerable trust and from its
+      cutomers. This is due to the it's reliability and consistent method of
+      operation. Our drivers are well screened to make sure that they reflect
+      the company label. This is particurlary essential since they represent the
+      face of the company to every customer they come in contact with.
+    </p>
+  </div>
 </div>
 
 <div class="container services-container center-align">
-<h5 id="services-heading">Services</h5>
-<!----------city tours -------------->
-<div class="row">
-</div>    
-<div class="row">
+  <h5 id="services-heading">Services</h5>
+  <!----------city tours -------------->
+  <div class="row"></div>
+  <div class="row">
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/lon.jpg') }}">          
+          <img src="{{ url_for('static', filename='assets/img/lon.jpg') }}" />
         </div>
         <div class="card-content">
-          <p>Book a cab for a quick drop off or a city tours. You can book a single tour or multiple tours lasting several hours</p>
+          <p>
+            Book a cab for a quick drop off or a city tours. You can book a
+            single tour or multiple tours lasting several hours
+          </p>
         </div>
         <div class="card-action center-align">
           <h5 class="main-subheading">City Tours</h5>
@@ -53,14 +78,17 @@
       </div>
     </div>
 
-<!----------Airport service-------------->   
+    <!----------Airport service-------------->
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/air1.jpg')}}">          
+          <img src="{{ url_for('static', filename='assets/img/air1.jpg')}}" />
         </div>
         <div class="card-content">
-          <p>Need a reliable airport service? Our experinced cab drivers can get you to the airport in time for your flight.</p>
+          <p>
+            Need a reliable airport service? Our experinced cab drivers can get
+            you to the airport in time for your flight.
+          </p>
         </div>
         <div class="card-action center-align">
           <h5 class="main-subheading">Airport Service</h5>
@@ -68,84 +96,103 @@
       </div>
     </div>
 
-    <!--------- End Airport service----------> 
-    <!--------- Escursions ----------> 
+    <!--------- End Airport service---------->
+    <!--------- Escursions ---------->
 
-  <div class="col s12 m4 l4">
+    <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/way.jpg') }}">          
+          <img src="{{ url_for('static', filename='assets/img/way.jpg') }}" />
         </div>
         <div class="card-content">
-          <p>Our cab services to out of city escursions as well. Our drivers have vitrually been hired for trips all around the UK.</p>
+          <p>
+            Our cab services to out of city escursions as well. Our drivers have
+            vitrually been hired for trips all around the UK.
+          </p>
         </div>
         <div class="card-action center-align">
-         <h5 class="main-subheading">Intercity Escursion</h5>
+          <h5 class="main-subheading">Intercity Escursion</h5>
         </div>
       </div>
     </div>
     <!--------- End Escusions---------->
-  </div> 
- 
-  
-    <div class="row">  
-    <!--------- Camper---------> 
+  </div>
 
-  <div class="col s12 m4 l4">
+  <div class="row">
+    <!--------- Camper--------->
+
+    <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/camper.jpg') }}">          
+          <img
+            src="{{ url_for('static', filename='assets/img/camper.jpg') }}"
+          />
         </div>
         <div class="card-content">
-          <p>Going on Holidays? Hire one of our mobile campers and drive it yourself to a camping site nationwide or abroad. Our campers come well equiped.</p>
+          <p>
+            Going on Holidays? Hire one of our mobile campers and drive it
+            yourself to a camping site nationwide or abroad. Our campers come
+            well equiped.
+          </p>
         </div>
         <div class="card-action center-align">
-         <h5 class="main-subheading">Mobile Camper</h5>
+          <h5 class="main-subheading">Mobile Camper</h5>
         </div>
       </div>
     </div>
     <!--------- End Camper--------->
 
-    <!--------- Man and Van---------> 
-  <div class="col s12 m4 l4">
+    <!--------- Man and Van--------->
+    <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/man.jpg') }}">          
+          <img src="{{ url_for('static', filename='assets/img/man.jpg') }}" />
         </div>
         <div class="card-content">
-          <p>Our services include Man-and-van options for those who need to move items from one location to another. The van comes with a driver.</p>
+          <p>
+            Our services include Man-and-van options for those who need to move
+            items from one location to another. The van comes with a driver.
+          </p>
         </div>
         <div class="card-action center-align">
-         <h5 class="main-subheading">Man & Van</h5>
+          <h5 class="main-subheading">Man & Van</h5>
         </div>
       </div>
     </div>
     <!--------- End Man and Van --------->
 
-  <!----------Become a driver------------->   
+    <!----------Become a driver------------->
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ url_for('static', filename='assets/img/driver.jpg') }}">          
+          <img
+            src="{{ url_for('static', filename='assets/img/driver.jpg') }}"
+          />
         </div>
-        
+
         <div class="card-content">
-          <p>Want to join our driver program? Enjoy the benefits of working at your own pace, being your own boss and earning all the while.</p>
+          <p>
+            Want to join our driver program? Enjoy the benefits of working at
+            your own pace, being your own boss and earning all the while.
+          </p>
         </div>
         <div class="card-action center-align">
           <h5 class="main-subheading">Drive for Us</h5>
         </div>
       </div>
     </div>
-    <!--------- End become a driver---------->  
-    </div>
+    <!--------- End become a driver---------->
+  </div>
 
- <div class="row">
- <div class="left">
- <a href="{{ url_for('add_booking') }}" class="waves-effect waves-light btn-large orange"><i class="material-icons left">book_online</i>Book A Cab</a>
- </div>
- 
- </div>
+  <div class="row">
+    <div class="left">
+      <a
+        href="{{ url_for('add_booking') }}"
+        class="waves-effect waves-light btn-large orange"
+        ><i class="material-icons left">book_online</i>Book A Cab</a
+      >
+    </div>
+  </div>
 </div>
 
 {% endblock %}
