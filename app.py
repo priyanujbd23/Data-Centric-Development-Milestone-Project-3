@@ -68,7 +68,7 @@ def update_cab(cab_id):
     cabs = mongo.db.cabs
     # call the update function, specify an id
     cabs.update({'_id': ObjectId(cab_id)},
-    {
+                {
         'vehicle_type': request.form.get('vehicle_type'),
         'brand_name': request.form.get('brand_name'),
         'model_name': request.form.get('model_name'),
@@ -106,7 +106,8 @@ def get_bookings():
 # add booking
 @app.route('/add_booking')
 def add_booking():
-    return render_template('bookings/addbooking.html', types=mongo.db.types.find(),
+    return render_template('bookings/addbooking.html',
+                           types=mongo.db.types.find(),
                            brands=mongo.db.brands.find(),
                            models=mongo.db.models.find(),
                            bookings=mongo.db.bookings.find())
@@ -121,7 +122,14 @@ def insert_booking():
     return redirect(url_for('get_bookings'))
 
 
+# delete a Booking
+@app.route('/delete_booking/<booking_id>')
+def delete_booking(booking_id):
+    mongo.db.bookings.remove({'_id': ObjectId(booking_id)})
+    return redirect(url_for('get_bookings'))
+
 # <---- Manage vehicle Types, Brands & Models ---->
+
 
 # Gets the vehicle Types
 @app.route('/get_types')
@@ -135,7 +143,7 @@ def get_types():
 def edit_type(type_id):
     return render_template('types/edittype.html',
                            type=mongo.db.types.find_one(
-                            {'_id': ObjectId(type_id)}))
+                               {'_id': ObjectId(type_id)}))
 
 
 # updates vehicle Type
@@ -162,7 +170,7 @@ def get_brand():
 def edit_brand(brand_id):
     return render_template('brands/editbrand.html',
                            brand=mongo.db.brands.find_one(
-                            {'_id': ObjectId(brand_id)}))
+                               {'_id': ObjectId(brand_id)}))
 
 
 # updates Brand
@@ -190,7 +198,7 @@ def get_model():
 def edit_model(model_id):
     return render_template('models/editmodel.html',
                            model=mongo.db.models.find_one(
-                            {'_id': ObjectId(model_id)}))
+                               {'_id': ObjectId(model_id)}))
 
 
 # updates Model
@@ -330,7 +338,7 @@ def register():
     if request.method == 'POST':
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
-                {'username': request.form.get('username').lower()})
+            {'username': request.form.get('username').lower()})
 
         if existing_user:
             flash('username already in DB')
@@ -363,9 +371,9 @@ def login():
                                    request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
-                            request.form.get("username")))
+                    request.form.get("username")))
                 return redirect(url_for(
-                            "profile", username=session["user"]))
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -399,6 +407,7 @@ def logout():
     return redirect(url_for("login"))
 
 # ----- end login section ---------------/
+
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
