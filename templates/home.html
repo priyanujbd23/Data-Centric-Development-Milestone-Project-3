@@ -6,22 +6,20 @@
 <section class="container-cover container-fluid">
   <div class="row">
     <div id="cover-text">
-      <h3>Hire a Cab</h3>
-      <!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
+      <h4>Hire a Cab</h4>      
       <p>
         Call or click below to book one of our cabs online. Our team of
         experienced drivers have got your booking destinations covered
       </p>
       <a
-        href="{{ url_for('add_booking') }}"
+        href="{{ url_for('cabs') }}"
         class="waves-effect waves-light btn-large orange"
         ><i class="material-icons left"> book_online</i>Book Online</a
       >
     </div>
     <!--- Driver program-->
     <div id="driver-text">
-      <h3>Become a Driver</h3>
-      <!--<a href="{{ url_for('add_booking') }}" class="cover-button">Get started</a> -->
+      <h4>Become a Driver</h4>      
       <p>
         Join our driver programe and become your own boss. Drive one of our
         vehicles or submit your owncar once you sign up
@@ -183,16 +181,7 @@
     </div>
     <!--------- End become a driver---------->
   </div>
-
-  <div class="row">
-    <div class="left">
-      <a
-        href="{{ url_for('add_booking') }}"
-        class="waves-effect waves-light btn-large orange"
-        ><i class="material-icons left">book_online</i>Book A Cab</a
-      >
-    </div>
-  </div>
+    
 </div>
 
 {% endblock %}

@@ -23,21 +23,32 @@
       href="{{ url_for('static', filename='css/style.css')}}"
       type="text/css"
     />
+    <!-- Send Email-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_UU4KcF5Hbuu0qmEO38pMn");          
+        })();
+</script>
+
   </head>
   <body>
     <header>
       <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper navbar-nav blue-grey darken-1">
-            <a href="/" class="brand-logo large">CityCabs</a>
+            <a href="/" class="brand-logo site-logo large">CityCabs</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"
               ><i class="material-icons">menu</i></a
             >
             <ul class="right hide-on-med-and-down">
-              <li><a href="{{ url_for('home_page') }}">Home</a></li>
-              <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
-              <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
-              <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('cabs') }}">Cabs</a></li>
+              <li><a href="{{ url_for('add_cab') }}">Add Cab</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+              
               {% if session.user %}
               <li>
                 <a href="{{ url_for('profile', username=session['user']) }}"
@@ -45,10 +56,12 @@
                 >
               </li>
 
+              <li><a href="{{ url_for('admin_page') }}">Dashboard</a></li>
               <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-              {% else %}
-              <li><a href="{{ url_for('login') }}">LogIn</a></li>
               <li><a href="{{ url_for('register') }}">Register</a></li>
+              {% else %}
+              <li><a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small orange">LogIn</a></li>
+              
               {% endif %}
             </ul>
           </div>
@@ -56,21 +69,22 @@
       </div>
       <div>
         <ul class="sidenav navbar-na" id="mobile-demo">
-          <li><a href="{{ url_for('home_page') }}">Home</a></li>
-          <li><a href="{{ url_for('get_cabs') }}">Cabs</a></li>
-          <li><a href="{{ url_for('add_booking') }}">Book Cab</a></li>
-          <li><a href="{{ url_for('get_bookings') }}">View Bookings</a></li>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('cabs') }}">Cabs</a></li>
+          <li><a href="{{ url_for('add_cab') }}">Add Cab</a></li>  
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>        
           {% if session.user %}
           <li>
             <a href="{{ url_for('profile', username=session['user']) }}"
               >Profile</a
             >
           </li>
-
+          <li><a href="{{ url_for('admin_page') }}">Dashboard</a></li>
           <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+           <li><a href="{{ url_for('register') }}">Register</a></li>
           {% else %}
           <li><a href="{{ url_for('login') }}">Log In</a></li>
-          <li><a href="{{ url_for('register') }}">Register</a></li>
+         
           {% endif %}
         </ul>
       </div>
@@ -97,16 +111,12 @@
     <footer class="page-footer container-fluid blue-grey darken-1">
       <div class="row footer-details">
         <div class="col s12 m6">
-          <h5 class="about-sub">Sign Up</h5>
+          <h5 class="about-sub">Address</h5>
           <p class="inline-block">
-            We welcome new drivers to sign and join our driver program.
+            Caldron Str. 42, NO3 OY6 London
           </p>
           <p>
-            <a
-              href="{{ url_for('login') }}"
-              class="waves-effect waves-light btn-small blue"
-              >sign up!</a
-            >
+            Tel: 02323435367
           </p>
         </div>
 
@@ -154,8 +164,7 @@
       </div>
     </footer>
     <!--- End Footer-->
-    <!--- End Footer-->
-
+  
     <!-- jQuerry -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -181,7 +190,7 @@
              $("#contact-details").slideToggle();
              });*/
 
-      //  Date Picker
+      // Date Picker
       $(".datepicker").pickadate({
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15, // Creates a dropdown of 15 years to control year,
@@ -195,6 +204,7 @@
         e.stopPropagation();
       });
     </script>
-    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+     
+    <script src="{{ url_for('static', filename='assets/js/sendEmail.js') }}"></script>
   </body>
 </html>

@@ -41,22 +41,17 @@
       </div>
       <!---------------End Vehicle Brand ------->
 
-      <!--------------Vehicle Model ------->
+      
+      <!---------- Name -------------->
       <div class="row">
         <div class="input-field col s12">
-          <i class="material-icons prefix">model_training</i>
-          <!--- Select option for brand-->
-          <select id="model" name="model_name">
-            <option value="" disabled selected>Choose Model</option>
-            <!-- Display each instant of the type-->
-            {% for model in models %}
-            <option value="{{model.model_name}}">{{model.model_name}}</option>
-            {% endfor %}
-          </select>
-          <label>Model</label>
+          <i class="material-icons prefix">account_circle</i>
+          <input id="owner-name" name="owner_name" type="text" class="validate" required/>
+          <label for="icon_prefix">Name</label>
         </div>
       </div>
-      <!------------End Vehicle Model ------->
+      <!----------End Name  -------------->
+
       <!----------Location------->
       <div class="row">
         <div class="input-field col s12">
@@ -66,16 +61,18 @@
             name="cab_location"
             type="tel"
             class="validate"
+            required
           />
           <label for="icon_telephone">Location</label>
         </div>
       </div>
       <!----------End Location ------->
+
       <!---------- Email -------------->
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">email</i>
-          <input id="email" name="email" type="text" class="validate" />
+          <input id="email" name="email" type="text" class="validate" required />
           <label for="icon_prefix">Email</label>
         </div>
       </div>
@@ -84,7 +81,7 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">phone</i>
-          <input id="tel_nr" name="tel_nr" type="tel" class="validate" />
+          <input id="tel_nr" name="tel_nr" type="tel" class="validate" required/>
           <label for="icon_telephone">Telephone</label>
         </div>
       </div>
@@ -98,6 +95,7 @@
             name="cab_picture"
             type="text"
             class="validate"
+           
           />
           <label for="icon_prefix">Image URL</label>
         </div>
@@ -107,7 +105,7 @@
       <!---------- Button -------------->
       <div class="row">
         <button
-          class="btn waves-effect waves-light btn-large"
+          class="btn waves-effect waves-light blue btn-large"
           type="submit"
           name="action"
         >
@@ -121,5 +119,6 @@
     <!---------- End Form -------------->
   </div>
 </div>
+ <script src="{{ url_for('static', filename='assets/js/test.js') }}"></script>
 
 {% endblock %}

@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700");
 
-/*
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-*/
 
 body {
   margin: 0;
@@ -34,7 +27,7 @@ nav .nav-wrapper {
 .navbar-nav a {
   text-decoration: none;
   color: #fafafa;
-  font-size: 18px;
+  font-size: 18px; 
   list-style-type: none;
 }
 
@@ -44,6 +37,12 @@ nav .nav-wrapper {
 
 .navbar-nav .active {
   border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.navbar-nav .site-logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 15px;
 }
 
 /*  */
@@ -85,19 +84,19 @@ nav .nav-wrapper {
 #main-heading {
   text-align: center;
   margin-bottom: 30px;
-  color: orangered;
+  color: orange;
   font-weight: bold;
 }
 
 #services-heading {
   text-align: center;
   margin-bottom: 25px;
-  color: orangered;
+  color: orange;
   font-weight: bold;
 }
 
 .main-subheading {
-  color: orangered;
+  color: orange;
   font-weight: bold;
 }
 
@@ -105,7 +104,7 @@ nav .nav-wrapper {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
-  color: orangered;
+  color: orange;
   font-weight: bold;
 }
 
@@ -195,9 +194,9 @@ nav .nav-wrapper {
 }
 
 .admin-button {
-  background-color: orange;
+  background-color: #40c4ff ;
   color: white;
-  padding: 10px 24px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -205,18 +204,18 @@ nav .nav-wrapper {
   margin-left: 34px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  
   border: none;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .model-display {
-  background-color: orange;
+  background-color: grey;
   color: white;
-  padding: 10px 20px;
+ /* padding: 10px 20px;*/
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  /*display: inline-block;*/
   font-size: 1.5rem;
   border-radius: 6px;
   cursor: pointer;
@@ -237,7 +236,7 @@ nav .nav-wrapper {
 .specs1 {
   font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .specs-db1 {
@@ -267,10 +266,10 @@ nav .nav-wrapper {
 }
 
 .book-it {
-  height: 150px;
-  width: 90%;
+ 
+  width: 100%;
   position: relative;
-  left: 7%;
+  
   margin-bottom: 5px;
 }
 
@@ -289,10 +288,10 @@ nav .nav-wrapper {
 }
 
 #rates {
-  font-size: 48px;
-  color: orange;
+  font-size: 18px;
+  color: blue;
   text-align: center;
-  padding: 5px;
+  
 }
 
 #currency {
@@ -332,15 +331,14 @@ nav .nav-wrapper {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 50px;
-  color: orangered;
+  color: orange;
   font-weight: bold;
   position: relative;
   right: 18%;
 }
 
 .for-hire {
-  font-size: 18px;
-  color: orangered;
+  font-size: 16px; 
   text-align: center;
   text-transform: uppercase;
 }
@@ -351,7 +349,7 @@ nav .nav-wrapper {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 50px;
-  color: orangered;
+  color: orange;
   font-weight: bold;
 }
 
@@ -367,8 +365,8 @@ nav .nav-wrapper {
 /*-------------------------------Search for Cabs by Model or Brand --*/
 
 .results-container {
-  margin-top: 100px;
-  margin-bottom: 300px;
+  margin-top: 120px;
+  margin-bottom: 350px;
 }
 
 /*-------------------------Add Booking Page --*/
@@ -492,15 +490,17 @@ nav .nav-wrapper {
 }
 
 .login-container {
-  padding: 20px;
-  margin-top: 50px;
-  margin-bottom: 170px;
+  height: 500px;
+    width: 40%;
+    margin-bottom: 250px;
+    margin-top: 100px;
 }
 
 .registe-container {
-  padding: 20px;
-  margin-top: 50px;
-  margin-bottom: 150px;
+  height: 500px;
+    width: 40%;
+    margin-bottom: 250px;
+    margin-top: 100px;
 }
 
 .flashes h4 {
@@ -509,9 +509,12 @@ nav .nav-wrapper {
 
 /*-----Contact Page ---*/
 .contact-container {
-  height: 500px;
-  width: 100%;
+    height: 500px;
+    width: 40%;
+    margin-bottom: 250px;
+    margin-top: 100px;
 }
+/*
 #contact {
   height: 300px;
   width: 50%;
@@ -522,7 +525,7 @@ nav .nav-wrapper {
   background-color: white;
   border-radius: 10px;
 }
-
+*/
 /*******************************************/
 
 /*----------------------------------Social Media icons-*/
@@ -556,7 +559,7 @@ ul:not(.browser-default) > li {
 }
 
 .social-links li a i:hover {
-  background: #a446c9;
+  background: orangered;
 }
 
 #footer-details {
@@ -701,7 +704,7 @@ footer p {
     text-align: center;
     /* margin-top: 30px; */
     margin-bottom: 30px;
-    color: orangered;
+    color: orange;
     /* font-weight: bold; */
     /* position: relative; */
     right: 18%;
@@ -714,20 +717,20 @@ footer p {
   .booker-info {
     padding: 10px;
   }
-
+/*
   .bookings-search {
     position: relative;
     margin-top: 30px;   
     left: 0%;
   }
-
+*/
   .login-container {
     margin-top: 20px;
     padding: 0px;
     margin-bottom: 0px;
   }
 
-  .register-container {
+  .registe-container {
     margin-top: 32px;
     padding: 0px;
     margin-bottom: 0px;
@@ -743,8 +746,14 @@ footer p {
     display: none;
   }
 
+  .admin-container {
+      margin-top: 50px;
+      margin-bottom: 230px;
+      width: 70%;
+  }
+
   .admin-button {
-    background-color: orange;
+    background-color: #40c4ff ;
     color: white;
     padding: 10;
     text-align: center;
@@ -763,7 +772,7 @@ footer p {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
-    color: orangered;
+    color: orange;
     /* font-weight: bold; */
   }
 
@@ -816,7 +825,7 @@ footer p {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
-    color: orangered;
+    color: orange;
     font-weight: normal;
   }
 

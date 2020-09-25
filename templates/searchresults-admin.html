@@ -2,9 +2,10 @@
 
 {% extends 'base.html' %} {% block content %}
 
-<div class="container findcab-container">
-  <h4 class="page-headings">Cab</h4>
+<div class="container results-container">
+  <h4 class="page-headings">Results admin</h4>
   <!-- trial----->
+  {% for cab in cabs %}
   <div class="row grey lighten-5">
     <div class="col s12 m4 l4">
       <div class="card">
@@ -36,6 +37,8 @@
     </div>
     <!-- End Cab Model ccolumn-->
 
+    
+    <!-- End book this Cab -->
     <div class="col s12 m4 l4 center-align">
       <!--<div class="available"></div> -->
       <p class="specs">Contact information</p>
@@ -53,22 +56,19 @@
         <p class="specs">
           Phone Number: <span class="specs-db"> {{cab.tel_nr}}</span>
         </p>
-      </div><br>
+      </div>
       
-      <div id="book-thisCab">     
+      <div id="book-thisCab">
+     
         <a
-        href="{{ url_for('delete_cab', cab_id=cab._id)}}"
-        class="waves-effect waves-light delete-btn btn btn-style red"
-        >delete this Cab</a
-      >
-      <a
-        href="{{ url_for('edit_cab', cab_id=cab._id)}}"
-        class="waves-effect waves-light edit-btn btn btn-style green"
-        >Edit/book this Cab</a
-      >
+          href="{{ url_for('get_one', cab_id=cab._id)}}"
+          class="waves-effect waves-light btn btn-style book_btn blue"
+          >go to cab</a
+        > 
       </div>
     </div>
   </div>
+  {% endfor%}
 </div>
 
 {% endblock%}

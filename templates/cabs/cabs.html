@@ -21,9 +21,9 @@
           <label for="query">Search Cab</label>
         </div>
         <div class="col s12 m4">
-          <button class="blue lighten-2 btn" type="submit">Search</button>
+          <button class="blue  btn" type="submit">Search</button>
           <a
-            href="{{ url_for('get_cabs') }}"
+            href="{{ url_for('cabs') }}"
             class="grey btn text-shadow cancel-btn"
             >Cancel</a
           >
@@ -32,13 +32,14 @@
     </form>
   </div>
 </div>
+<!-- End Search box-->
 <br /><br />
 
 {% for cab in cabs %}
 
 <div class="container cabs-container">
   <!-- trial----->
-  <div class="row yellow lighten-5">
+  <div class="row">
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
@@ -51,46 +52,32 @@
       </div>
     </div>
 
-    <!-- Cab Model ccolumn-->
+    <!-- Cab  column-->
     <div class="col s12 m4 l4">
       <div class="card-content center-align">
-        <h4 class="model-display">{{cab.brand_name}} {{cab.model_name}}</h4>
+        <h4 class="model-display">{{cab.brand_name}}</h4>
         <p class="specs1">
           Vehicle Type | <span class="specs-db1">{{cab.vehicle_type}}</span>
-        </p>
-        <!-- Modal Trigger -->
-        <a
-          class="waves-effect waves-light btn blue lighten-1 modal-trigger"
-          href="#modal1"
-          >See Rates</a
-        >
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h6>Base Rates From</h6>
+        </p>                       
+          
+            <p>Base Rates From</p>
             <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
             <small
-              >Additional charges may apply as per distance ot toll
-              charges</small
-            >
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat"
-              >Close</a
-            >
-          </div>
-        </div>
-        <!--End- Modal Structure -->
+              >Additional charges may apply as per distance or toll
+              charges</small>         
+        
       </div>
     </div>
     <!-- End Cab Model ccolumn-->
 
     <div class="col s12 m4 l4 center-align">
       <!--<div class="available"></div> -->
-      <p class="for-hire">This Cab is available for hire</p>
+      <p class="specs">Contact information</p>
 
       <div class="book-it">
+       <p class="specs">
+          Owner: <span class="specs-db"> {{cab.owner_name}}</span>
+        </p>
         <p class="specs">
           Location: <span class="specs-db"> {{cab.cab_location}}</span>
         </p>
@@ -101,16 +88,28 @@
           Phone Number: <span class="specs-db"> {{cab.tel_nr}}</span>
         </p>
       </div>
+      
       <div id="book-thisCab">
-        <a
+      Email or call the driver directly to arrange a booking
+        <!--<a
           href="{{ url_for('get_one', cab_id=cab._id)}}"
           class="waves-effect waves-light btn btn-style book_btn blue"
-          >book it</a
-        >
+          >go to cab</a
+        > -->
       </div>
     </div>
     <!-- End book this Cab -->
-  </div>
+  </div> 
 </div>
 
-{% endfor %} {% endblock %}
+{% endfor %} 
+<div class="container"><br>
+ <ul class="pagination">
+            {% for page_number in pages %} {% if page_number == current_page %}
+            <li class="active"><a>{{ page_number }}</a></li>
+            {% else %}
+            <li class="waves-effect"><a href="{{ url_for('cabs', current_page=page_number) }}">{{ page_number }}</a></li>
+            {% endif %} {% endfor %}
+        </ul>
+</div>
+{% endblock %}

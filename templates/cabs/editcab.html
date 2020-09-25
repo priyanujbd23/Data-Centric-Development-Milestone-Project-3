@@ -55,27 +55,16 @@
       </div>
       <!---------------End Vehicle Brand ------->
 
-      <!--------------Vehicle Model ------->
+       <!---------- Name -------------->
       <div class="row">
         <div class="input-field col s12">
-          <i class="material-icons prefix">model_training</i>
-          <!--- Select option for brand-->
-          <select id="model" name="model_name">
-            <option value="" disabled selected>Choose Model</option>
-            <!-- Display each instant of the type-->
-            {% for model in models %} {% if model.model_name == cab.model_name
-            %}
-            <option value="{{model.model_name}}" selected
-              >{{model.model_name}}</option
-            >
-            {% else %}
-            <option value="{{model.model_name}}">{{model.model_name}}</option>
-            {% endif %} {% endfor %}
-          </select>
-          <label>Model</label>
+          <i class="material-icons prefix">account_circle</i>
+          <input id="owner-name" name="owner_name" type="text" class="validate" required/>
+          <label for="icon_prefix">Name</label>
         </div>
       </div>
-      <!------------End Vehicle Model ------->
+      <!----------End Name  -------------->
+      
       <!----------Location------->
       <div class="row">
         <div class="input-field col s12">

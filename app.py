@@ -1,6 +1,8 @@
 import os
+import math
+import re
 from flask import Flask, render_template, redirect, request, url_for, session, flash
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from os import path
@@ -17,23 +19,39 @@ mongo = PyMongo(app)
 
 # Admin page
 @app.route('/')
-@app.route('/home_page')
-def home_page():
+@app.route('/home')
+def home():
     return render_template('home.html')
 
 
-@app.route('/get_cabs')
-def get_cabs():
-    return render_template('cabs/cabs.html', cabs=mongo.db.cabs.find())
+""" Pagination example taken from:
+https://github.com/ShaneMuir/Cookbook-Recipe-Manager/blob/master/templates/index.html
+"""
+
+# Cabs page
+@app.route('/cabs')
+def cabs():
+    page_limit = 4  # Logic for pagination
+    current_page = int(request.args.get('current_page', 1))
+    total = mongo.db.cabs.count()
+    pages = range(1, int(math.ceil(total / page_limit)) + 1)
+    cab = mongo.db.cabs.find().sort('_id', pymongo.ASCENDING).skip(
+        (current_page - 1)*page_limit).limit(page_limit)
+    return render_template('cabs/cabs.html', cab=cab,
+                           current_page=current_page,
+                           pages=pages, cabs=mongo.db.cabs.find({}).sort('_id', -1))
 
 
 # Add a cab
 @app.route('/add_cab')
 def add_cab():
     return render_template('cabs/addcab.html', types=mongo.db.types.find(),
-                           brands=mongo.db.brands.find(),
-                           models=mongo.db.models.find(),
-                           bookings=mongo.db.bookings.find())
+                           brands=mongo.db.brands.find())
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 
 # Insert a Cab
@@ -43,7 +61,7 @@ def insert_cab():
     # get the form and convert to a dictionary
     cabs.insert_one(request.form.to_dict())
     # get the form fields with data in them
-    return redirect(url_for('get_cabs'))
+    return redirect(url_for('cabs'))
 
 
 # Edit a Cab selection
@@ -52,13 +70,11 @@ def insert_cab():
 def edit_cab(cab_id):
     a_cab = mongo.db.cabs.find_one({"_id": ObjectId(cab_id)})
     # prepolulated based on the collection
-    # returned in the types, brands and models cursor
+    # returned in the types andbrands cursor
     all_types = mongo.db.types.find()
     all_brands = mongo.db.brands.find()
-    all_models = mongo.db.models.find()
     return render_template('cabs/editcab.html', cab=a_cab,
-                           types=all_types, brands=all_brands,
-                           models=all_models)
+                           types=all_types, brands=all_brands)
 
 
 # update Cab entry
@@ -71,13 +87,13 @@ def update_cab(cab_id):
                 {
         'vehicle_type': request.form.get('vehicle_type'),
         'brand_name': request.form.get('brand_name'),
-        'model_name': request.form.get('model_name'),
+        'owner_name': request.form.get('owner_name'),
         'cab_location': request.form.get('cab_location'),
         'email': request.form.get('email'),
         'tel_nr': request.form.get('tel_nr'),
         'cab_picture': request.form.get('cab_picture')
     })
-    return redirect(url_for('get_cabs'))
+    return redirect(url_for('cabs'))
     # specify the form fields to match the keys on the task collection
 
 
@@ -85,7 +101,7 @@ def update_cab(cab_id):
 @app.route('/delete_cab/<cab_id>')
 def delete_cab(cab_id):
     mongo.db.cabs.remove({'_id': ObjectId(cab_id)})
-    return redirect(url_for('get_cabs'))
+    return redirect(url_for('cabs'))
 
 
 # find a cab by using a search field
@@ -96,6 +112,7 @@ def get_one(cab_id):
     return render_template('cabs/findcab.html', cab=cab)
 
 
+"""
 # get booked cabs
 @app.route('/get_bookings')
 def get_bookings():
@@ -127,7 +144,7 @@ def insert_booking():
 def delete_booking(booking_id):
     mongo.db.bookings.remove({'_id': ObjectId(booking_id)})
     return redirect(url_for('get_bookings'))
-
+"""
 # <---- Manage vehicle Types, Brands & Models ---->
 
 
@@ -186,6 +203,7 @@ def update_brand(brand_id):
 
 # ------ Vehicle Model----------
 
+"""
 # Get the Model
 @app.route('/get_model')
 def get_model():
@@ -201,13 +219,14 @@ def edit_model(model_id):
                                {'_id': ObjectId(model_id)}))
 
 
+
 # updates Model
 @app.route('/update_model/<model_id>', methods=['POST'])
 def update_model(model_id):
     mongo.db.models.update(
         {'_id': ObjectId(model_id)},
         {'model_name': request.form.get('model_name')})
-    return redirect(url_for('get_model'))
+    return redirect(url_for('get_model')) """
 
 # ------ End of Vehicle Brand----------
 
@@ -228,11 +247,12 @@ def delete_brand(brand_id):
     return redirect(url_for('get_brand'))
 
 
+"""
 #  delete Models
 @app.route('/delete_model/<model_id>')
 def delete_model(model_id):
     mongo.db.models.remove({'_id': ObjectId(model_id)})
-    return redirect(url_for('get_model'))
+    return redirect(url_for('get_model')) """
 
 # ------ End Delete---------
 
@@ -268,19 +288,20 @@ def new_brand():
     return render_template('brands/addbrand.html')
 
 
+"""
 # add Model
 @app.route('/insert_model', methods=['POST'])
 def insert_model():
     models = mongo.db.models
     models_doc = {'model_name': request.form.get('model_name')}
     models.insert_one(models_doc)
-    return redirect(url_for('get_model'))
+    return redirect(url_for('get_model'))"""
 
 
-# render a view and add a new brand
+"""# render a view and add a new brand
 @app.route('/new_model')
 def new_model():
-    return render_template('models/addmodel.html')
+    return render_template('models/addmodel.html') """
 
 
 # Admin page
@@ -310,18 +331,29 @@ def search_cab(vehicle_type):
     return render_template('searchresults.html', cab=cab)
 # -------------------------------------------------------------->
 """
-
-
 # -- Search Routes ----
+
 
 # Search Cab
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     cabs = list(mongo.db.cabs.find({"$text": {"$search": query}}))
-    return render_template("searchresults.html", cabs=cabs)
+    if not query:
+        flash(' not found ..')
+        return redirect(url_for('cabs'))
+    else:
+        return render_template("searchresults.html", cabs=cabs)
 
 
+# Search for Admin Page
+@app.route("/search_admin", methods=["GET", "POST"])
+def search_admin():
+    query = request.form.get("query")
+    cabs = list(mongo.db.cabs.find({"$text": {"$search": query}}))
+    return render_template("searchresults-admin.html", cabs=cabs)
+
+"""
 # Search Cab Bookings
 @app.route("/search_booking", methods=["GET", "POST"])
 def search_booking():
@@ -329,8 +361,9 @@ def search_booking():
     bookings = list(mongo.db.bookings.find({"$text": {"$search": query}}))
     return render_template("bookings.html", bookings=bookings)
 
-
+"""
 # ------ Login section for new drivers to add a Cab -----------
+
 
 # register a user
 @app.route('/register', methods=['GET', 'POST'])
