@@ -586,20 +586,20 @@ footer p {
 
   #main-heading {
     text-align: center;
-    color: orangered;
+    color: oranger;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   #services-heading {
     text-align: center;
-    color: orangered;
+    color: oranger;
     font-weight: bold;
     font-size: 26px;
   }
 
   .welcome-text {
-    margin-top: 20x;
+    margin: 0px;
   }
 
   #cover-text {

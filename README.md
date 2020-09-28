@@ -43,8 +43,7 @@ devices. The use of Materialize enables the site elements to rearrange themselve
   - As a user I want to be able to browse through the cars 
   
 - Link to Mockups 
-  - assets/mockup/User Centric MileStone  Project 1.pdf
-  - assets/mockup/User Centric MileStone  Project 1- Smartphone.pdf
+  - static/assets/mockup/MS3 Mockup.pdf  
 
 - website
   - https://dop-dd.github.io/User-Centric-MileStone-Project-1/index.html
@@ -53,7 +52,7 @@ devices. The use of Materialize enables the site elements to rearrange themselve
 ## Demo 
 
 - Screen shot
-  - ![Image of website](/assets/img/website-demo.png) 
+  - ![Image of website](static//assets/img/website-demo.png) 
 
 
 ## Features
