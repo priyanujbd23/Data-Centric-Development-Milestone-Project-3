@@ -70,7 +70,7 @@ nav .nav-wrapper {
 
 .welcome-text {
   margin-bottom: 50px;
-  margin-top: 20x;
+  margin-top: 20px;
 }
 
 /*- Headings */
@@ -106,7 +106,7 @@ nav .nav-wrapper {
   text-align: center;
   margin-bottom: 30px;
   font-weight: bold;
-  color: rgba(63, 70, 36, 0.8);
+  color: grey;
 }
 
 /*-  cover text */
@@ -160,7 +160,7 @@ nav .nav-wrapper {
 
 .page-footer {
   margin-top: 50px;
-  padding: 10;
+  padding: 10px;
   height: 170px;
   background-color: rgba(63, 70, 36, 0.8);
 }
@@ -489,7 +489,7 @@ nav .nav-wrapper {
   padding-bottom: 15px;
   float: right;
   padding-top: 39px;
-  margin-top: 10;
+  margin-top: 10px;
   display: flex;
 }
 
@@ -545,14 +545,14 @@ footer p {
   /*---------Headings ---------*/
   #main-heading {
     text-align: center;
-    color: oranger;
+    color: orange;
     font-weight: bold;
     font-size: 24px;
   }
 
   #services-heading {
     text-align: center;
-    color: oranger;
+    color: orange;
     font-weight: bold;
     font-size: 26px;
   }
@@ -681,7 +681,7 @@ footer p {
   .admin-button {
     background-color: #40c4ff;
     color: white;
-    padding: 10;
+    padding: 10px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
@@ -791,7 +791,7 @@ footer p {
     padding-bottom: 15px;
     float: left;
     padding-top: 39px;
-    margin-top: 10;
+    margin-top: 10px;
     display: flex;
   }
 
