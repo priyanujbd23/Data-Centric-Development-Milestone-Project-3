@@ -159,8 +159,7 @@ nav .nav-wrapper {
 /*-----Footer ----*/
 
 .page-footer {
-  margin-top: 50px;
-  padding: 10px;
+  margin-top: 50px;  
   height: 170px;
   background-color: rgba(63, 70, 36, 0.8);
 }
@@ -587,8 +586,7 @@ footer p {
   /*----Footer ---*/
 
   .page-footer {
-    margin-top: 50px;
-    padding: 0;
+    margin-top: 50px;   
     height: 295px;
     background-color: rgba(63, 70, 36, 0.8);
   }
