@@ -25,26 +25,24 @@
         <h4 class="model-display">{{cab.brand_name}}</h4>
         <p class="specs1">
           Vehicle Type | <span class="specs-db1">{{cab.vehicle_type}}</span>
-        </p>                       
-          
-            <p>Base Rates From</p>
-            <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
-            <small
-              >Additional charges may apply as per distance or toll
-              charges</small>          
-        
+        </p>
+
+        <p>Base Rates From</p>
+        <p id="rates"><i class="fa fa-gbp"></i> 11.99</p>
+        <small
+          >Additional charges may apply as per distance or toll charges</small
+        >
       </div>
     </div>
     <!-- End Cab Model ccolumn-->
 
-    
     <!-- End book this Cab -->
     <div class="col s12 m4 l4 center-align">
       <!--<div class="available"></div> -->
       <p class="specs">Contact information</p>
 
       <div class="book-it">
-       <p class="specs">
+        <p class="specs">
           Owner: <span class="specs-db"> {{cab.owner_name}}</span>
         </p>
         <p class="specs">
@@ -57,19 +55,17 @@
           Phone Number: <span class="specs-db"> {{cab.tel_nr}}</span>
         </p>
       </div>
-      
+
       <div id="book-thisCab">
-     
         <a
           href="{{ url_for('get_one', cab_id=cab._id)}}"
           class="waves-effect waves-light btn btn-style book_btn blue"
           >go to cab</a
-        > 
+        >
       </div>
     </div>
   </div>
   {% endfor%}
-  
 </div>
 
 {% endblock%}

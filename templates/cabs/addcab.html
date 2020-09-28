@@ -41,12 +41,17 @@
       </div>
       <!---------------End Vehicle Brand ------->
 
-      
       <!---------- Name -------------->
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
-          <input id="owner-name" name="owner_name" type="text" class="validate" required/>
+          <input
+            id="owner-name"
+            name="owner_name"
+            type="text"
+            class="validate"
+            required
+          />
           <label for="icon_prefix">Name</label>
         </div>
       </div>
@@ -72,7 +77,13 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">email</i>
-          <input id="email" name="email" type="text" class="validate" required />
+          <input
+            id="email"
+            name="email"
+            type="text"
+            class="validate"
+            required
+          />
           <label for="icon_prefix">Email</label>
         </div>
       </div>
@@ -81,7 +92,13 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">phone</i>
-          <input id="tel_nr" name="tel_nr" type="tel" class="validate" required/>
+          <input
+            id="tel_nr"
+            name="tel_nr"
+            type="tel"
+            class="validate"
+            required
+          />
           <label for="icon_telephone">Telephone</label>
         </div>
       </div>
@@ -95,7 +112,6 @@
             name="cab_picture"
             type="text"
             class="validate"
-           
           />
           <label for="icon_prefix">Image URL</label>
         </div>
@@ -115,10 +131,10 @@
       </div>
       <!----------End Button -------------->
     </form>
-    <!----------  -------------->
+  
     <!---------- End Form -------------->
   </div>
 </div>
- <script src="{{ url_for('static', filename='assets/js/test.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/test.js') }}"></script>
 
 {% endblock %}

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="container search-container">
   <h4 class="cab-headings">Dashboard</h4>
   <!--- Search Cabs form-->
   <div class="row search-box">
-    <form class="col s12 m8" action="{{ url_for('search_admin') }}" method="POST">
+    <form
+      class="col s12 m8"
+      action="{{ url_for('search_admin') }}"
+      method="POST"
+    >
       <div class="row valign-wrapper center-align">
         <div class="input-field col s12 m6">
           <i class="fa fa-search prefix light-blue-text text-darken-4"></i>
@@ -35,63 +38,78 @@
 </div>
 
 <div class="container admin-container">
-<h5 id="admin-title">Manage Cabs</h5>
+  <h5 id="admin-title">Manage Cabs</h5>
 
-<!---------- Manage Vehicle Type -------------->
-<div class="row">
+  <!---------- Manage Vehicle Type -------------->
+  <div class="row">
     <div class="col s12 m4">
-    <h5 class="admin-header center-align">Manage Vehicle Type</h5>
-    <div class="card medium">
-      <div class="card-image">
-        <img src="https://cdn.pixabay.com/photo/2015/06/08/15/18/steering-wheel-801994_960_720.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content center-align">
-          <p class="admin-desc">Add vehicle type. Van, Station wagon, Sedan, etc.</p>         
-          <a class="admin-button" href="{{ url_for('get_types') }}">Add Vehicle Type</a>
-         </div>
-      </div>
-    </div>
-  </div> 
-  <!---------------End Vehicle Type-------->
-   
-   <!---------- Manage Vehicle Brand -------------->
-  <div class="col s12 m4">
-    <h5 class="admin-header">Manage Vehicle Brand</h5>
-    <div class="card medium">
-      <div class="card-image">
-        <img src="https://cdn.pixabay.com/photo/2015/08/11/22/33/nissan-885309_960_720.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content center-align">
-          <p class="admin-desc">Add vehicle brand. Peugoet, Toyota, Renault, etc. etc.</p>         
-          <a class="admin-button" href="{{ url_for('get_brand') }}">Add Vehicla Brand</a>
+      <h5 class="admin-header center-align">Manage Vehicle Type</h5>
+      <div class="card medium">
+        <div class="card-image">
+          <img
+            src="https://cdn.pixabay.com/photo/2015/06/08/15/18/steering-wheel-801994_960_720.jpg"
+          />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content center-align">
+            <p class="admin-desc">
+              Add vehicle type. Van, Station wagon, Sedan, etc.
+            </p>
+            <a class="admin-button" href="{{ url_for('get_types') }}"
+              >Add Vehicle Type</a
+            >
           </div>
+        </div>
       </div>
     </div>
-  </div>
-   <!---------------End Vehicle Brand -------->
+    <!---------------End Vehicle Type-------->
 
-    
-
-    
-  <!---------- Add a new Cab -------------->
-  <div class="col s12 m4">
-    <h5 class="admin-header">Add a new cab</h5>
-    <div class="card medium">
-      <div class="card-image">
-        <img src="https://cdn.pixabay.com/photo/2016/02/19/11/01/taxi-1209542__340.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content center-align">
-          <p class="admin-desc">New drivers or admin can dd a new cab to the collection.</p>               
-          <a class="admin-button" href="{{ url_for('add_cab') }}">Add a new Cab</a>
+    <!---------- Manage Vehicle Brand -------------->
+    <div class="col s12 m4">
+      <h5 class="admin-header">Manage Vehicle Brand</h5>
+      <div class="card medium">
+        <div class="card-image">
+          <img
+            src="https://cdn.pixabay.com/photo/2015/08/11/22/33/nissan-885309_960_720.jpg"
+          />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content center-align">
+            <p class="admin-desc">
+              Add vehicle brand. Peugoet, Toyota, Renault, etc. etc.
+            </p>
+            <a class="admin-button" href="{{ url_for('get_brand') }}"
+              >Add Vehicla Brand</a
+            >
           </div>
+        </div>
       </div>
     </div>
+    <!---------------End Vehicle Brand -------->
+
+    <!---------- Add a new Cab -------------->
+    <div class="col s12 m4">
+      <h5 class="admin-header">Add a new cab</h5>
+      <div class="card medium">
+        <div class="card-image">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/02/19/11/01/taxi-1209542__340.jpg"
+          />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content center-align">
+            <p class="admin-desc">
+              New drivers or admin can dd a new cab to the collection.
+            </p>
+            <a class="admin-button" href="{{ url_for('add_cab') }}"
+              >Add a new Cab</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------End Add a new Cab -------------->
   </div>
-    <!----------End Add a new Cab -------------->    
-  </div>
-  </div>  
+</div>
 
 {% endblock %}

@@ -2,38 +2,56 @@
 
 {% extends 'base.html' %} {% block content %}
 
-   
-<div class="container contact-container ">
-	<h4 class="page-headings center-align">Contact</h4>
- 
-	<div class="row">
-		<form onsubmit="return sendMail(this);" method="post">
-			<div class="card-panel">
+<div class="container contact-container">
+  <h4 class="page-headings center-align">Contact</h4>
 
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="fullname" name="name" type="text" placeholder="Name" class="validate" required>
-                    </div>					
-					
-						<div class="input-field col s12">
-							<input id="emailaddress" name="emailaddress" type="text" placeholder="Email" class="validate" required>
-                        </div>
-						</div><br>
-              
-						<div class="row">
-							<div class="input-field col s12">
-								<textarea rows="5" id="projectsummary"  name="projectsummary" placeholder="Message" required class="materialize-textarea"></textarea>
-							</div>
-						</div>                                           
-
-					</div>
-					<div class="row">
-						<button type="submit" class="col  blue s12 btn-large">Submit</button>
-					</div>
-		</form>
-	</div>
-    
-
+  <!-- EmailJs form submission-->
+  <div class="row">
+    <form onsubmit="return sendMail(this);" method="post">
+      <div class="card-panel">
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="fullname"
+              name="name"
+              type="text"
+              placeholder="Name"
+              class="validate"
+              required
+            />
+          </div>
+        <!---Email address-->
+          <div class="input-field col s12">
+            <input
+              id="emailaddress"
+              name="emailaddress"
+              type="text"
+              placeholder="Email"
+              class="validate"
+              required
+            />
+          </div>
+        </div>
+        <br />
+        <!---Message-->
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea
+              rows="5"
+              id="projectsummary"
+              name="projectsummary"
+              placeholder="Message"
+              required
+              class="materialize-textarea"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" class="col blue s12 btn-large">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
- 
+
 {% endblock %}

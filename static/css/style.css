@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700");
 
-
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +9,8 @@ main {
   flex: 1 0 auto;
 }
 
-/* Navbar  */
+/* --- Navbar --- */
+
 .navbar-nav {
   font-size: 30%;
   list-style-type: none;
@@ -27,7 +27,7 @@ nav .nav-wrapper {
 .navbar-nav a {
   text-decoration: none;
   color: #fafafa;
-  font-size: 18px; 
+  font-size: 18px;
   list-style-type: none;
 }
 
@@ -40,20 +40,16 @@ nav .nav-wrapper {
 }
 
 .navbar-nav .site-logo {
-    font-size: 25px;
-    font-weight: bold;
-    margin-left: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 15px;
 }
-
-/*  */
 
 .btn-style {
   margin: 0px 10px;
 }
 
-.table-text {
-  color: white;
-}
+/*--- home page --*/
 
 .container-cover {
   height: auto;
@@ -76,8 +72,6 @@ nav .nav-wrapper {
   margin-bottom: 50px;
   margin-top: 20x;
 }
-
-/*------ Login Section ------*/
 
 /*- Headings */
 
@@ -151,7 +145,6 @@ nav .nav-wrapper {
   font-size: 1.1rem;
   color: #fafafa;
   font-family: "Exo", sans-serif;
-  /*text-transform: uppercase;*/
   letter-spacing: 4px;
   width: 450px;
   height: 265px;
@@ -177,16 +170,6 @@ nav .nav-wrapper {
 }
 
 /*  Admin link text- --*/
-/*.admin-link a {
-    text-align: center;
-    font-size: 20px;
-    color: orangered;
-    margin-top: 0px;
-    position: absolute;
-    left: 30%;
-    top: 60%;
-}
-*/
 
 .admin-desc {
   font-size: 18px;
@@ -194,16 +177,16 @@ nav .nav-wrapper {
 }
 
 .admin-button {
-  background-color: #40c4ff ;
+  background-color: #40c4ff;
   color: white;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;  
+  font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-  
+
   border: none;
   margin-top: 20px;
 }
@@ -211,7 +194,7 @@ nav .nav-wrapper {
 .model-display {
   background-color: grey;
   color: white;
- /* padding: 10px 20px;*/
+  /* padding: 10px 20px;*/
   text-align: center;
   text-decoration: none;
   /*display: inline-block;*/
@@ -265,10 +248,9 @@ nav .nav-wrapper {
 }
 
 .book-it {
- 
   width: 100%;
   position: relative;
-  
+
   margin-bottom: 5px;
 }
 
@@ -290,26 +272,11 @@ nav .nav-wrapper {
   font-size: 18px;
   color: blue;
   text-align: center;
-  
 }
 
 #currency {
   font-size: 50px;
   color: orangered;
-}
-
-/*
-.for-hire {
-     color:  #fafafa;
-     font-size: 1.1rem;
-}
-*/
-/*--------Bookings --*/
-
-.bookings-search {
-  position: relative;
-  left: 10%;
-  margin-top: 50px;
 }
 
 #contact-heading {
@@ -337,12 +304,12 @@ nav .nav-wrapper {
 }
 
 .for-hire {
-  font-size: 16px; 
+  font-size: 16px;
   text-align: center;
   text-transform: uppercase;
 }
 
-/*------------------------------------Find a specific Cab page----*/
+/*-----Find a specific Cab page----*/
 
 .page-headings {
   text-align: center;
@@ -361,32 +328,31 @@ nav .nav-wrapper {
   margin-left: 40px;
 }
 
-/*-------------------------------Search for Cabs by Model or Brand --*/
+/*----Search for Cabs by Model or Brand --*/
 
 .results-container {
   margin-top: 120px;
   margin-bottom: 350px;
 }
 
-/*-------------------------Add Booking Page --*/
+/*-------Add Booking Page --*/
 
 .addBooking-container {
   width: 50%;
   padding: 50px;
 }
 
-/*-------------------------Edit Cab Page --*/
+/*----Edit Cab Page --*/
 
 .editCab-container {
   width: 40%;
   padding: 20px;
   margin-top: 50px;
 }
-}
 
-/*----------------------------------Admin Section---*/
+/*-------------Admin Section--------------*/
 
-/*--------Add Vehicle Type --*/
+/*---Add Vehicle Type --*/
 
 .types-heading {
   font-weight: bold;
@@ -490,44 +456,35 @@ nav .nav-wrapper {
 
 .login-container {
   height: 500px;
-    width: 40%;
-    margin-bottom: 250px;
-    margin-top: 100px;
+  width: 40%;
+  margin-bottom: 250px;
+  margin-top: 100px;
 }
 
 .registe-container {
   height: 500px;
-    width: 40%;
-    margin-bottom: 250px;
-    margin-top: 100px;
+  width: 40%;
+  margin-bottom: 250px;
+  margin-top: 100px;
 }
 
 .flashes h4 {
   line-height: 1;
 }
 
-/*-----Contact Page ---*/
-.contact-container {
-    height: 500px;
-    width: 40%;
-    margin-bottom: 250px;
-    margin-top: 100px;
-}
-/*
-#contact {
-  height: 300px;
-  width: 50%;
-  border: 1px solid yellow;
-  position: relative;
-  left: 25%;
-  top: 120px;
-  background-color: white;
-  border-radius: 10px;
-}
-*/
-/*******************************************/
 
-/*----------------------------------Social Media icons-*/
+/*-----Contact Page ---*/
+
+.contact-container {
+  height: 500px;
+  width: 40%;
+  margin-bottom: 250px;
+  margin-top: 100px;
+}
+
+
+/*-------Social Media icons-----*/
+
 .social-links {
   padding-bottom: 15px;
   float: right;
@@ -574,9 +531,10 @@ footer p {
   font-size: 16px;
 }
 
-/*-------------------------- End of Social Media-*/
+/*--------- End of Social Media--------*/
 
-/*----------------------------------------------------------Media Queries--------------------------------*/
+/*-------------Media Queries------------*/
+
 @media screen and (max-width: 743px) {
   .container-cover {
     height: auto;
@@ -584,6 +542,7 @@ footer p {
     margin-top: 0px;
   }
 
+  /*---------Headings ---------*/
   #main-heading {
     text-align: center;
     color: oranger;
@@ -598,6 +557,21 @@ footer p {
     font-size: 26px;
   }
 
+  .cab-headings {
+    text-align: center;
+    margin-bottom: 30px;
+    color: orange;
+    right: 18%;
+  }
+
+  .page-headings {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: orange;
+    font-weight: normal;
+  }
+
   .welcome-text {
     margin: 0px;
   }
@@ -610,10 +584,7 @@ footer p {
     display: none;
   }
 
-  .social-sub {
-    position: absolute;
-    left: 20px;
-  }
+  /*----Footer ---*/
 
   .page-footer {
     margin-top: 50px;
@@ -622,50 +593,13 @@ footer p {
     background-color: rgba(63, 70, 36, 0.8);
   }
 
-  .social-links {
-    padding-bottom: 15px;
-    float: left;
-    padding-top: 39px;
-    margin-top: 10;
-    display: flex;
-  }
-
-  .left {
-    float: left !important;
-    position: relative;
-    left: 25%;
-  }
-
-  /* search bar */
-  .orange.lighten-2 {
-    background-color: #ffb74d !important;
-    margin-bottom: 10px;
-  }
-  /*
- .fa {    
-    display: none;
- }
-*/
-
-  /*--Booking--*/
-
-  .addBooking-container {
-    width: 90%;
-    padding: 3px;
-    margin-top: 10px;
-  }
+  /*-- Cab Type, Brand pages -*/
 
   .addCab-container {
-    /* width: 50%; */
     padding: 20px;
   }
 
   .addType-container {
-    width: 100%;
-    padding: 0px;
-  }
-
-  .addModel-container {
     width: 100%;
     padding: 0px;
   }
@@ -683,60 +617,37 @@ footer p {
     margin-bottom: 20px;
   }
 
-  .cab-headings {
-    text-align: center;
-    /* margin-top: 30px; */
-    margin-bottom: 30px;
-    color: orangered;
-    /* font-weight: bold; */
-    position: relative;
-    right: 18%;
-  }
-
+  /*--  Search --*/
   .search-container {
     position: relative;
-    margin-top: 30px;    
+    margin-top: 30px;
     left: 0%;
   }
 
-  .cab-headings {
-    text-align: center;
-    /* margin-top: 30px; */
-    margin-bottom: 30px;
-    color: orange;
-    /* font-weight: bold; */
-    /* position: relative; */
-    right: 18%;
-  }
-
-  .cancel-btn {
-    margin-top: 10px;
+  .orange.lighten-2 {
+    background-color: #ffb74d !important;
+    margin-bottom: 10px;
   }
 
   .booker-info {
     padding: 10px;
   }
-/*
-  .bookings-search {
-    position: relative;
-    margin-top: 30px;   
-    left: 0%;
-  }
-*/
+
+  /* COntact, Login, register and Profile pages --*/
+
   .contact-container {
-      width: 90%;
+    width: 90%;
     margin-top: 20px;
     padding: 0px;
     margin-bottom: 0px;
   }
-
 
   .login-container {
     margin-top: 10px;
     padding: 10px;
     margin-bottom: 5px;
     width: 90%;
-}
+  }
 
   .registe-container {
     width: 90%;
@@ -752,29 +663,31 @@ footer p {
   }
 
   .admin-desc {
-    font-size: 18px;;
+    font-size: 18px;
   }
 
   .admin-container {
-      margin-top: 50px;
-      margin-bottom: 20px;
-      width: 70%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+  /*  -- Buttons --*/
+
+  .cancel-btn {
+    margin-top: 10px;
   }
 
   .admin-button {
-    background-color: #40c4ff ;
+    background-color: #40c4ff;
     color: white;
     padding: 10;
     text-align: center;
-    /* text-decoration: none; */
     display: inline-block;
     font-size: 16px;
-    /* margin-left: 34px; */
     border-radius: 6px;
     cursor: pointer;
-    /* font-weight: bold; */
     border: none;
-    /* margin-top: 80px; */
   }
 
   .page-headings {
@@ -782,18 +695,18 @@ footer p {
     margin-top: 20px;
     margin-bottom: 30px;
     color: orange;
-    /* font-weight: bold; */
   }
 
   .types-heading {
     font-weight: bold;
-    /* margin-bottom: 20px; */
     font-size: 20px;
   }
 
   .new-types {
     padding: 5px;
   }
+
+  /*--  Add, Edit Cab, Type and Brand pages --*/
 
   .addType-container {
     width: 100%;
@@ -816,84 +729,80 @@ footer p {
     margin-bottom: 30px;
   }
 
-  .editModel-container {
-    width: 100%;
-    padding: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .addModel-container {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-
-  .page-headings {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    color: orange;
-    font-weight: normal;
-  }
-
   .addCab-container {
     width: 100%;
     padding: 15px;
   }
- 
-.findcab-container {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
 
-/* delete a cab */
-.delete-btn {
+  .findcab-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .delete-btn {
     margin-left: 0px;
-}
+  }
 
-/* edit a cab */
-.editCab-container { 
-    width: 90%;  
+  .editCab-container {
+    width: 90%;
     padding: 20px;
-    margin-top: 10px;    
-}
+    margin-top: 10px;
+  }
 
+  /* Flash message */
 
   .flashes h4 {
     line-height: 1;
     font-size: 18px;
- }
+  }
 
- .results-container {
+  /* Search results */
+
+  .results-container {
     margin-top: 20px;
     margin-bottom: 30px;
-}
+  }
 
-.available-types {
-    /* height: 28px; */
+  .available-types {
     width: 50%;
-    /* margin-bottom: 30px; */
     text-align: center;
     font-size: 15px;
     font-weight: bold;
     position: relative;
     left: 27%;
-}
+  }
 
-.types-text {
+  .types-text {
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: center;  
+    text-align: center;
     color: green;
-}
+  }
 
- .new-types {
+  .new-types {
     padding: 1px;
     margin-bottom: 10px;
     margin-top: 10px;
-}
+  }
 
+  /*------Soc Media ----*/
 
+  .social-links {
+    padding-bottom: 15px;
+    float: left;
+    padding-top: 39px;
+    margin-top: 10;
+    display: flex;
+  }
+
+  .social-sub {
+    position: absolute;
+    left: 20px;
+  }
+
+  .left {
+    float: left !important;
+    position: relative;
+    left: 25%;
+  }
 }

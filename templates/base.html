@@ -23,17 +23,21 @@
       href="{{ url_for('static', filename='css/style.css')}}"
       type="text/css"
     />
-    
-    <!-- Send Email-->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("user_UU4KcF5Hbuu0qmEO38pMn");          
-        })();
-</script>
 
+    <!-- Send Email-->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_UU4KcF5Hbuu0qmEO38pMn");
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -49,7 +53,7 @@
               <li><a href="{{ url_for('cabs') }}">Cabs</a></li>
               <li><a href="{{ url_for('add_cab') }}">Add Cab</a></li>
               <li><a href="{{ url_for('contact') }}">Contact</a></li>
-              
+
               {% if session.user %}
               <li>
                 <a href="{{ url_for('profile', username=session['user']) }}"
@@ -61,8 +65,14 @@
               <li><a href="{{ url_for('logout') }}">Log Out</a></li>
               <li><a href="{{ url_for('register') }}">Register</a></li>
               {% else %}
-              <li><a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small orange">LogIn</a></li>
-              
+              <li>
+                <a
+                  href="{{ url_for('login') }}"
+                  class="waves-effect waves-light btn-small orange"
+                  >LogIn</a
+                >
+              </li>
+
               {% endif %}
             </ul>
           </div>
@@ -72,8 +82,8 @@
         <ul class="sidenav navbar-na" id="mobile-demo">
           <li><a href="{{ url_for('home') }}">Home</a></li>
           <li><a href="{{ url_for('cabs') }}">Cabs</a></li>
-          <li><a href="{{ url_for('add_cab') }}">Add Cab</a></li>  
-          <li><a href="{{ url_for('contact') }}">Contact</a></li>        
+          <li><a href="{{ url_for('add_cab') }}">Add Cab</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
           {% if session.user %}
           <li>
             <a href="{{ url_for('profile', username=session['user']) }}"
@@ -82,10 +92,10 @@
           </li>
           <li><a href="{{ url_for('admin_page') }}">Dashboard</a></li>
           <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-           <li><a href="{{ url_for('register') }}">Register</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
           {% else %}
           <li><a href="{{ url_for('login') }}">Log In</a></li>
-         
+
           {% endif %}
         </ul>
       </div>
@@ -165,7 +175,7 @@
       </div>
     </footer>
     <!--- End Footer-->
-  
+
     <!-- jQuerry -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -186,11 +196,7 @@
         $(".carousel").carousel();
         $(".button-collapse").sideNav();
       });
-
-      /*$("button").click(function(){
-             $("#contact-details").slideToggle();
-             });*/
-
+      
       // Date Picker
       $(".datepicker").pickadate({
         selectMonths: true, // Creates a dropdown to control month
@@ -205,8 +211,7 @@
         e.stopPropagation();
       });
     </script>
-     
-    <script src="{{ url_for('static', filename='assets/js/sendEmail.js') }}"></script>    
-    
+
+    <script src="{{ url_for('static', filename='assets/js/sendEmail.js') }}"></script>
   </body>
 </html>

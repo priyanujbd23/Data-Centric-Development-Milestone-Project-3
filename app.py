@@ -30,9 +30,9 @@ https://github.com/DarilliGames/flaskpaginate/blob/master/app.py """
 
 @app.route('/cabs')
 def cabs():
-   
+
     page, per_page, offset = get_page_args(
-            page_parameter='page', per_page_parameter='per_page')
+        page_parameter='page', per_page_parameter='per_page')
 
     # Gets the total values to be used later
     total = mongo.db.cabs.find().count()
@@ -255,7 +255,11 @@ def search_admin():
     cabs = list(mongo.db.cabs.find({"$text": {"$search": query}}))
     return render_template("searchresults-admin.html", cabs=cabs)
 
+
 # ------ Login section for new drivers to add a Cab -----------
+""" Example code from:
+https://github.com/TravelTimN/flask-task-manager-project
+"""
 
 
 # register a user
