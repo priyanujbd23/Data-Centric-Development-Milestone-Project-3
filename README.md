@@ -46,7 +46,7 @@ devices. The use of Materialize enables the site elements to rearrange themselve
   - static/assets/mockup/MS3 Mockup.pdf  
 
 - website
-  - https://dop-dd.github.io/User-Centric-MileStone-Project-1/index.html
+  - https://cab-agency.herokuapp.com/
 
 
 ## Demo 
