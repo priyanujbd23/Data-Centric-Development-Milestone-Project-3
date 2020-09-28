@@ -200,8 +200,7 @@ nav .nav-wrapper {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin-left: 34px;
+  font-size: 16px;  
   border-radius: 6px;
   cursor: pointer;
   
@@ -724,16 +723,27 @@ footer p {
     left: 0%;
   }
 */
-  .login-container {
+  .contact-container {
+      width: 90%;
     margin-top: 20px;
     padding: 0px;
     margin-bottom: 0px;
   }
 
+
+  .login-container {
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
   .registe-container {
+    width: 90%;
     margin-top: 32px;
-    padding: 0px;
-    margin-bottom: 0px;
+    padding: 10px;
+    margin-bottom: 5px;
+    
   }
 
   .profile-container {
@@ -743,12 +753,12 @@ footer p {
   }
 
   .admin-desc {
-    display: none;
+    font-size: 18px;;
   }
 
   .admin-container {
       margin-top: 50px;
-      margin-bottom: 230px;
+      margin-bottom: 20px;
       width: 70%;
   }
 
@@ -833,4 +843,40 @@ footer p {
     width: 100%;
     padding: 15px;
   }
+
+  .flashes h4 {
+    line-height: 1;
+    font-size: 18px;
+ }
+
+ .results-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.available-types {
+    /* height: 28px; */
+    width: 50%;
+    /* margin-bottom: 30px; */
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 27%;
+}
+
+.types-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;  
+    color: green;
+}
+
+ .new-types {
+    padding: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
 }
