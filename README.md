@@ -1,6 +1,11 @@
 
 # CityCabs Agency
 
+## Demo 
+
+- Screen shot
+  - ![Image of website](static//assets/img/website-demo.png)
+
 CityCabs Agency is a small but reliable cab service. The project is inspired by the cabby service concept. Users can book cabs 
 for different destinations nationwide. 
 
@@ -47,12 +52,6 @@ devices. The use of Materialize enables the site elements to rearrange themselve
 
 - website
   - https://cab-agency.herokuapp.com/
-
-
-## Demo 
-
-- Screen shot
-  - ![Image of website](static//assets/img/website-demo.png) 
 
 
 ## Features
