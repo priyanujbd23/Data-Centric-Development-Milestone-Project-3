@@ -9,7 +9,7 @@ we try to put some emphasis in our drivers who join our company. That way, set f
 The site contains basic information for anyone who wants to book a cab or drive for a cab agency and be their own boss.
 
 
-## UX
+## User Experience (UX)
 
 This project is for anyone who may need to book a cab for different servces.  
 

@@ -245,6 +245,8 @@ def admin_tasks():
 def search():
     query = request.form.get("query")
     cabs = list(mongo.db.cabs.find({"$text": {"$search": query}}))
+    if cabs.count(2) < 1:
+        return render_template('notfound.html')
     return render_template("searchresults.html", cabs=cabs)
 
 

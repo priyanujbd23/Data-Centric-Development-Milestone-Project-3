@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "base.html" %} {% block content %}
+
+<div class="container profile-container">
+  <div class="row">
+    <div class="col s12 m8 offset-m2 center-align">
+      <div class="card-panel">
+        <h5 class="center-align light-green accent-2">
+          Sorry Nof found
+        </h5>
+
+        
+        <br />
+        <a
+          href="{{ url_for('cabs') }}"
+          class="waves-effectblue blue waves-light btn"
+        >
+          <span class="material-icons"></span>Go to Cabs</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
