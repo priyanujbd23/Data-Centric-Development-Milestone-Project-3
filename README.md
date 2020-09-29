@@ -3,7 +3,7 @@
 
 ## Demo 
 
-- Screen shot
+- <a href="https://cab-agency.herokuapp.com/">View the live project here</a>
   - ![Image of website](static//assets/img/website-demo.png)
 
 CityCabs Agency is a small but reliable cab service. The project is inspired by the cabby service concept. Users can book cabs 
