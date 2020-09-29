@@ -4,14 +4,17 @@
 ## Demo 
 
 - <a href="https://cab-agency.herokuapp.com/">View the live project here</a>
-  - ![Image of website](static//assets/img/website-demo.png)
 
+  
 CityCabs Agency is a small but reliable cab service. The project is inspired by the cabby service concept. Users can book cabs 
 for different destinations nationwide. 
 
 There's also opportunity for new drivrs to join the company by signing up and adding their vehiclesas part of the collection. Services range from city tours, to out of town escurtions, from airport service to camper vans for those who wish to go aay on holidays.
 we try to put some emphasis in our drivers who join our company. That way, set forth our reputation as being a reputable company.
 The site contains basic information for anyone who wants to book a cab or drive for a cab agency and be their own boss.
+
+
+- ![Image of website](static//assets/img/website-demo.png)
 
 
 ## User Experience (UX)
