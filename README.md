@@ -128,8 +128,25 @@ This projet is built using HTML, CSS, Javascript, jQuery and Materialize
 - jQuery
   - https://jquery.com/
   
--EmailJs
+- EmailJs
   - https://www.emailjs.com/
+
+- Git
+  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+- Google Fonts:
+  - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+  - https://fonts.google.com/
+
+- Font Awesome:
+   - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+   - https://fontawesome.com/
+
+      
+GitHub:
+  - GitHub is used to store the projects code after being pushed from Git.
+  - https://github.com/ 
+
 
 ## Testing
 
