@@ -1,7 +1,6 @@
 
 # CityCabs Agency
 
-## Demo 
 
 <a href="https://cab-agency.herokuapp.com/">View the live project here</a>
 
@@ -14,7 +13,9 @@ we try to put some emphasis in our drivers who join our company. That way, set f
 The site contains basic information for anyone who wants to book a cab or drive for a cab agency and be their own boss.
 
 
+
 ![Image of website](static//assets/img/website-demo.png)
+
 
 
 ## User Experience (UX)
@@ -145,10 +146,12 @@ This projet is built using HTML, CSS, Javascript, jQuery and Materialize
    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
    - https://fontawesome.com/
 
-      
-GitHub:
+- GitHub:
   - GitHub is used to store the projects code after being pushed from Git.
   - https://github.com/ 
+
+- Heroku
+  - https://www.heroku.com
 
 
 ## Testing
