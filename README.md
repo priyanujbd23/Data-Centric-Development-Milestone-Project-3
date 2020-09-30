@@ -229,5 +229,12 @@ The code consist of interactive website developed using HTML, CSS Javascript, jQ
   - https://www.pexels.com/search/eating/ 
   - https://unsplash.com/
 
+### Pagination
+
+  - Pagination example taken from: https://github.com/DarilliGames/flaskpaginate/blob/master/app.py
+
+### Authentication and Login section 
+  - Example code from https://github.com/TravelTimN/flask-task-manager-project
+  
 ### Acknowledgements
 - I received inspiration for this project from the private cab companies.
