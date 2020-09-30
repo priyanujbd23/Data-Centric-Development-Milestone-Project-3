@@ -247,9 +247,9 @@ def search():
     """ Search  for Cab page """
     query = request.form.get("query")
     cabs = list(mongo.db.cabs.find({"$text": {"$search": query}}))
-    if cabs.count(cabs) < 1:
+    if cabs.count() < 1:
         return render_template('notfound.html')
-        
+
     return render_template("searchresults.html", cabs=cabs)
 
 
