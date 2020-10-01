@@ -27,7 +27,7 @@ def home():
 
 @app.route('/cabs')
 def cabs():
-    """ Cabs page """
+    """ Cabs pagel """
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page')
 
@@ -247,9 +247,6 @@ def search():
     """ Search  for Cab page """
     query = request.form.get("query")
     cabs = list(mongo.db.cabs.find({"$text": {"$search": query}}))
-    if cabs.count() < 1:
-        return render_template('notfound.html')
-
     return render_template("searchresults.html", cabs=cabs)
 
 
@@ -337,6 +334,7 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 """ end of Authentication section """
 
