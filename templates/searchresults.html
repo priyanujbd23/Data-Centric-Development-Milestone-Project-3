@@ -4,7 +4,12 @@
 
 <div class="container results-container">
   <h4 class="page-headings">Results</h4>
-  <!-- trial----->
+  <!-- back Btn----->  
+<div class="center-align">
+<a href="{{ url_for('cabs') }}" class="waves-effectblue blue waves-light btn">
+	<span class="material-icons"></span>Back to Cabs</a>
+    </div><br><br>
+
   {% for cab in cabs %}
   <div class="row grey lighten-5">
     <div class="col s12 m4 l4">
@@ -62,6 +67,11 @@
     </div>
   </div>
   {% endfor%}
+  <br><br>
+<div class="center-align">
+<a href="{{ url_for('cabs') }}" class="waves-effectblue blue waves-light btn">
+	<span class="material-icons"></span>Back to Cabs</a>
+    </div>
 </div>
 
 {% endblock%}
